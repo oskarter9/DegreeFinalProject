@@ -83,14 +83,14 @@ public class MorseGenerator : MonoBehaviour {
             {
                 if (morseDigit == '.')
                 {
-                    _morseLight.intensity = 2f;
+                    _morseLight.intensity = 0.5f;
                     yield return _delayMorseFlashDot;
                     _morseLight.intensity = 0f;
                     yield return _delayBetweenFlashes;
                 }
                 else
                 {
-                    _morseLight.intensity = 2f;
+                    _morseLight.intensity = 0.5f;
                     yield return _delayMorseFlashDash;
                     _morseLight.intensity = 0f;
                     yield return _delayBetweenFlashes;
