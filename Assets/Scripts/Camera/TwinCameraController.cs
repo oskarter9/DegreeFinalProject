@@ -12,26 +12,14 @@ public class TwinCameraController : MonoBehaviour
     private Camera _hiddenCamera;
     private Material _hiddenCameraMat;
 
-    private float timeToChangeScene = 3f;
+    private float _timeToChangeScene;
     private float currentTime = 4f;
-
-    public void SwapCameras()
-    {
-        _activeCamera.targetTexture = _hiddenCamera.targetTexture;
-        _hiddenCamera.targetTexture = null;
-
-        var swapCamera = _activeCamera;
-        _activeCamera = _hiddenCamera;
-        _hiddenCamera = swapCamera;
-
-        _activeCameraMat.SetFloat("_RunRingPass", 0);
-        _hiddenCamera.GetComponent<PostProcessDepthGrayscale>().enabled = false;
-        _activeCamera.GetComponent<PostProcessDepthGrayscale>().enabled = true;
-    }
 
     private void Awake()
     {
+        
         _activeCameraMat = _activeCamera.GetComponent<PostProcessDepthGrayscale>().mat;
+        _timeToChangeScene = _activeCameraMat.GetFloat("_RingPassTimeLength");
         _hiddenCamera.GetComponent<PostProcessDepthGrayscale>().enabled = false;
         _activeCameraMat.SetFloat("_RunRingPass", 0);
         _hiddenCamera.targetTexture = initialRT;
@@ -45,10 +33,25 @@ public class TwinCameraController : MonoBehaviour
             {
                 currentTime = 0f;
                 ChangeSceneMat();
-                Invoke("SwapCameras", 2.1f);
+                Invoke("SwapCameras", _timeToChangeScene);
             }
         }
+
+    }
+
+    public void SwapCameras()
+    {
+        _activeCamera.targetTexture = _hiddenCamera.targetTexture;
+        _hiddenCamera.targetTexture = null;
+
+        var swapCamera = _activeCamera;
+        _activeCamera = _hiddenCamera;
+        _hiddenCamera = swapCamera;
+
         
+        _activeCameraMat.SetFloat("_RunRingPass", 0);
+        //_hiddenCamera.GetComponent<PostProcessDepthGrayscale>().enabled = true;
+        _activeCamera.GetComponent<PostProcessDepthGrayscale>().enabled = true;
     }
 
     private void ChangeSceneMat()
@@ -62,7 +65,7 @@ public class TwinCameraController : MonoBehaviour
     private bool TimeElapsed()
     {
         currentTime += Time.deltaTime;
-        if(currentTime >= timeToChangeScene)
+        if(currentTime >= _timeToChangeScene)
         {
             return true;
         }

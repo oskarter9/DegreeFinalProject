@@ -38,7 +38,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: BarrasColumna
-    second: {fileID: 2100000, guid: 2a656169e8e4351439e86d8bfeb85818, type: 2}
+    second: {fileID: 2100000, guid: 3cb39efaa76b02e41ae26cd08cde0a2a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -48,12 +48,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: EmbellecedoresColumna
-    second: {fileID: 2100000, guid: 2e7bf86c9dbda7d4eafcc9e301920095, type: 2}
+    second: {fileID: 2100000, guid: 3cb39efaa76b02e41ae26cd08cde0a2a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: EmbellecedoresEspejos
-    second: {fileID: 2100000, guid: 7b1937c1b295d334c822466c725d827c, type: 2}
+    second: {fileID: 2100000, guid: 3cb39efaa76b02e41ae26cd08cde0a2a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -99,7 +99,7 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
+    optimizeMeshForGPU: 0
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
