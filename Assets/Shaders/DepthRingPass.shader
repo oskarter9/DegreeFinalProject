@@ -6,7 +6,7 @@ Properties {
    _MainTex ("", 2D) = "white" {} //this texture will have the rendered image before post-processing
    _AnotherTex ( "Texture to change", 2D) = "white"{}
    _RingWidth("ring width", Float) = 0.01
-   _RingPassTimeLength("ring pass time", Float) = 2.0
+   _RingPassTimeLength("ring pass time", Float) = 5.0
 }
 
 SubShader {

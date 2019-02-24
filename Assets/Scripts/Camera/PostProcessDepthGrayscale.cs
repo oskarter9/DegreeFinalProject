@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class PostProcessDepthGrayscale : MonoBehaviour {
 
     public Material mat;
 
 	// Use this for initialization
 	void Start () {
-       GetComponent<Camera>().depthTextureMode = DepthTextureMode.Depth;
+       this.GetComponent<Camera>().depthTextureMode = DepthTextureMode.Depth;
     }
     void OnRenderImage(RenderTexture source, RenderTexture destination)
     {

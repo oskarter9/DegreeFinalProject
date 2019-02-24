@@ -50,7 +50,7 @@ public class TwinCameraController : MonoBehaviour
 
         
         _activeCameraMat.SetFloat("_RunRingPass", 0);
-        //_hiddenCamera.GetComponent<PostProcessDepthGrayscale>().enabled = true;
+        //_hiddenCamera.GetComponent<PostProcessDepthGrayscale>().enabled = false;
         _activeCamera.GetComponent<PostProcessDepthGrayscale>().enabled = true;
     }
 

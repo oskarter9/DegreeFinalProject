@@ -12,38 +12,38 @@ OcclusionCullingData:
     sizeRenderers: 16
     indexPortals: 0
     sizePortals: 0
-    scene: 9f18a57672d2aca49a30157cbbdb261c
+    scene: ca84b18b2f7dbae469c1f034cdda99ed
   m_StaticRenderers:
-  - targetObject: 23346215730516524
-    targetPrefab: 1911818909
-  - targetObject: 23571894976185038
-    targetPrefab: 1911818909
-  - targetObject: 23415162989234812
-    targetPrefab: 1911818909
-  - targetObject: 23631799460518222
-    targetPrefab: 1911818909
-  - targetObject: 23156489633957828
-    targetPrefab: 1911818909
-  - targetObject: 23480436172384812
-    targetPrefab: 1911818909
-  - targetObject: 23963606935423490
-    targetPrefab: 1911818909
-  - targetObject: 23718280761836092
-    targetPrefab: 1911818909
-  - targetObject: 23396838193788974
-    targetPrefab: 1911818909
-  - targetObject: 23530490622972218
-    targetPrefab: 1911818909
-  - targetObject: 23491150115288640
-    targetPrefab: 1911818909
-  - targetObject: 23967583392712286
-    targetPrefab: 1911818909
-  - targetObject: 23208798897553370
-    targetPrefab: 1911818909
-  - targetObject: 23414937433573764
-    targetPrefab: 1911818909
-  - targetObject: 23159484203851652
-    targetPrefab: 1911818909
-  - targetObject: 23218044736721498
-    targetPrefab: 1911818909
+  - targetObject: 23128109284556904
+    targetPrefab: 2146005567
+  - targetObject: 23173545992496750
+    targetPrefab: 2146005567
+  - targetObject: 23753657525059106
+    targetPrefab: 2146005567
+  - targetObject: 23833546087789302
+    targetPrefab: 2146005567
+  - targetObject: 23868693750906180
+    targetPrefab: 2146005567
+  - targetObject: 23333646643856292
+    targetPrefab: 2146005567
+  - targetObject: 23723827845238208
+    targetPrefab: 2146005567
+  - targetObject: 23971785884288760
+    targetPrefab: 2146005567
+  - targetObject: 23210398874410370
+    targetPrefab: 2146005567
+  - targetObject: 23511211725031712
+    targetPrefab: 2146005567
+  - targetObject: 23731319767225102
+    targetPrefab: 2146005567
+  - targetObject: 23426939966503588
+    targetPrefab: 2146005567
+  - targetObject: 23093369486036966
+    targetPrefab: 2146005567
+  - targetObject: 23970015751853878
+    targetPrefab: 2146005567
+  - targetObject: 23486003517238788
+    targetPrefab: 2146005567
+  - targetObject: 23550181337045442
+    targetPrefab: 2146005567
   m_Portals: []
