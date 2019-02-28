@@ -114,6 +114,16 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!108 &25610592 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 108793047972302990, guid: ed3418477bbca8c48a6b0befe3e2884d,
+    type: 2}
+  m_PrefabInternal: {fileID: 923244357}
+--- !u!108 &123477872 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 108755750939673576, guid: ed3418477bbca8c48a6b0befe3e2884d,
+    type: 2}
+  m_PrefabInternal: {fileID: 923244357}
 --- !u!1001 &328451159
 Prefab:
   m_ObjectHideFlags: 0
@@ -164,6 +174,11 @@ Light:
 --- !u!108 &454525672 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 108602826306017802, guid: ed3418477bbca8c48a6b0befe3e2884d,
+    type: 2}
+  m_PrefabInternal: {fileID: 923244357}
+--- !u!108 &614787706 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 108658373007033196, guid: ed3418477bbca8c48a6b0befe3e2884d,
     type: 2}
   m_PrefabInternal: {fileID: 923244357}
 --- !u!1 &657583322 stripped
@@ -274,6 +289,9 @@ MonoBehaviour:
   - {fileID: 1071206946}
   - {fileID: 1777312524}
   - {fileID: 411262418}
+  - {fileID: 614787706}
+  - {fileID: 123477872}
+  - {fileID: 25610592}
   POneLightSwitch: {fileID: 1034932972685062, guid: ac42ca3b5fb101846a354994b24ff30f,
     type: 2}
   POneControllerContainer: {fileID: 657583322}
