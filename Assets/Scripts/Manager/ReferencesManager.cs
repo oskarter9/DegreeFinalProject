@@ -6,9 +6,16 @@ public class ReferencesManager : MonoBehaviour
 {
     public static ReferencesManager instance = null;
 
+    public Transform PlayerObjectsContainer;
+
+    [Header("First Puzzle References")]
+
     public Light[] POneLights;
     public GameObject POneLightSwitch;
     public GameObject POneControllerContainer;
+    public Item POneLighterItem;
+    [HideInInspector]
+    public LightmapSwitch POneLighmapSwitch;
 
     void Awake()
     {
@@ -20,6 +27,7 @@ public class ReferencesManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
 
+        POneLighmapSwitch = GetComponentInChildren<LightmapSwitch>();
+    }
 }

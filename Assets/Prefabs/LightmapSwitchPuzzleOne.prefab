@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1809582470363136}
+  m_IsPrefabAsset: 1
+--- !u!1 &1809582470363136
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4417494196240052}
+  - component: {fileID: 114717463778336930}
+  m_Layer: 9
+  m_Name: LightmapSwitchPuzzleOne
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4417494196240052
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1809582470363136}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.556336, y: -2.3475983, z: 1.9871299}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114717463778336930
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1809582470363136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 358deb1a2dd71f345870918569230a9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FirstLightMapDir:
+  - {fileID: 2800000, guid: 52c4b5da2020734448f1bdba0cbfd360, type: 3}
+  - {fileID: 2800000, guid: f378e04b61930c145bf239ba50747407, type: 3}
+  - {fileID: 2800000, guid: 91d81690883c31f47b1ed39f64a31b8b, type: 3}
+  - {fileID: 2800000, guid: ca662a9260dc51a49ace243f7d076b4a, type: 3}
+  - {fileID: 2800000, guid: c8059478fdfaba84098f42b805d5a3bd, type: 3}
+  - {fileID: 2800000, guid: e19fecf57236d604daf004770a54bd2c, type: 3}
+  - {fileID: 2800000, guid: 56b040541427e6449a703a7c315054e7, type: 3}
+  FirstLightMapLight:
+  - {fileID: 2800000, guid: 6bb2c3d11f977f04280d66c8e2d49347, type: 3}
+  - {fileID: 2800000, guid: bcf12b3b70dde874ea05740f32d94e38, type: 3}
+  - {fileID: 2800000, guid: 8fcf84da55c6ac64e8aeda9fa7edd9fb, type: 3}
+  - {fileID: 2800000, guid: 39591b439891d9d43b60d3c1cf1e0d4d, type: 3}
+  - {fileID: 2800000, guid: 0ea35553c730e224ca233a818fa8c90e, type: 3}
+  - {fileID: 2800000, guid: 0a0c285048d3d63469e1f02584ea368c, type: 3}
+  - {fileID: 2800000, guid: 4785b7f2d80b39a4c8b1353a43d1376a, type: 3}
+  FirstLightMapSM:
+  - {fileID: 2800000, guid: 6bb2c3d11f977f04280d66c8e2d49347, type: 3}
+  - {fileID: 2800000, guid: bcf12b3b70dde874ea05740f32d94e38, type: 3}
+  - {fileID: 2800000, guid: 8fcf84da55c6ac64e8aeda9fa7edd9fb, type: 3}
+  - {fileID: 2800000, guid: 39591b439891d9d43b60d3c1cf1e0d4d, type: 3}
+  - {fileID: 2800000, guid: 0ea35553c730e224ca233a818fa8c90e, type: 3}
+  - {fileID: 2800000, guid: 0a0c285048d3d63469e1f02584ea368c, type: 3}
+  - {fileID: 2800000, guid: 4785b7f2d80b39a4c8b1353a43d1376a, type: 3}
+  SecondLightMapDir:
+  - {fileID: 2800000, guid: 435f94020f5555046b1ad5f0301f86e6, type: 3}
+  - {fileID: 2800000, guid: 2d5c0b6af528e3b4d9e6c28c87870453, type: 3}
+  - {fileID: 2800000, guid: c09462656b0c7c1429cf1eb65249fc88, type: 3}
+  - {fileID: 2800000, guid: 1d4c28edb3ef0004abe91284c08f6fb6, type: 3}
+  - {fileID: 2800000, guid: 16ff1e611f3445440afa5a8a1735ceba, type: 3}
+  - {fileID: 2800000, guid: 2bd6cbe976b58274687cd719e6ef0ca2, type: 3}
+  - {fileID: 2800000, guid: ee1cfeaf94dfe584896142e8849d9ac0, type: 3}
+  SecondLightMapLight:
+  - {fileID: 2800000, guid: 818dabbc84ca38d4493f4ba7839cfb6e, type: 3}
+  - {fileID: 2800000, guid: 9a13e27fe503e5e4e84ef55b453d5bde, type: 3}
+  - {fileID: 2800000, guid: 525de460a711a2644a24969ff44a8654, type: 3}
+  - {fileID: 2800000, guid: e46aa72057a32fb458d86d18c4d20534, type: 3}
+  - {fileID: 2800000, guid: e519f4df4675b3f47bc6baa8e1ace23c, type: 3}
+  - {fileID: 2800000, guid: 2e217dc04b679ea40bfd719654b01a00, type: 3}
+  - {fileID: 2800000, guid: 8ea7361164e814f459914675b2b08a9e, type: 3}
+  SecondLightMapSM:
+  - {fileID: 2800000, guid: de69e9041e2357d46b508d4683431dec, type: 3}
+  - {fileID: 2800000, guid: d5a59a5908bcb9a4b81f5a5c9787b1f6, type: 3}
+  - {fileID: 2800000, guid: 70f9066a19894c8459e92dfd4d123444, type: 3}
+  - {fileID: 2800000, guid: 02549189cfd867d41a7c36a5650f913f, type: 3}
+  - {fileID: 2800000, guid: 1eaa8a8f0504f114182898bbc37c5c48, type: 3}
+  - {fileID: 2800000, guid: 83bc58b40c8398542bcf7956605c3bd0, type: 3}
+  - {fileID: 2800000, guid: 8a3f3e2f93ff7f3468b15661d5fc376d, type: 3}

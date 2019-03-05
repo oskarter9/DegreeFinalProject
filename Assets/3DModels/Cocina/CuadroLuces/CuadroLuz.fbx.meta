@@ -1,0 +1,253 @@
+fileFormatVersion: 2
+guid: f734913b537618645b4711fa2c951247
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Cables
+    100002: //RootNode
+    100004: Interruptores
+    100006: Palancas
+    100008: PuertaCuadroLuz
+    400000: Cables
+    400002: //RootNode
+    400004: Interruptores
+    400006: Palancas
+    400008: PuertaCuadroLuz
+    2100000: CarcasaCuadroLuz
+    2100002: Soporte
+    2100004: ChapasMetal
+    2100006: PiezaPlastico
+    2100008: Tuercas
+    2100010: CableColor1
+    2100012: CableColor2
+    2100014: CablesGordos
+    2100016: PuertaCuadroLuz
+    2100018: BaseInterruptor
+    2100020: CuerpoInterruptor
+    2100022: CabezalInterruptor
+    2100024: OnOff
+    2300000: Cables
+    2300002: //RootNode
+    2300004: Interruptores
+    2300006: Palancas
+    2300008: PuertaCuadroLuz
+    3300000: Cables
+    3300002: //RootNode
+    3300004: Interruptores
+    3300006: Palancas
+    3300008: PuertaCuadroLuz
+    4300000: CuadroLuz
+    4300002: Cables
+    4300004: PuertaCuadroLuz
+    4300006: Interruptores
+    4300008: Palancas
+    7400000: PuertaCuadroLuz|AbrirPuerta
+    7400002: PuertaCuadroLuz|EncendidoInterruptores
+    7400004: Palancas|AbrirPuerta
+    7400006: Palancas|EncendidoInterruptores
+    9500000: //RootNode
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BaseInterruptor
+    second: {fileID: 2100000, guid: f052c7e4862153e4b918ec8670a49f5e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CabezalInterruptor
+    second: {fileID: 2100000, guid: a693a643f6943b548b8e3610f26630b3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CableColor1
+    second: {fileID: 2100000, guid: ddfde7557c65bc04492ba8230c3385d9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CableColor2
+    second: {fileID: 2100000, guid: ddfde7557c65bc04492ba8230c3385d9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CablesGordos
+    second: {fileID: 2100000, guid: ddfde7557c65bc04492ba8230c3385d9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CarcasaCuadroLuz
+    second: {fileID: 2100000, guid: 75816ae2dc99a874cb20b647bfaa6b71, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ChapasMetal
+    second: {fileID: 2100000, guid: 75816ae2dc99a874cb20b647bfaa6b71, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CuerpoInterruptor
+    second: {fileID: 2100000, guid: a693a643f6943b548b8e3610f26630b3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OnOff
+    second: {fileID: 2100000, guid: a693a643f6943b548b8e3610f26630b3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PiezaPlastico
+    second: {fileID: 2100000, guid: 75816ae2dc99a874cb20b647bfaa6b71, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PuertaCuadroLuz
+    second: {fileID: 2100000, guid: 50216b1f3fbd70e4aa5104a87fa10446, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Soporte
+    second: {fileID: 2100000, guid: 50216b1f3fbd70e4aa5104a87fa10446, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tuercas
+    second: {fileID: 2100000, guid: 75816ae2dc99a874cb20b647bfaa6b71, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: PuertaCuadroLuz|AbrirPuerta
+      takeName: PuertaCuadroLuz|AbrirPuerta
+      firstFrame: 0
+      lastFrame: 70
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Palancas|EncendidoInterruptores
+      takeName: Palancas|EncendidoInterruptores
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 0
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
