@@ -10,7 +10,7 @@ public class GenreCodesPaper : Interactable {
     {
         base.Interact();
         Inventory.instance.Add(_genreCodesPaperItem);
-        GetComponentInParent<PuzzleOneController>().powerEnabled = true;
+        GetComponentInParent<PuzzleOneController>().puzzleSolved = true;
         Destroy(gameObject);
     }
 }

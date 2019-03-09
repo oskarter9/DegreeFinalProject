@@ -310,8 +310,9 @@ GameObject:
   - component: {fileID: 4420699469905532}
   - component: {fileID: 33913634324903038}
   - component: {fileID: 23218044736721498}
+  - component: {fileID: 65405130410096454}
   m_Layer: 9
-  m_Name: Vater (1)
+  m_Name: VaterChicos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -907,8 +908,9 @@ GameObject:
   - component: {fileID: 4170299590239400}
   - component: {fileID: 33658562090229926}
   - component: {fileID: 23208798897553370}
+  - component: {fileID: 65210889159601070}
   m_Layer: 9
-  m_Name: Vater (1)
+  m_Name: VaterChicas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3243,6 +3245,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.9997735, y: 3.1, z: 0.13862133}
   m_Center: {x: 4.1251135, y: 1.55, z: -6.3056893}
+--- !u!65 &65210889159601070
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1998343690374142}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7866878, y: 2.810823, z: 0.89676857}
+  m_Center: {x: -0.00918579, y: 0.5612831, z: -0.10663463}
 --- !u!65 &65217230557469580
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -3303,6 +3317,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9600003, y: 3.1, z: 0.7599999}
   m_Center: {x: -4.47226, y: 1.55, z: 1.2284942}
+--- !u!65 &65405130410096454
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1350374483334280}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7866878, y: 2.8108227, z: 0.8967685}
+  m_Center: {x: -0.00918579, y: 0.5612831, z: -0.106634624}
 --- !u!65 &65433699847418174
 BoxCollider:
   m_ObjectHideFlags: 1

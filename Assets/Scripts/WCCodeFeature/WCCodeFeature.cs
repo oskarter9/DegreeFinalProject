@@ -16,15 +16,17 @@ public class WCCodeFeature : MonoBehaviour {
 
 
     [HideInInspector]
-    public List<int> PlayerInput;
+    public List<int> PlayerInput = new List<int>();
 
     private AudioSource _wCSoundManager;
-    public AudioClip WrongSound;
-    public AudioClip CorrectSound;
+    private AudioClip _wrongSound;
+    private AudioClip _correctSound;
 
     private void Awake()
     {
         _wCSoundManager = GetComponent<AudioSource>();
+        _wrongSound = ReferencesManager.instance.WrongSound;
+        _correctSound = ReferencesManager.instance.CorrectSound;
         _codeSet = new int[4][];
         _codeSet[0] = _firstCode;
         _codeSet[1] = _secondCode;
@@ -32,20 +34,28 @@ public class WCCodeFeature : MonoBehaviour {
         _codeSet[3] = _fourthCode;
     }
 
-    public void Update()
+    private void Update()
     {
-        if(_currentCode < 4 && PlayerInput.Count == 3)
+        //TODO change _currentCode < 4
+        if (_currentCode < 1)
         {
-            if (CheckCorrectCode())
+            if (PlayerInput.Count == 3)
             {
-                _wCSoundManager.clip = CorrectSound;
-                _wCSoundManager.Play();
+                if (CheckCorrectCode())
+                {
+                    _wCSoundManager.clip = _correctSound;
+                    _wCSoundManager.Play();
+                }
+                else
+                {
+                    _wCSoundManager.clip = _wrongSound;
+                    _wCSoundManager.Play();
+                }
             }
-            else
-            {
-                _wCSoundManager.clip = WrongSound;
-                _wCSoundManager.Play();
-            }
+        }
+        else
+        {
+            GetComponent<PuzzleTwoController>().puzzleSolved = true;
         }
     }
 

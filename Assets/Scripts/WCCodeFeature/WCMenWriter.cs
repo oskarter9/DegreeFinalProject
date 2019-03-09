@@ -2,37 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WCMenWriter : MonoBehaviour {
+public class WCMenWriter : Interactable {
 
     private List<int> _inputList;
-    private bool _insideArea;
+
+    public override void Interact()
+    {
+        base.Interact();
+        AddMaleCode();
+    }
 
     private void Awake()
     {
         _inputList = GetComponentInParent<WCCodeFeature>().PlayerInput;
     }
-
-    private void Update()
+    private void AddMaleCode()
     {
-        if (_insideArea && Input.GetKeyDown(KeyCode.F))
-        {
-            _inputList.Add(0);
-        }
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.GetComponent<CharacterController>())
-        {
-            _insideArea = true;
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.GetComponent<CharacterController>())
-        {
-            _insideArea = false;
-        }
+        _inputList.Add(0);
     }
 }

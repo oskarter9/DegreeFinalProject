@@ -30,7 +30,9 @@ public class PuzzleOneController : MonoBehaviour {
         }
         if (puzzleSolved)
         {
-            GameManager.instance.SetPuzzleEnvironment(_currentPuzzle + 1);
+            Debug.Log("puzzle 1 solucionado");
+            GameManager.instance.currentPuzzle++;
+            GameManager.instance.SetPuzzleEnvironment(GameManager.instance.currentPuzzle);
             Destroy(this);
         }
 	}

@@ -481,42 +481,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1817963180016226, guid: 58543736ddd328f48a1f1342493b0d38, type: 2}
-      propertyPath: m_Name
-      value: PlayerObjectsHolder
-      objectReference: {fileID: 0}
-    - target: {fileID: 4276252645035650, guid: 58543736ddd328f48a1f1342493b0d38, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0.544
-      objectReference: {fileID: 0}
-    - target: {fileID: 4276252645035650, guid: 58543736ddd328f48a1f1342493b0d38, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.393
-      objectReference: {fileID: 0}
-    - target: {fileID: 4276252645035650, guid: 58543736ddd328f48a1f1342493b0d38, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.168
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58543736ddd328f48a1f1342493b0d38, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &328451160 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1817963180016226, guid: 58543736ddd328f48a1f1342493b0d38,
-    type: 2}
-  m_PrefabInternal: {fileID: 328451159}
---- !u!114 &328451161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 328451160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 274ac4205e989594985b7d7f9e358128, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SelectedObject: 0
 --- !u!4 &328451162 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4276252645035650, guid: 58543736ddd328f48a1f1342493b0d38,
@@ -908,17 +875,19 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4939856327024790, guid: ed3418477bbca8c48a6b0befe3e2884d, type: 2}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4879403675982984, guid: ed3418477bbca8c48a6b0befe3e2884d, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed3418477bbca8c48a6b0befe3e2884d, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &945819908 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1998343690374142, guid: ed3418477bbca8c48a6b0befe3e2884d,
+    type: 2}
+  m_PrefabInternal: {fileID: 945819907}
+--- !u!1 &945819909 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1350374483334280, guid: ed3418477bbca8c48a6b0befe3e2884d,
+    type: 2}
+  m_PrefabInternal: {fileID: 945819907}
 --- !u!1 &1037200097
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,6 +963,10 @@ MonoBehaviour:
   POneLighterItem: {fileID: 11400000, guid: 48e912636b706cc409c3876eacd451a3, type: 2}
   POneLighmapSwitch: {fileID: 0}
   PTwoControllerContainer: {fileID: 218315005}
+  PTwoMaleWC: {fileID: 945819909}
+  PTwoFemaleWC: {fileID: 945819908}
+  WrongSound: {fileID: 8300000, guid: 9a5bcd938930c0443abe7889f5f5dff0, type: 3}
+  CorrectSound: {fileID: 8300000, guid: 80efaff85250e0c4aafa3c5741b7cd39, type: 3}
 --- !u!114 &1037200101
 MonoBehaviour:
   m_ObjectHideFlags: 0

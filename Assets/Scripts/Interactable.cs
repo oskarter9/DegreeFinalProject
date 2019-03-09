@@ -18,12 +18,14 @@ public class Interactable : MonoBehaviour {
     {
         _isFocused = true;
         _player = playerTransform;
+        _hasInteracted = false;
     }
 
     public void OnDefocused()
     {
         _isFocused = false;
         _player = null;
+        _hasInteracted = false;
     }
 
     private void Update()

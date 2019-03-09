@@ -12,7 +12,6 @@ public class PuzzleTwoController : MonoBehaviour {
     void Awake()
     {
         _referencesManager = ReferencesManager.instance;
-        _currentPuzzle = GameManager.instance.currentPuzzle;
         ConfigureLevelTwo();
     }
 
@@ -20,17 +19,32 @@ public class PuzzleTwoController : MonoBehaviour {
     {
         if (puzzleSolved)
         {
-            LightmapSettings.lightmaps = _referencesManager.POneLighmapSwitch._secondLightMaps;
-            GameManager.instance.SetPuzzleEnvironment(_currentPuzzle + 1);
-            puzzleSolved = false;
-            Destroy(this);
+            GameManager.instance.currentPuzzle++;
+            GameManager.instance.SetPuzzleEnvironment(GameManager.instance.currentPuzzle);
+            DestroyElements();
         }
     }
 
     void ConfigureLevelTwo()
     {
-        LightmapSettings.lightmaps = _referencesManager.POneLighmapSwitch._firstLightMaps;
-        Instantiate(_referencesManager.POneLightSwitch, gameObject.transform);
-        Inventory.instance.Add(_referencesManager.POneLighterItem);
+        _referencesManager.PTwoControllerContainer.AddComponent<AudioSource>();
+        _referencesManager.PTwoControllerContainer.AddComponent<WCCodeFeature>();
+        SetToilets();
+    }
+
+    void SetToilets()
+    {
+        _referencesManager.PTwoFemaleWC.transform.SetParent(_referencesManager.PTwoControllerContainer.transform);
+        _referencesManager.PTwoMaleWC.transform.SetParent(_referencesManager.PTwoControllerContainer.transform);
+        _referencesManager.PTwoFemaleWC.AddComponent<WCWomenWriter>();
+        _referencesManager.PTwoMaleWC.AddComponent<WCMenWriter>();
+    }
+
+    void DestroyElements()
+    {
+        Destroy(GetComponentInChildren<WCWomenWriter>());
+        Destroy(GetComponentInChildren<WCMenWriter>());
+        Destroy(GetComponent<WCCodeFeature>());
+        Destroy(this);
     }
 }

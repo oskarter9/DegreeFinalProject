@@ -2,37 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WCWomenWriter : MonoBehaviour {
+public class WCWomenWriter : Interactable {
 
     private List<int> _inputList;
-    private bool _insideArea = false;
+
+    public override void Interact()
+    {
+        base.Interact();
+        AddFemaleCode();
+    }
 
     private void Awake()
     {
         _inputList = GetComponentInParent<WCCodeFeature>().PlayerInput;
     }
 
-    private void Update()
+    private void AddFemaleCode()
     {
-        if(_insideArea && Input.GetKeyDown(KeyCode.F))
-        {
-            _inputList.Add(1);
-        }
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.GetComponent<CharacterController>())
-        {
-            _insideArea = true;  
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.GetComponent<CharacterController>())
-        {
-            _insideArea = false;
-        }
+        _inputList.Add(1);
     }
 }

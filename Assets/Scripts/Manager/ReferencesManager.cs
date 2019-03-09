@@ -21,6 +21,12 @@ public class ReferencesManager : MonoBehaviour
     [Header("Second Puzzle References")]
     
     public GameObject PTwoControllerContainer;
+    public GameObject PTwoMaleWC;
+    public GameObject PTwoFemaleWC;
+
+    //PROVISIONAL
+    public AudioClip WrongSound;
+    public AudioClip CorrectSound;
 
     void Awake()
     {
