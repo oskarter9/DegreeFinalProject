@@ -13,9 +13,14 @@ public class ReferencesManager : MonoBehaviour
     public Light[] POneLights;
     public GameObject POneLightSwitch;
     public GameObject POneControllerContainer;
+    public GameObject POneGenreCodesPaper;
     public Item POneLighterItem;
     [HideInInspector]
     public LightmapSwitch POneLighmapSwitch;
+
+    [Header("Second Puzzle References")]
+    
+    public GameObject PTwoControllerContainer;
 
     void Awake()
     {

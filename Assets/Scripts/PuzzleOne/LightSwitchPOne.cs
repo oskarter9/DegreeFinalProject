@@ -2,13 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LightSwitchPOne : MonoBehaviour {
+public class LightSwitchPOne : Interactable {
 
     private Animator _lightBoxAnimator;
+
+    public override void Interact()
+    {
+        base.Interact();
+        OpenDoor();
+
+    }
 
     void Awake()
     {
         _lightBoxAnimator = GetComponent<Animator>();
+    }
+
+    void OpenDoor()
+    {
+        _lightBoxAnimator.SetBool("OpenDoor", true);
     }
 
 	void OnTriggerEnter(Collider other)
@@ -16,11 +28,8 @@ public class LightSwitchPOne : MonoBehaviour {
         if (other.gameObject.GetComponent<CharacterController>() && _lightBoxAnimator.GetBool("OpenDoor"))
         {
             _lightBoxAnimator.SetTrigger("EnablePower");
-            GetComponentInParent<PuzzleOneController>().puzzleSolved = true;
-        }
-        else
-        {
-            _lightBoxAnimator.SetBool("OpenDoor", true);
+            GetComponentInParent<PuzzleOneController>().powerEnabled = true;
+            Destroy(this);
         }
     }
 }

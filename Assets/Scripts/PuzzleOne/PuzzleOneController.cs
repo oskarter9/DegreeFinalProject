@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class PuzzleOneController : MonoBehaviour {
 
+    public bool powerEnabled;
     public bool puzzleSolved;
 
     private int _currentPuzzle;
     private Light[] _lights;
-    private GameObject _lightSwitch;
     private ReferencesManager _referencesManager;
 
     void Awake()
@@ -21,19 +21,25 @@ public class PuzzleOneController : MonoBehaviour {
     }
 
 	void Update () {
-        if (puzzleSolved)
+        if (powerEnabled)
         {
             TurnOnLights(_lights);
             LightmapSettings.lightmaps = _referencesManager.POneLighmapSwitch._secondLightMaps;
+            powerEnabled = false;
+            
+        }
+        if (puzzleSolved)
+        {
             GameManager.instance.SetPuzzleEnvironment(_currentPuzzle + 1);
-            puzzleSolved = false;
+            Destroy(this);
         }
 	}
 
     void ConfigureLevelOne()
     {
         LightmapSettings.lightmaps = _referencesManager.POneLighmapSwitch._firstLightMaps;
-        _lightSwitch = Instantiate(_referencesManager.POneLightSwitch, gameObject.transform);
+        Instantiate(_referencesManager.POneLightSwitch, gameObject.transform);
+        Instantiate(_referencesManager.POneGenreCodesPaper, gameObject.transform);
         Inventory.instance.Add(_referencesManager.POneLighterItem);
         TurnOffLights(_lights);
     }

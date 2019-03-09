@@ -5,8 +5,7 @@ public class TwinCameraController : MonoBehaviour
 {
     public RenderTexture initialRT;
 
-    [SerializeField]
-    private Camera _activeCamera;
+    public Camera _activeCamera;
     public Material _activeCameraMat;
     [SerializeField]
     private Camera _hiddenCamera;

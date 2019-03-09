@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 65428470361868426}
   - component: {fileID: 65091061745690446}
   - component: {fileID: 114598094403751520}
+  - component: {fileID: 65794777440198532}
   m_Layer: 9
   m_Name: CuadroLuz
   m_TagString: Untagged
@@ -397,8 +398,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0077398107, y: 0.0040478487, z: 0.007946155}
-  m_Center: {x: -0.006991138, y: -0.007976076, z: -0.006026971}
+  m_Size: {x: 0.0030024217, y: 0.0046320553, z: 0.0024735364}
+  m_Center: {x: -0.0072095464, y: -0.007150307, z: -0.005468972}
 --- !u!65 &65428470361868426
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -409,8 +410,20 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0061503174, y: 0.0019981521, z: 0.007946154}
-  m_Center: {x: -0.006924841, y: -0.009000922, z: -0.006026921}
+  m_Size: {x: 0.006150317, y: 0.0007849327, z: 0.007946154}
+  m_Center: {x: -0.0069248406, y: -0.009607537, z: -0.006026921}
+--- !u!65 &65794777440198532
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1426695196801786}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.006150317, y: 0.0019981512, z: 0.0012945434}
+  m_Center: {x: -0.0069248364, y: -0.009000931, z: -0.002701129}
 --- !u!95 &95536976186018326
 Animator:
   serializedVersion: 3
