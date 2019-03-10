@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
     private bool _gameFinished;
     private ReferencesManager _referencesManager;
 
-    // Use this for initialization
     void Awake()
     {
         if (instance == null)

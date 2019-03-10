@@ -7,6 +7,7 @@ public class ReferencesManager : MonoBehaviour
     public static ReferencesManager instance = null;
 
     public Transform PlayerObjectsContainer;
+    public Player Player;
 
     [Header("First Puzzle References")]
 

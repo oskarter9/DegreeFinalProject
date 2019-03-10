@@ -6,7 +6,6 @@ public class PuzzleTwoController : MonoBehaviour {
 
     public bool puzzleSolved;
 
-    private int _currentPuzzle;
     private ReferencesManager _referencesManager;
 
     void Awake()
@@ -19,8 +18,7 @@ public class PuzzleTwoController : MonoBehaviour {
     {
         if (puzzleSolved)
         {
-            GameManager.instance.currentPuzzle++;
-            GameManager.instance.SetPuzzleEnvironment(GameManager.instance.currentPuzzle);
+            GameManager.instance.SetPuzzleEnvironment(++GameManager.instance.currentPuzzle);
             DestroyElements();
         }
     }

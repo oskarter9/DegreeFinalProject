@@ -8,14 +8,12 @@ public class PuzzleOneController : MonoBehaviour {
     public bool powerEnabled;
     public bool puzzleSolved;
 
-    private int _currentPuzzle;
     private Light[] _lights;
     private ReferencesManager _referencesManager;
 
     void Awake()
     {
         _referencesManager = ReferencesManager.instance;
-        _currentPuzzle = GameManager.instance.currentPuzzle;
         _lights = ReferencesManager.instance.POneLights;
         ConfigureLevelOne();
     }
@@ -31,8 +29,7 @@ public class PuzzleOneController : MonoBehaviour {
         if (puzzleSolved)
         {
             Debug.Log("puzzle 1 solucionado");
-            GameManager.instance.currentPuzzle++;
-            GameManager.instance.SetPuzzleEnvironment(GameManager.instance.currentPuzzle);
+            GameManager.instance.SetPuzzleEnvironment(++GameManager.instance.currentPuzzle);
             Destroy(this);
         }
 	}
@@ -40,7 +37,7 @@ public class PuzzleOneController : MonoBehaviour {
     void ConfigureLevelOne()
     {
         LightmapSettings.lightmaps = _referencesManager.POneLighmapSwitch._firstLightMaps;
-        Instantiate(_referencesManager.POneLightSwitch, gameObject.transform);
+        _referencesManager.POneLightSwitch.transform.SetParent(_referencesManager.POneControllerContainer.transform);
         Instantiate(_referencesManager.POneGenreCodesPaper, gameObject.transform);
         Inventory.instance.Add(_referencesManager.POneLighterItem);
         TurnOffLights(_lights);
