@@ -33,6 +33,7 @@ public class Inventory : MonoBehaviour {
     {
         Items.Add(item);
         Instantiate(item.ObjectToUse, ReferencesManager.instance.PlayerObjectsContainer);
+        ReferencesManager.instance.PlayerObjectsContainer.GetComponent<ObjectSwitching>().SelectObject();
 
         if (OnItemChangedCallback != null)
         {

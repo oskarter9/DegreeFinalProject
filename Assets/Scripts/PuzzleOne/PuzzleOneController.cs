@@ -10,6 +10,8 @@ public class PuzzleOneController : MonoBehaviour {
 
     private Light[] _lights;
     private ReferencesManager _referencesManager;
+    private GameObject _soundClueEmitter;
+    private GameObject _paperGenresCodes;
 
     void Awake()
     {
@@ -30,6 +32,7 @@ public class PuzzleOneController : MonoBehaviour {
         {
             Debug.Log("puzzle 1 solucionado");
             GameManager.instance.SetPuzzleEnvironment(++GameManager.instance.currentPuzzle);
+            Destroy(_soundClueEmitter);
             Destroy(this);
         }
 	}
@@ -38,7 +41,9 @@ public class PuzzleOneController : MonoBehaviour {
     {
         LightmapSettings.lightmaps = _referencesManager.POneLighmapSwitch._firstLightMaps;
         _referencesManager.POneLightSwitch.transform.SetParent(_referencesManager.POneControllerContainer.transform);
-        Instantiate(_referencesManager.POneGenreCodesPaper, gameObject.transform);
+        _paperGenresCodes = Instantiate(_referencesManager.POneGenreCodesPaper, _referencesManager.POneGenreCodesPaperContainer);
+        _paperGenresCodes.GetComponent<LookGenresCode>().enabled = false;
+        _soundClueEmitter = Instantiate(_referencesManager.SoundClueSource,transform);
         Inventory.instance.Add(_referencesManager.POneLighterItem);
         TurnOffLights(_lights);
     }

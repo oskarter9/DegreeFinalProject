@@ -32,12 +32,13 @@ public class Interactable : MonoBehaviour {
     {
         if(_isFocused && !_hasInteracted)
         {
-            float distance = Vector3.Distance(_player.position, transform.position);
-            if(distance <= radius)
+            Interact();
+            _hasInteracted = true;
+            /*(distance <= radius)
             {
                 Interact();
                 _hasInteracted = true;
-            }
+            }*/
         }
     }
 }

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Lighter
   Icon: {fileID: 0}
-  ObjectToUse: {fileID: 1662188492364494, guid: 302a9ae4d4940e44d9036cae315af8bd,
+  ObjectToUse: {fileID: 1022446466636556, guid: 302a9ae4d4940e44d9036cae315af8bd,
     type: 2}

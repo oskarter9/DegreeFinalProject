@@ -7,6 +7,7 @@ public class PuzzleTwoController : MonoBehaviour {
     public bool puzzleSolved;
 
     private ReferencesManager _referencesManager;
+    private GameObject _soundClueEmitter;
 
     void Awake()
     {
@@ -25,8 +26,8 @@ public class PuzzleTwoController : MonoBehaviour {
 
     void ConfigureLevelTwo()
     {
-        _referencesManager.PTwoControllerContainer.AddComponent<AudioSource>();
         _referencesManager.PTwoControllerContainer.AddComponent<WCCodeFeature>();
+        _soundClueEmitter = Instantiate(_referencesManager.SoundClueSource, transform);
         SetToilets();
     }
 
@@ -40,6 +41,7 @@ public class PuzzleTwoController : MonoBehaviour {
 
     void DestroyElements()
     {
+        Destroy(_soundClueEmitter);
         Destroy(GetComponentInChildren<WCWomenWriter>());
         Destroy(GetComponentInChildren<WCMenWriter>());
         Destroy(GetComponent<WCCodeFeature>());

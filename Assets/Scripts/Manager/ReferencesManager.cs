@@ -8,6 +8,9 @@ public class ReferencesManager : MonoBehaviour
 
     public Transform PlayerObjectsContainer;
     public Player Player;
+    public AudioSource SFXSource;
+    public GameObject SoundClueSource;
+    public Canvas MainCanvas;
 
     [Header("First Puzzle References")]
 
@@ -15,6 +18,8 @@ public class ReferencesManager : MonoBehaviour
     public GameObject POneLightSwitch;
     public GameObject POneControllerContainer;
     public GameObject POneGenreCodesPaper;
+    public Transform POneGenreCodesPaperContainer;
+    public GameObject POneGenreCodesUI;
     public Item POneLighterItem;
     [HideInInspector]
     public LightmapSwitch POneLighmapSwitch;
@@ -24,10 +29,7 @@ public class ReferencesManager : MonoBehaviour
     public GameObject PTwoControllerContainer;
     public GameObject PTwoMaleWC;
     public GameObject PTwoFemaleWC;
-
-    //PROVISIONAL
-    public AudioClip WrongSound;
-    public AudioClip CorrectSound;
+    
 
     void Awake()
     {

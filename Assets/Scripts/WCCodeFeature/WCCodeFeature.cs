@@ -18,15 +18,21 @@ public class WCCodeFeature : MonoBehaviour {
     [HideInInspector]
     public List<int> PlayerInput = new List<int>();
 
+    [HideInInspector]
+    public float Counter = 0;
+    [HideInInspector]
+    public float _flushDelay;
+
     private AudioSource _wCSoundManager;
     private AudioClip _wrongSound;
     private AudioClip _correctSound;
 
     private void Awake()
     {
-        _wCSoundManager = GetComponent<AudioSource>();
-        _wrongSound = ReferencesManager.instance.WrongSound;
-        _correctSound = ReferencesManager.instance.CorrectSound;
+        _wCSoundManager = SoundsManager.instance.SFXSource;
+        _flushDelay = SoundsManager.instance.ToiletFlush.length;
+        _wrongSound = SoundsManager.instance.WrongSound;
+        _correctSound = SoundsManager.instance.CorrectSound;
         _codeSet = new int[4][];
         _codeSet[0] = _firstCode;
         _codeSet[1] = _secondCode;
@@ -36,21 +42,30 @@ public class WCCodeFeature : MonoBehaviour {
 
     private void Update()
     {
+        if(Counter <= _flushDelay + 1)
+        {
+            Counter += Time.deltaTime;
+        }
+        
         //TODO change _currentCode < 4
         if (_currentCode < 1)
         {
             if (PlayerInput.Count == 3)
             {
-                if (CheckCorrectCode())
+                if(Counter > _flushDelay)
                 {
-                    _wCSoundManager.clip = _correctSound;
-                    _wCSoundManager.Play();
+                    if (CheckCorrectCode())
+                    {
+                        _wCSoundManager.clip = _correctSound;
+                        _wCSoundManager.Play();
+                    }
+                    else
+                    {
+                        _wCSoundManager.clip = _wrongSound;
+                        _wCSoundManager.Play();
+                    }
                 }
-                else
-                {
-                    _wCSoundManager.clip = _wrongSound;
-                    _wCSoundManager.Play();
-                }
+                
             }
         }
         else

@@ -35,9 +35,11 @@ public class PlayerLook : MonoBehaviour
         if (Physics.Raycast(ray, out hit, 100))
         {
             Interactable interactable = hit.collider.GetComponent<Interactable>();
+            
             if (interactable != null)
             {
-                if (Input.GetKeyDown(KeyCode.R))
+                float distance = Vector3.Distance(transform.position, interactable.transform.position);
+                if (Input.GetKeyDown(KeyCode.R) && distance < 5f)
                 {
                     SetFocus(interactable);
                 }

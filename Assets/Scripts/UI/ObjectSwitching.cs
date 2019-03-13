@@ -47,7 +47,7 @@ public class ObjectSwitching : MonoBehaviour {
 
     }
 
-    void SelectObject()
+    public void SelectObject()
     {
         int i = 0;
         foreach (Transform playerObject in transform)
