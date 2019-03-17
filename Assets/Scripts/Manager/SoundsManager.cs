@@ -7,9 +7,11 @@ public class SoundsManager : MonoBehaviour {
     public static SoundsManager instance = null;
 
     public AudioSource SFXSource;
+    public AudioSource SFXPuzzleTwoSource;
+
+    public AudioClip CorrectPuzzle;
 
     public AudioClip WrongSound;
-    public AudioClip CorrectSound;
     public AudioClip ToiletFlush;
 
     void Awake()
@@ -24,9 +26,10 @@ public class SoundsManager : MonoBehaviour {
         }
     }
 
-    public void PlaySFX(AudioClip clip)
+    public void PlaySFX(AudioSource audioSource, AudioClip clip)
     {
-        SFXSource.clip = clip;
-        SFXSource.Play();
+        audioSource.volume = 0.2f;
+        audioSource.clip = clip;
+        audioSource.Play();
     }
 }

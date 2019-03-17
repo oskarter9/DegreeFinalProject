@@ -6,29 +6,29 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public static class SaveSystem {
 
-    public static void SavePlayer()
+    public static void SavePlayer(Player player)
     {
         BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + "/playerState";
         FileStream stream = new FileStream(path, FileMode.Create);
 
-        int data = 1;
+        PlayerData data = new PlayerData(player);
 
         formatter.Serialize(stream, data);
 
         stream.Close();
     }
 
-    public static int LoadPlayer()
+    public static PlayerData LoadPlayer()
     {
-        string path = Application.persistentDataPath + "/playerState";
+        string path = Application.persistentDataPath + "/playerState.txt";
 
         if (File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();
             FileStream stream = new FileStream(path, FileMode.Open);
 
-            var data = (int) formatter.Deserialize(stream);
+            PlayerData data = formatter.Deserialize(stream) as PlayerData;
             stream.Close();
 
             return data;
@@ -36,7 +36,7 @@ public static class SaveSystem {
         else
         {
             Debug.LogError("Save file not found in" + path);
-            return 0;
+            return null;
         }
     }
 }

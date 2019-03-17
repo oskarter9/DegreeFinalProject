@@ -16,7 +16,7 @@ public class LookGenresCode : MonoBehaviour {
     }
 
     void Update () {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             if (!_lookingPaper)
             {

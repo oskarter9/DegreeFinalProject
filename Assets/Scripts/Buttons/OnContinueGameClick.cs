@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class OnNewGameClick : MonoBehaviour {
-    
-    public void LoadNewGame(int buildIndex)
+public class OnContinueGameClick : MonoBehaviour {
+
+    public void LoadGame(int buildIndex)
     {
-        PlayerPrefs.SetInt("SomethingToLoad", 0);
         StartCoroutine(LoadSceneAsync(buildIndex));
     }
 

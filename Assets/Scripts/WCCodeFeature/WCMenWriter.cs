@@ -6,7 +6,6 @@ public class WCMenWriter : Interactable {
 
     private List<int> _inputList;
     private SoundsManager _toiletSoundsManager;
-    private AudioSource _toiletSource;
     private WCCodeFeature _wCCodeFeature;
 
     public override void Interact()
@@ -27,7 +26,7 @@ public class WCMenWriter : Interactable {
 
     private void AddMaleCode()
     {
-        _toiletSoundsManager.PlaySFX(_toiletSoundsManager.ToiletFlush);
+        _toiletSoundsManager.PlaySFX(_toiletSoundsManager.SFXPuzzleTwoSource, _toiletSoundsManager.ToiletFlush);
         GetComponentInParent<WCCodeFeature>().Counter = 0;
         _inputList.Add(0);
     }

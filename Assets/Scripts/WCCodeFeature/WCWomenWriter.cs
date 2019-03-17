@@ -27,7 +27,7 @@ public class WCWomenWriter : Interactable {
 
     private void AddFemaleCode()
     {
-        _toiletSoundsManager.PlaySFX(_toiletSoundsManager.ToiletFlush);
+        _toiletSoundsManager.PlaySFX(_toiletSoundsManager.SFXPuzzleTwoSource, _toiletSoundsManager.ToiletFlush);
         GetComponentInParent<WCCodeFeature>().Counter = 0;
         _inputList.Add(1);
     }

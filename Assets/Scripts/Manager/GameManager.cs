@@ -26,8 +26,16 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-        _referencesManager = GetComponent<ReferencesManager>();
-        currentPuzzle = 1;
+        _referencesManager = ReferencesManager.instance;
+        if (PlayerPrefs.GetInt("SomethingToLoad") == 1)
+        {
+            _referencesManager.Player.LoadPlayer();
+        }
+        else
+        {
+            currentPuzzle = 1;
+        }
+        SetEnvironmentVestiges(currentPuzzle);
         SetPuzzleEnvironment(currentPuzzle);
     }
 
@@ -43,6 +51,23 @@ public class GameManager : MonoBehaviour
                 break;
             case 3:
                 Debug.Log("Pasamos a puzzle 3");
+                break;
+        }
+    }
+
+    public void SetEnvironmentVestiges(int currentPuzzle)
+    {
+        switch (currentPuzzle)
+        {
+            case 2:
+                var pOne = _referencesManager.POneControllerContainer.AddComponent<PuzzleOneController>();
+                pOne.SetPuzzleOneVestiges();
+                break;
+            case 3:
+                var pTwo = _referencesManager.PTwoControllerContainer.AddComponent<PuzzleTwoController>();
+                pTwo.SetPuzzleTwoVestiges();
+                break;
+            default:
                 break;
         }
     }

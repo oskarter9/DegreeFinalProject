@@ -38,6 +38,8 @@ public class PauseMenu : MonoBehaviour {
         GamePaused = false;
         LockCursorManager(false);
         EnableCamerasFunction();
+        ReferencesManager.instance.Player.SavePlayer();
+        PlayerPrefs.SetInt("SomethingToLoad", 1);
         SceneManager.LoadScene("MainMenu");
     }
 

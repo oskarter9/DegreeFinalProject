@@ -8,9 +8,11 @@ public class PuzzleTwoController : MonoBehaviour {
 
     private ReferencesManager _referencesManager;
     private GameObject _soundClueEmitter;
+    private SoundsManager _soundsManager;
 
     void Awake()
     {
+        _soundsManager = SoundsManager.instance;
         _referencesManager = ReferencesManager.instance;
         ConfigureLevelTwo();
     }
@@ -19,9 +21,15 @@ public class PuzzleTwoController : MonoBehaviour {
     {
         if (puzzleSolved)
         {
+            _soundsManager.PlaySFX(_soundsManager.SFXSource, _soundsManager.CorrectPuzzle);
             GameManager.instance.SetPuzzleEnvironment(++GameManager.instance.currentPuzzle);
             DestroyElements();
         }
+    }
+
+    public void SetPuzzleTwoVestiges()
+    {
+        DestroyElements();
     }
 
     void ConfigureLevelTwo()

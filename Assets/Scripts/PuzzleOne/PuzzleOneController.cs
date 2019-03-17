@@ -12,12 +12,17 @@ public class PuzzleOneController : MonoBehaviour {
     private ReferencesManager _referencesManager;
     private GameObject _soundClueEmitter;
     private GameObject _paperGenresCodes;
+    private SoundsManager _soundsManager;
 
     void Awake()
     {
+        _soundsManager = SoundsManager.instance;
         _referencesManager = ReferencesManager.instance;
         _lights = ReferencesManager.instance.POneLights;
-        ConfigureLevelOne();
+        if(GameManager.instance.currentPuzzle == 1)
+        {
+            ConfigureLevelOne();
+        }
     }
 
 	void Update () {
@@ -32,10 +37,21 @@ public class PuzzleOneController : MonoBehaviour {
         {
             Debug.Log("puzzle 1 solucionado");
             GameManager.instance.SetPuzzleEnvironment(++GameManager.instance.currentPuzzle);
+            _soundsManager.PlaySFX(_soundsManager.SFXSource,_soundsManager.CorrectPuzzle);
             Destroy(_soundClueEmitter);
             Destroy(this);
         }
 	}
+
+    public void SetPuzzleOneVestiges()
+    {
+        TurnOnLights(_lights);
+        LightmapSettings.lightmaps = _referencesManager.POneLighmapSwitch._secondLightMaps;
+        _referencesManager.POneLightSwitch.GetComponent<LightSwitchPOne>().enabled = false;
+        Inventory.instance.Add(_referencesManager.POneGenreCodesPaperItem);
+        Inventory.instance.Add(_referencesManager.POneLighterItem);
+        Destroy(this);
+    }
 
     void ConfigureLevelOne()
     {

@@ -8,7 +8,6 @@ public class ReferencesManager : MonoBehaviour
 
     public Transform PlayerObjectsContainer;
     public Player Player;
-    public AudioSource SFXSource;
     public GameObject SoundClueSource;
     public Canvas MainCanvas;
 
@@ -21,6 +20,7 @@ public class ReferencesManager : MonoBehaviour
     public Transform POneGenreCodesPaperContainer;
     public GameObject POneGenreCodesUI;
     public Item POneLighterItem;
+    public Item POneGenreCodesPaperItem;
     [HideInInspector]
     public LightmapSwitch POneLighmapSwitch;
 

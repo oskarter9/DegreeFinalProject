@@ -23,16 +23,14 @@ public class WCCodeFeature : MonoBehaviour {
     [HideInInspector]
     public float _flushDelay;
 
-    private AudioSource _wCSoundManager;
+    private SoundsManager _wCSoundManager;
     private AudioClip _wrongSound;
     private AudioClip _correctSound;
 
     private void Awake()
     {
-        _wCSoundManager = SoundsManager.instance.SFXSource;
+        _wCSoundManager = SoundsManager.instance;
         _flushDelay = SoundsManager.instance.ToiletFlush.length;
-        _wrongSound = SoundsManager.instance.WrongSound;
-        _correctSound = SoundsManager.instance.CorrectSound;
         _codeSet = new int[4][];
         _codeSet[0] = _firstCode;
         _codeSet[1] = _secondCode;
@@ -54,15 +52,9 @@ public class WCCodeFeature : MonoBehaviour {
             {
                 if(Counter > _flushDelay)
                 {
-                    if (CheckCorrectCode())
+                    if (!CheckCorrectCode())
                     {
-                        _wCSoundManager.clip = _correctSound;
-                        _wCSoundManager.Play();
-                    }
-                    else
-                    {
-                        _wCSoundManager.clip = _wrongSound;
-                        _wCSoundManager.Play();
+                        _wCSoundManager.PlaySFX(_wCSoundManager.SFXPuzzleTwoSource, _wCSoundManager.WrongSound);
                     }
                 }
                 
