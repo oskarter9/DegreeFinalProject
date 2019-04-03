@@ -5,7 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class PuzzleOneController : MonoBehaviour {
 
+    [HideInInspector]
     public bool powerEnabled;
+    [HideInInspector]
+    public bool enablePaper;
+    [HideInInspector]
     public bool puzzleSolved;
 
     private Light[] _lights;
@@ -28,10 +32,10 @@ public class PuzzleOneController : MonoBehaviour {
 	void Update () {
         if (powerEnabled)
         {
-            TurnOnLights(_lights);
             LightmapSettings.lightmaps = _referencesManager.POneLighmapSwitch._secondLightMaps;
+            TurnOnPower();
             powerEnabled = false;
-            
+            enablePaper = true;
         }
         if (puzzleSolved)
         {
@@ -45,7 +49,7 @@ public class PuzzleOneController : MonoBehaviour {
 
     public void SetPuzzleOneVestiges()
     {
-        TurnOnLights(_lights);
+        TurnOnPower();
         LightmapSettings.lightmaps = _referencesManager.POneLighmapSwitch._secondLightMaps;
         _referencesManager.POneLightSwitch.GetComponent<LightSwitchPOne>().enabled = false;
         Inventory.instance.Add(_referencesManager.POneGenreCodesPaperItem);
@@ -61,22 +65,29 @@ public class PuzzleOneController : MonoBehaviour {
         _paperGenresCodes.GetComponent<LookGenresCode>().enabled = false;
         _soundClueEmitter = Instantiate(_referencesManager.SoundClueSource,transform);
         Inventory.instance.Add(_referencesManager.POneLighterItem);
-        TurnOffLights(_lights);
+        TurnOffLights();
     }
-
-    void TurnOnLights(Light[] lights)
-    {
-        foreach (var light in lights)
-        {
-            light.intensity = .5f;
-        }
-    }
-
-    void TurnOffLights(Light[] lights)
+    void TurnOffLights()
     {
         foreach (var light in _lights)
         {
             light.intensity = 0;
         }
+    }
+
+    void TurnOnPower()
+    {
+        foreach (var fan in _referencesManager.POneFans)
+        {
+            fan.GetComponent<FanBehaviour>().EnableFan();
+        }
+
+        foreach (var light in _lights)
+        {
+            light.intensity = .5f;
+        }
+
+        _referencesManager.POneTobaccoMachine.Play();
+        _referencesManager.POneFluorescentsContainer.GetComponent<FluorescentsBehaviour>().EnableFluorescents();
     }
 }

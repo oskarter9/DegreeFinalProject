@@ -46,7 +46,7 @@ public class WCCodeFeature : MonoBehaviour {
         }
         
         //TODO change _currentCode < 4
-        if (_currentCode < 1)
+        if (_currentCode < 4)
         {
             if (PlayerInput.Count == 3)
             {

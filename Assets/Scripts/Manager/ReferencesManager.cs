@@ -14,6 +14,9 @@ public class ReferencesManager : MonoBehaviour
     [Header("First Puzzle References")]
 
     public Light[] POneLights;
+    public AudioSource POneTobaccoMachine;
+    public GameObject[] POneFans;
+    public GameObject POneFluorescentsContainer;
     public GameObject POneLightSwitch;
     public GameObject POneControllerContainer;
     public GameObject POneGenreCodesPaper;

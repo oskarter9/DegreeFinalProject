@@ -13,10 +13,12 @@ public class TwinCameraController : MonoBehaviour
 
     private float _timeToChangeScene;
     private float currentTime = 4f;
+    private Transform _playerTransform;
 
     private void Awake()
     {
-        
+        _playerTransform = GetComponentInParent<Player>().GetComponent<Transform>();
+        _playerTransform.gameObject.layer = LayerMask.NameToLayer("UniverseA");
         _activeCameraMat = _activeCamera.GetComponent<PostProcessDepthGrayscale>().mat;
         _timeToChangeScene = _activeCameraMat.GetFloat("_RingPassTimeLength");
         _hiddenCamera.GetComponent<PostProcessDepthGrayscale>().enabled = false;
@@ -28,7 +30,7 @@ public class TwinCameraController : MonoBehaviour
     {
         if (TimeElapsed())
         {
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKeyDown(KeyCode.P))
             {
                 currentTime = 0f;
                 ChangeSceneMat();
@@ -40,6 +42,7 @@ public class TwinCameraController : MonoBehaviour
 
     public void SwapCameras()
     {
+        ChangePlayerLayer();
         _activeCamera.targetTexture = _hiddenCamera.targetTexture;
         _hiddenCamera.targetTexture = null;
 
@@ -69,5 +72,16 @@ public class TwinCameraController : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    private void ChangePlayerLayer()
+    {
+        if(_playerTransform.gameObject.layer == LayerMask.NameToLayer("UniverseA")){
+            _playerTransform.gameObject.layer = LayerMask.NameToLayer("UniverseB");
+        }
+        else
+        {
+            _playerTransform.gameObject.layer = LayerMask.NameToLayer("UniverseA");
+        }
     }
 }

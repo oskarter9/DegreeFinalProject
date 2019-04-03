@@ -23,19 +23,21 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        Cursor.visible = false;
     }
     void Start()
     {
         _referencesManager = ReferencesManager.instance;
         if (PlayerPrefs.GetInt("SomethingToLoad") == 1)
         {
-            _referencesManager.Player.LoadPlayer();
+            //_referencesManager.Player.LoadPlayer();
+            currentPuzzle = 1;
         }
         else
         {
             currentPuzzle = 1;
         }
-        SetEnvironmentVestiges(currentPuzzle);
+        //SetEnvironmentVestiges(currentPuzzle);
         SetPuzzleEnvironment(currentPuzzle);
     }
 

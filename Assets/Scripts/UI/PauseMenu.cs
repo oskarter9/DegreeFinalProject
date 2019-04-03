@@ -37,6 +37,7 @@ public class PauseMenu : MonoBehaviour {
         Time.timeScale = 1f;
         GamePaused = false;
         LockCursorManager(false);
+        Cursor.visible = true;
         EnableCamerasFunction();
         ReferencesManager.instance.Player.SavePlayer();
         PlayerPrefs.SetInt("SomethingToLoad", 1);
@@ -50,6 +51,7 @@ public class PauseMenu : MonoBehaviour {
         Time.timeScale = 1f;
         GamePaused = false;
         LockCursorManager(true);
+        Cursor.visible = false;
         EnableCamerasFunction();
     }
 
@@ -58,6 +60,7 @@ public class PauseMenu : MonoBehaviour {
         PauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GamePaused = true;
+        Cursor.visible = true;
         LockCursorManager(false);
         DisableCamerasFunction();
     }

@@ -9,8 +9,12 @@ public class GenreCodesPaper : Interactable {
     public override void Interact()
     {
         base.Interact();
-        Inventory.instance.Add(_genreCodesPaperItem);
-        GetComponentInParent<PuzzleOneController>().puzzleSolved = true;
-        Destroy(gameObject);
+        if (ReferencesManager.instance.POneControllerContainer.GetComponent<PuzzleOneController>().enablePaper)
+        {
+            Debug.Log("Papel recogido");
+            Inventory.instance.Add(_genreCodesPaperItem);
+            GetComponentInParent<PuzzleOneController>().puzzleSolved = true;
+            Destroy(gameObject);
+        }
     }
 }
