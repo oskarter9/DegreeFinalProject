@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
+        SetGameVolume();
         _referencesManager = ReferencesManager.instance;
         if (PlayerPrefs.GetInt("SomethingToLoad") == 1)
         {
@@ -72,6 +73,11 @@ public class GameManager : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    private void SetGameVolume()
+    {
+        AudioListener.volume = PlayerPrefs.GetFloat("GeneralVolume");
     }
 }
 
