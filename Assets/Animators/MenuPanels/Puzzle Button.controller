@@ -5,7 +5,7 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: MM Button
+  m_Name: Puzzle Button
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Normal
@@ -160,7 +160,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: c793bd99f8b312449b177b84625550c1, type: 2}
+  m_Motion: {fileID: 7400000, guid: 56d3dc4b35c616443a5c0c55311ef7b9, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -185,7 +185,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 5fcbd2b305c0ba74097124808a12f444, type: 2}
+  m_Motion: {fileID: 7400000, guid: dc529a6d507ba754e9f55b025793107b, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -210,7 +210,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 5a71a79f5e0b10f498459bd45b8b1cd1, type: 2}
+  m_Motion: {fileID: 7400000, guid: ab1be0abaf0ddea429d632be86501b9f, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -235,7 +235,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 0652bd3d4ed4ac24c9edd466f898c49d, type: 2}
+  m_Motion: {fileID: 7400000, guid: 069e1f99c7d364a4a9c5361be8d1fe17, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
