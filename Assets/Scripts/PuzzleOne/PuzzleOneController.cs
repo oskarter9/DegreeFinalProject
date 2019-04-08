@@ -17,14 +17,18 @@ public class PuzzleOneController : MonoBehaviour {
     private GameObject _soundClueEmitter;
     private GameObject _paperGenresCodes;
     private SoundsManager _soundsManager;
+    private DialogueTrigger _currentTrigger;
 
     void Awake()
     {
         _soundsManager = SoundsManager.instance;
         _referencesManager = ReferencesManager.instance;
         _lights = ReferencesManager.instance.POneLights;
+        _currentTrigger = GetComponent<DialogueTrigger>();
+        _referencesManager.CurrentStoryDialogue = _currentTrigger;
         if(GameManager.instance.currentPuzzle == 1)
         {
+            _currentTrigger.TriggerDialogue();
             ConfigureLevelOne();
         }
     }

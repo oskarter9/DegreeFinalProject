@@ -21,18 +21,19 @@ public class OnNewGameClick : MonoBehaviour {
     {
         if (_ableToLoad)
         {
+            Debug.Log("Build index = " + buildIndex);
             AsyncOperation async = SceneManager.LoadSceneAsync(buildIndex, LoadSceneMode.Additive);
 
             while (!async.isDone)
             {
                 yield return null;
             }
-
             AsyncOperation async2 = SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
 
             while (!async2.isDone)
                 yield return null;
 
+            _ableToLoad = false;
             SceneManager.SetActiveScene(SceneManager.GetSceneAt(buildIndex));
         }
     }

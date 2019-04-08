@@ -9,11 +9,15 @@ public class PuzzleTwoController : MonoBehaviour {
     private ReferencesManager _referencesManager;
     private GameObject _soundClueEmitter;
     private SoundsManager _soundsManager;
+    private DialogueTrigger _currentTrigger;
 
     void Awake()
     {
         _soundsManager = SoundsManager.instance;
         _referencesManager = ReferencesManager.instance;
+        _currentTrigger = GetComponent<DialogueTrigger>();
+        _referencesManager.CurrentStoryDialogue = _currentTrigger;
+        _currentTrigger.TriggerDialogue();
         ConfigureLevelTwo();
     }
 

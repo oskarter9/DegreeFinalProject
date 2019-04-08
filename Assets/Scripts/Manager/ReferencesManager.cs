@@ -10,6 +10,7 @@ public class ReferencesManager : MonoBehaviour
     public Player Player;
     public GameObject SoundClueSource;
     public Canvas MainCanvas;
+    public DialogueTrigger CurrentStoryDialogue;
 
     [Header("First Puzzle References")]
 
