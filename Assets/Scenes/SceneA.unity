@@ -459,7 +459,7 @@ Prefab:
     - target: {fileID: 224819715022254672, guid: f80cd1e250fd14b4ebad6157b1955921,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -975
       objectReference: {fileID: 0}
     - target: {fileID: 224819715022254672, guid: f80cd1e250fd14b4ebad6157b1955921,
         type: 2}
@@ -503,7 +503,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1041954492575476, guid: f80cd1e250fd14b4ebad6157b1955921, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224795805711928926, guid: f80cd1e250fd14b4ebad6157b1955921,
         type: 2}
@@ -1634,6 +1634,24 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1041954492575476, guid: f80cd1e250fd14b4ebad6157b1955921,
     type: 2}
   m_PrefabInternal: {fileID: 112555773}
+--- !u!95 &696017055
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696017054}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0f322221064c4f84785f05bf30485626, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!224 &696017057 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224819715022254672, guid: f80cd1e250fd14b4ebad6157b1955921,
@@ -1801,7 +1819,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 751775085}
-  - component: {fileID: 751775084}
   m_Layer: 0
   m_Name: _FungusState
   m_TagString: Untagged
@@ -1809,17 +1826,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &751775084
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 751775083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &751775085
 Transform:
   m_ObjectHideFlags: 1
@@ -2579,6 +2585,7 @@ MonoBehaviour:
   CorrectPuzzle: {fileID: 8300000, guid: 6df70df6d1294bd45be7f7a1e2c16cb9, type: 3}
   WrongSound: {fileID: 8300000, guid: d72e0e0d7ebce9d469f5fa45f49cb89b, type: 3}
   ToiletFlush: {fileID: 8300000, guid: 7e497914eba471444941fef262fb96b6, type: 3}
+  NoInteractable: {fileID: 8300000, guid: 00852efea1951eb49ac38847fe9c2e0a, type: 3}
 --- !u!164 &1037200104
 AudioReverbFilter:
   m_ObjectHideFlags: 0

@@ -21,12 +21,12 @@ public class LookGenresCode : MonoBehaviour {
             if (!_lookingPaper)
             {
                 _lookingPaper = true;
-                _lookGenresCodeUI.SetActive(true);
+                _lookGenresCodeAnimator.Play("OpenPaper");
             }
             else
             {
                 _lookingPaper = false;
-                _lookGenresCodeUI.SetActive(false);
+                _lookGenresCodeAnimator.Play("ClosePaper");
             }
         }
     }

@@ -35,6 +35,8 @@ public class SettingsMenu : MonoBehaviour {
         ResolutionDropdown.AddOptions(options);
         ResolutionDropdown.value = currentResolutionIndex;
         ResolutionDropdown.RefreshShownValue();
+
+        PlayerPrefs.SetFloat("GeneralVolume", 1);
     }
 
 	public void SetVolume(float volume)

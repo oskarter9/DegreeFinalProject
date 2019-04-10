@@ -11,6 +11,7 @@ public class PlayerLook : MonoBehaviour
 
     private float _xAxisClamp;
     private Camera _mainCamera;
+    public SoundsManager _soundsManager;
 
     private void Awake()
     {
@@ -19,6 +20,10 @@ public class PlayerLook : MonoBehaviour
         _xAxisClamp = 0.0f;
     }
 
+    void Start()
+    {
+        _soundsManager = SoundsManager.instance;
+    }
 
     private void LockCursor()
     {
@@ -35,7 +40,7 @@ public class PlayerLook : MonoBehaviour
         if (Physics.Raycast(ray, out hit, 100))
         {
             Interactable interactable = hit.collider.GetComponent<Interactable>();
-            
+
             if (interactable != null)
             {
                 float distance = Vector3.Distance(transform.position, interactable.transform.position);
@@ -43,6 +48,10 @@ public class PlayerLook : MonoBehaviour
                 {
                     SetFocus(interactable);
                 }
+            }
+            else if (interactable == null && Input.GetKeyDown(KeyCode.R))
+            {
+                _soundsManager.PlaySFX(_soundsManager.SFXSource,_soundsManager.NoInteractable);
             }
             else
             {

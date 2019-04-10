@@ -13,6 +13,7 @@ public class SoundsManager : MonoBehaviour {
 
     public AudioClip WrongSound;
     public AudioClip ToiletFlush;
+    public AudioClip NoInteractable;
 
     void Awake()
     {
