@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.PostProcessing;
 using UnityEngine;
 
 
 public class SettingsMenu : MonoBehaviour {
 
     public TMP_Dropdown ResolutionDropdown;
+    public PostProcessingProfile PostProcProf;
 
     private Resolution[] _resolutions;
 
@@ -58,5 +60,20 @@ public class SettingsMenu : MonoBehaviour {
     {
         Resolution res = _resolutions[resolutionIndex];
         Screen.SetResolution(res.width, res.height, Screen.fullScreen);
+    }
+
+    public void SetBloomEffect(bool bloomActive)
+    {
+        PostProcProf.bloom.enabled = bloomActive;
+    }
+
+    public void SetVignetteEffect(bool vignetteActive)
+    {
+        PostProcProf.vignette.enabled = vignetteActive;
+    }
+
+    public void SetMBEffect(bool mbActive)
+    {
+        PostProcProf.motionBlur.enabled = mbActive;
     }
 }
