@@ -15,7 +15,7 @@ public class PlayerLook : MonoBehaviour
 
     private void Awake()
     {
-        _mainCamera = GetComponentInChildren<TwinCameraController>()._activeCamera;
+        _mainCamera = GetComponentInChildren<TwinCameraController>().ActiveCamera;
         LockCursor();
         _xAxisClamp = 0.0f;
     }

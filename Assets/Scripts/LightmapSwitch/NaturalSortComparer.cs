@@ -4,11 +4,11 @@ using System.Text.RegularExpressions;
 
 public class NaturalSortComparer<T> : IComparer<string>, IDisposable
 {
-    private readonly bool isAscending;
+    private readonly bool _isAscending;
 
     public NaturalSortComparer(bool inAscendingOrder = true)
     {
-        this.isAscending = inAscendingOrder;
+        this._isAscending = inAscendingOrder;
     }
 
     #region IComparer<string> Members
@@ -45,7 +45,7 @@ public class NaturalSortComparer<T> : IComparer<string>, IDisposable
             if (x1[i] != y1[i])
             {
                 returnVal = PartCompare(x1[i], y1[i]);
-                return isAscending ? returnVal : -returnVal;
+                return _isAscending ? returnVal : -returnVal;
             }
         }
 
@@ -62,7 +62,7 @@ public class NaturalSortComparer<T> : IComparer<string>, IDisposable
             returnVal = 0;
         }
 
-        return isAscending ? returnVal : -returnVal;
+        return _isAscending ? returnVal : -returnVal;
     }
 
     private static int PartCompare(string left, string right)

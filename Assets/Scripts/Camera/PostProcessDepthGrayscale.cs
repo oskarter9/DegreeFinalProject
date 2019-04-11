@@ -1,18 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [ExecuteInEditMode]
 public class PostProcessDepthGrayscale : MonoBehaviour {
 
-    public Material mat;
+    public Material Mat;
 
-	// Use this for initialization
-	void Start () {
-       this.GetComponent<Camera>().depthTextureMode = DepthTextureMode.Depth;
+	void Start ()
+    {
+       GetComponent<Camera>().depthTextureMode = DepthTextureMode.Depth;
     }
+
     void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
-        Graphics.Blit(source, destination, mat);
+        Graphics.Blit(source, destination, Mat);
     }
 }

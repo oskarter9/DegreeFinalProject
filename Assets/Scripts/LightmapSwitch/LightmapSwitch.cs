@@ -18,18 +18,20 @@ public class LightmapSwitch : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        if ((FirstLightMapDir.Length != FirstLightMapLight.Length || FirstLightMapDir.Length != FirstLightMapSM.Length) || (SecondLightMapDir.Length != SecondLightMapLight.Length || SecondLightMapDir.Length != SecondLightMapSM.Length))
+        if (FirstLightMapDir.Length != FirstLightMapLight.Length || FirstLightMapDir.Length != FirstLightMapSM.Length || SecondLightMapDir.Length != SecondLightMapLight.Length || SecondLightMapDir.Length != SecondLightMapSM.Length)
         {
             Debug.Log("In order for LightMapSwitcher to work, the Near and Far LightMap lists must be of equal length");
             return;
         }
+        _firstLightMaps = ConfigureFirstLightmap();
+        _secondLightMaps = ConfigureSecondLightmap();
+    }
 
+    LightmapData[] ConfigureFirstLightmap()
+    {
         FirstLightMapDir = FirstLightMapDir.OrderBy(t2d => t2d.name, new NaturalSortComparer<string>()).ToArray();
         FirstLightMapLight = FirstLightMapLight.OrderBy(t2d => t2d.name, new NaturalSortComparer<string>()).ToArray();
         FirstLightMapSM = FirstLightMapSM.OrderBy(t2d => t2d.name, new NaturalSortComparer<string>()).ToArray();
-        SecondLightMapDir = SecondLightMapDir.OrderBy(t2d => t2d.name, new NaturalSortComparer<string>()).ToArray();
-        SecondLightMapLight = SecondLightMapLight.OrderBy(t2d => t2d.name, new NaturalSortComparer<string>()).ToArray();
-        SecondLightMapSM = SecondLightMapSM.OrderBy(t2d => t2d.name, new NaturalSortComparer<string>()).ToArray();
 
         _firstLightMaps = new LightmapData[FirstLightMapDir.Length];
         for (int i = 0; i < FirstLightMapDir.Length; i++)
@@ -39,6 +41,14 @@ public class LightmapSwitch : MonoBehaviour {
             _firstLightMaps[i].lightmapColor = FirstLightMapLight[i];
             _firstLightMaps[i].shadowMask = FirstLightMapSM[i];
         }
+        return _firstLightMaps;
+    }
+
+    LightmapData[] ConfigureSecondLightmap()
+    {
+        SecondLightMapDir = SecondLightMapDir.OrderBy(t2d => t2d.name, new NaturalSortComparer<string>()).ToArray();
+        SecondLightMapLight = SecondLightMapLight.OrderBy(t2d => t2d.name, new NaturalSortComparer<string>()).ToArray();
+        SecondLightMapSM = SecondLightMapSM.OrderBy(t2d => t2d.name, new NaturalSortComparer<string>()).ToArray();
 
         _secondLightMaps = new LightmapData[SecondLightMapDir.Length];
         for (int i = 0; i < SecondLightMapDir.Length; i++)
@@ -48,5 +58,6 @@ public class LightmapSwitch : MonoBehaviour {
             _secondLightMaps[i].lightmapColor = SecondLightMapLight[i];
             _secondLightMaps[i].shadowMask = SecondLightMapSM[i];
         }
+        return _secondLightMaps;
     }
 }

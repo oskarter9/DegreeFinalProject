@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour {
 
-    private float radius = 2f;
     private bool _isFocused = false;
     private Transform _player;
     private bool _hasInteracted = false;
@@ -34,11 +33,6 @@ public class Interactable : MonoBehaviour {
         {
             Interact();
             _hasInteracted = true;
-            /*(distance <= radius)
-            {
-                Interact();
-                _hasInteracted = true;
-            }*/
         }
     }
 }
