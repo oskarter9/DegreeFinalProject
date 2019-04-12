@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-        SetGameVolume();
+        //SetGameVolume();
         _referencesManager = ReferencesManager.instance;
         if (PlayerPrefs.GetInt("SomethingToLoad") == 1)
         {
