@@ -25,8 +25,7 @@ public class SettingsMenu : MonoBehaviour {
 
     void Start()
     {
-        SetInitialSettings();
-        GetInitialSettings();
+        
         _resolutions = Screen.resolutions;
 
         ResolutionDropdown.ClearOptions();
@@ -49,6 +48,8 @@ public class SettingsMenu : MonoBehaviour {
         ResolutionDropdown.value = currentResolutionIndex;
         ResolutionDropdown.RefreshShownValue();
 
+        SetInitialSettings();
+        GetInitialSettings();
         changesNotApplied = false;
         ApplyChangesButton.interactable = false;
 
@@ -114,19 +115,27 @@ public class SettingsMenu : MonoBehaviour {
     public void RevertChanges()
     {
         AudioListener.volume = PlayerPrefs.GetFloat("PrevGeneralVolume");
+        VolumeSlider.value = PlayerPrefs.GetFloat("PrevGeneralVolume");
         QualitySettings.SetQualityLevel(PlayerPrefs.GetInt("PrevQualityIndex"));
+        QualityDropdown.value = PlayerPrefs.GetInt("PrevQualityIndex");
         Screen.fullScreen = IntToBool(PlayerPrefs.GetInt("PrevFullScreen"));
+        FullScreenToggle.isOn = IntToBool(PlayerPrefs.GetInt("PrevFullScreen"));
         Resolution res = _resolutions[PlayerPrefs.GetInt("PrevResolutionIndex")];
+        ResolutionDropdown.value = PlayerPrefs.GetInt("PrevResolutionIndex");
         Screen.SetResolution(res.width, res.height, Screen.fullScreen);
         PostProcProf.bloom.enabled = IntToBool(PlayerPrefs.GetInt("PrevBloomEffect"));
+        BloomEffectToggle.isOn = IntToBool(PlayerPrefs.GetInt("PrevBloomEffect"));
         PostProcProf.vignette.enabled = IntToBool(PlayerPrefs.GetInt("PrevVignetteEffect"));
+        VignetteEffectToggle.isOn = IntToBool(PlayerPrefs.GetInt("PrevVignetteEffect"));
         PostProcProf.motionBlur.enabled = IntToBool(PlayerPrefs.GetInt("PrevMBEffect"));
+        MBEffectToggle.isOn = IntToBool(PlayerPrefs.GetInt("PrevMBEffect"));
         changesNotApplied = false;
         ApplyChangesButton.interactable = false;
     }
 
     public void ApplyChanges()
     {
+        GetInitialSettings();
         AudioListener.volume = PlayerPrefs.GetFloat("GeneralVolume");
         QualitySettings.SetQualityLevel(PlayerPrefs.GetInt("QualityIndex"));
         Screen.fullScreen = IntToBool(PlayerPrefs.GetInt("FullScreen"));
