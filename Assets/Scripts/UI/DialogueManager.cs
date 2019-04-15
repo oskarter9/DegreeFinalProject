@@ -29,7 +29,6 @@ public class DialogueManager : MonoBehaviour {
 
     void Start () {
         _sentences = new Queue<string>();
-        _cameraRotation = ReferencesManager.instance.Player.GetComponentInChildren<PlayerLook>();
         _swapCamera = ReferencesManager.instance.Player.GetComponentInChildren<TwinCameraController>();
     }
 
@@ -83,14 +82,11 @@ public class DialogueManager : MonoBehaviour {
         if (locked)
         {
             Cursor.lockState = CursorLockMode.None;
-            //_cameraRotation.enabled = false;
             _swapCamera.enabled = false;
         }
         else
         {
             Cursor.lockState = CursorLockMode.Locked;
-            //Cursor.visible = false;
-            //_cameraRotation.enabled = true;
             _swapCamera.enabled = true;
         }
     }

@@ -18,7 +18,6 @@ public class SettingsMenu : MonoBehaviour {
     public PostProcessingProfile PostProcProf;
 
     public Button ApplyChangesButton;
-    public Button ResetDefaultChanges;
 
     public bool changesNotApplied;
 
@@ -26,7 +25,6 @@ public class SettingsMenu : MonoBehaviour {
 
     void Start()
     {
-        ApplyChangesButton.GetComponent<Button>().enabled = false;
         SetInitialSettings();
         GetInitialSettings();
         _resolutions = Screen.resolutions;
@@ -52,6 +50,7 @@ public class SettingsMenu : MonoBehaviour {
         ResolutionDropdown.RefreshShownValue();
 
         changesNotApplied = false;
+        ApplyChangesButton.interactable = false;
 
     }
 
@@ -109,6 +108,7 @@ public class SettingsMenu : MonoBehaviour {
         ApplyChanges();
         SetInitialSettings();
         changesNotApplied = false;
+        ApplyChangesButton.interactable = false;
     }
 
     public void RevertChanges()
@@ -122,6 +122,7 @@ public class SettingsMenu : MonoBehaviour {
         PostProcProf.vignette.enabled = IntToBool(PlayerPrefs.GetInt("PrevVignetteEffect"));
         PostProcProf.motionBlur.enabled = IntToBool(PlayerPrefs.GetInt("PrevMBEffect"));
         changesNotApplied = false;
+        ApplyChangesButton.interactable = false;
     }
 
     public void ApplyChanges()
@@ -135,6 +136,7 @@ public class SettingsMenu : MonoBehaviour {
         PostProcProf.vignette.enabled = IntToBool(PlayerPrefs.GetInt("VignetteEffect"));
         PostProcProf.motionBlur.enabled = IntToBool(PlayerPrefs.GetInt("MBEffect"));
         changesNotApplied = false;
+        ApplyChangesButton.interactable = false;
     }
 
     void SetInitialSettings()
@@ -162,9 +164,9 @@ public class SettingsMenu : MonoBehaviour {
     void EnableButton(Button btn)
     {
         changesNotApplied = true;
-        if (!btn.GetComponent<Button>().isActiveAndEnabled)
+        if (!btn.GetComponent<Button>().interactable)
         {
-            btn.enabled = true;
+            btn.interactable = true;
         }
     }
 

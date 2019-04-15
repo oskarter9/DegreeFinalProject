@@ -88,10 +88,11 @@ public class PuzzleOneController : MonoBehaviour {
 
         foreach (var light in _lights)
         {
-            light.intensity = .5f;
+            light.intensity = .8f;
         }
 
         _referencesManager.POneTobaccoMachine.Play();
         _referencesManager.POneFluorescentsContainer.GetComponent<FluorescentsBehaviour>().EnableFluorescents();
+        _referencesManager.POneMainRoomLightsContainer.GetComponent<Animator>().Play("TurnOn");
     }
 }

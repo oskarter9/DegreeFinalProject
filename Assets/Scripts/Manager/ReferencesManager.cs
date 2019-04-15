@@ -18,6 +18,7 @@ public class ReferencesManager : MonoBehaviour
     public AudioSource POneTobaccoMachine;
     public GameObject[] POneFans;
     public GameObject POneFluorescentsContainer;
+    public GameObject POneMainRoomLightsContainer;
     public GameObject POneLightSwitch;
     public GameObject POneControllerContainer;
     public GameObject POneGenreCodesPaper;

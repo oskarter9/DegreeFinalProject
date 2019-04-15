@@ -102,7 +102,7 @@ public class PlayerLook : MonoBehaviour
             }
             focus = newFocus;
         }
-        newFocus.OnFocused(transform);
+        newFocus.OnFocused();
     }
 
     private void RemoveFocus()
