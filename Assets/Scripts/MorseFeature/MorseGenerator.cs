@@ -12,15 +12,13 @@ public class MorseGenerator : MonoBehaviour {
         {'b',"-..." },
         {'c',"-.-." },
         {'d',"-.." },
-        {'e',"." },
         {'1',".----" },
         {'2',"..---" },
         {'3',"...--" },
         {'4',"....-" },
-        {'5',"....." }
     };
 
-    private readonly char[] _possibleDigits = { 'a', 'b', 'c', 'd', 'e', '1', '2', '3', '4', '5' };
+    private readonly char[] _possibleDigits = { 'a', 'b', 'c', 'd', '1', '2', '3', '4'};
 
     private Light _morseLight;
 

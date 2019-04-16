@@ -24,12 +24,16 @@ public class WCCodeFeature : MonoBehaviour {
     public float _flushDelay;
 
     private SoundsManager _wCSoundManager;
+    private ReferencesManager _referencesManager;
+    private GameObject _tvScreen;
     private AudioClip _wrongSound;
     private AudioClip _correctSound;
 
     private void Awake()
     {
         _wCSoundManager = SoundsManager.instance;
+        _referencesManager = ReferencesManager.instance;
+        _tvScreen = _referencesManager.PTwoTV;
         _flushDelay = SoundsManager.instance.ToiletFlush.length;
         _codeSet = new int[4][];
         _codeSet[0] = _firstCode;
@@ -45,7 +49,6 @@ public class WCCodeFeature : MonoBehaviour {
             Counter += Time.deltaTime;
         }
         
-        //TODO change _currentCode < 4
         if (_currentCode < 4)
         {
             if (PlayerInput.Count == 3)
@@ -76,6 +79,17 @@ public class WCCodeFeature : MonoBehaviour {
                 return false;
             }
         }
+
+        if (_currentCode == 0)
+        {
+            _tvScreen.GetComponent<TVScreenManager>().AvailableTextures.Add(_tvScreen.GetComponent<TVScreenManager>().MorseTranslationTextures[_currentCode]);
+            StartCoroutine(_tvScreen.GetComponent<TVScreenManager>().IterateTextures());
+        }
+        else
+        {
+            _tvScreen.GetComponent<TVScreenManager>().AvailableTexturesToAdd.Add(_tvScreen.GetComponent<TVScreenManager>().MorseTranslationTextures[_currentCode]);
+        }
+
         PlayerInput.Clear();
         _currentCode += 1;
         return true;

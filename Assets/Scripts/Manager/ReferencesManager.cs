@@ -34,6 +34,7 @@ public class ReferencesManager : MonoBehaviour
     public GameObject PTwoControllerContainer;
     public GameObject PTwoMaleWC;
     public GameObject PTwoFemaleWC;
+    public GameObject PTwoTV;
     
 
     void Awake()

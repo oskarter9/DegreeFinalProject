@@ -10,6 +10,7 @@ public class PuzzleTwoController : MonoBehaviour {
     private GameObject _soundClueEmitter;
     private SoundsManager _soundsManager;
     private DialogueTrigger _currentTrigger;
+    private Material _tvScreenMaterial;
 
     void Awake()
     {
@@ -18,6 +19,7 @@ public class PuzzleTwoController : MonoBehaviour {
         _currentTrigger = GetComponent<DialogueTrigger>();
         _referencesManager.CurrentStoryDialogue = _currentTrigger;
         _currentTrigger.TriggerDialogue();
+        _tvScreenMaterial = _referencesManager.PTwoTV.GetComponent<MeshRenderer>().material;
         ConfigureLevelTwo();
     }
 
@@ -39,6 +41,7 @@ public class PuzzleTwoController : MonoBehaviour {
     void ConfigureLevelTwo()
     {
         _referencesManager.PTwoControllerContainer.AddComponent<WCCodeFeature>();
+        _tvScreenMaterial.EnableKeyword("_EMISSION");
         _soundClueEmitter = Instantiate(_referencesManager.SoundClueSource, transform);
         SetToilets();
     }

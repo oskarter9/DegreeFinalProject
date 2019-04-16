@@ -1641,6 +1641,27 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224819715022254672, guid: f80cd1e250fd14b4ebad6157b1955921,
     type: 2}
   m_PrefabInternal: {fileID: 112555773}
+--- !u!1 &728257337 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1833956606535926, guid: ed3418477bbca8c48a6b0befe3e2884d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1560553004}
+--- !u!114 &728257338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 728257337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9514081d4bde28644bee4b0b15c92f1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MorseTranslationTextures:
+  - {fileID: 2800000, guid: ced1b6a23cb43614f9967b7cac5665ba, type: 3}
+  - {fileID: 2800000, guid: 68a8cd2d62667504c974a6238597ff3a, type: 3}
+  - {fileID: 2800000, guid: 3f93687cf9c3e604cbbec7be5fe79cde, type: 3}
+  - {fileID: 2800000, guid: 7464d6e88cd5abf4cb6b7a73eb997954, type: 3}
 --- !u!1 &750211820
 GameObject:
   m_ObjectHideFlags: 0
@@ -2450,6 +2471,7 @@ MonoBehaviour:
   PTwoControllerContainer: {fileID: 218315005}
   PTwoMaleWC: {fileID: 945819909}
   PTwoFemaleWC: {fileID: 945819908}
+  PTwoTV: {fileID: 728257337}
 --- !u!114 &1037200101
 MonoBehaviour:
   m_ObjectHideFlags: 0
