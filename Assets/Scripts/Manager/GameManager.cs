@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
                 _referencesManager.PTwoControllerContainer.AddComponent<PuzzleTwoController>();
                 break;
             case 3:
-                Debug.Log("Pasamos a puzzle 3");
+                _referencesManager.PTwoControllerContainer.AddComponent<PuzzleThreeController>();
                 break;
         }
     }

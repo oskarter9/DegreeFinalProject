@@ -21,6 +21,7 @@ public class MorseGenerator : MonoBehaviour {
     private readonly char[] _possibleDigits = { 'a', 'b', 'c', 'd', '1', '2', '3', '4'};
 
     private Light _morseLight;
+    private Material _objectEmissiveMaterial;
 
     private string _codeToShow;
 
@@ -34,8 +35,12 @@ public class MorseGenerator : MonoBehaviour {
 
     // Use this for initialization
     private void Awake() {
+        if (GetComponent<MeshRenderer>())
+        {
+            _objectEmissiveMaterial = GetComponent<MeshRenderer>().material;
+        }
         InitializeWaitForSeconds();
-        _morseLight = GetComponent<Light>();
+        _morseLight = GetComponentInChildren<Light>();
         _morseLight.intensity = 0f;
         _codeToShow = FiveDigitsGenerator();
         Debug.Log(_codeToShow);
@@ -69,7 +74,7 @@ public class MorseGenerator : MonoBehaviour {
 
     private IEnumerator FlashMorseCode(string codeToShow)
     {
-        _morseLight.intensity = 0f;
+        TurnOffLight();
         Debug.Log("INICIO DE CÓDIGO MORSE");
         yield return _delayCodeStart;
 
@@ -81,21 +86,39 @@ public class MorseGenerator : MonoBehaviour {
             {
                 if (morseDigit == '.')
                 {
-                    _morseLight.intensity = 0.5f;
+                    TurnOnLight();
                     yield return _delayMorseFlashDot;
-                    _morseLight.intensity = 0f;
+                    TurnOffLight();
                     yield return _delayBetweenFlashes;
                 }
                 else
                 {
-                    _morseLight.intensity = 0.5f;
+                    TurnOnLight();
                     yield return _delayMorseFlashDash;
-                    _morseLight.intensity = 0f;
+                    TurnOffLight();
                     yield return _delayBetweenFlashes;
                 }
             }
             yield return _delayBetweenCodeLetters;
         }
         StartCoroutine(FlashMorseCode(codeToShow));
+    }
+
+    private void TurnOnLight()
+    {
+        _morseLight.intensity = 1f;
+        if (_objectEmissiveMaterial != null)
+        {
+            _objectEmissiveMaterial.EnableKeyword("_EMISSION");
+        }
+    }
+
+    private void TurnOffLight()
+    {
+        _morseLight.intensity = 0f;
+        if (_objectEmissiveMaterial != null)
+        {
+            _objectEmissiveMaterial.DisableKeyword("_EMISSION");
+        }
     }
 }

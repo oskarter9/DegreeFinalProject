@@ -15,6 +15,8 @@ public class SoundsManager : MonoBehaviour {
     public AudioClip ToiletFlush;
     public AudioClip NoInteractable;
 
+    public AudioClip TVSynthLoop;
+
     void Awake()
     {
         if (instance == null)

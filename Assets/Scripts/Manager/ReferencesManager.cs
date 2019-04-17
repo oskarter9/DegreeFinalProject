@@ -18,7 +18,7 @@ public class ReferencesManager : MonoBehaviour
     public AudioSource POneTobaccoMachine;
     public GameObject[] POneFans;
     public GameObject POneFluorescentsContainer;
-    public GameObject POneMainRoomLightsContainer;
+    public GameObject[] POneMainRoomLightsContainer;
     public GameObject POneLightSwitch;
     public GameObject POneControllerContainer;
     public GameObject POneGenreCodesPaper;
@@ -35,7 +35,11 @@ public class ReferencesManager : MonoBehaviour
     public GameObject PTwoMaleWC;
     public GameObject PTwoFemaleWC;
     public GameObject PTwoTV;
-    
+
+    [Header("Third Puzzle References")]
+
+    public GameObject PThreeControllerContainer;
+    public GameObject PThreeMorseLight;
 
     void Awake()
     {

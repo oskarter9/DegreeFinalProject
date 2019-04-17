@@ -3,13 +3,18 @@ guid: 089b9b3fb2277aa4d965f5585af942c8
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
+    100000: Cylinder.018
+    100002: //RootNode
+    400000: Cylinder.018
+    400002: //RootNode
     2100000: CarcasaLuzBarra
     2100002: EmisivoLuzBarra
-    2300000: //RootNode
-    3300000: //RootNode
+    2300000: Cylinder.018
+    2300002: //RootNode
+    3300000: Cylinder.018
+    3300002: //RootNode
     4300000: Cylinder.017
+    4300002: Cylinder.018
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -20,7 +25,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: EmisivoLuzBarra
-    second: {fileID: 2100000, guid: f3ea2ed5fb0348b4bb08f595438ea8c5, type: 2}
+    second: {fileID: 2100000, guid: 8960f8bc4901e684da38d7e4dc8617e5, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -59,7 +64,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
@@ -75,7 +80,7 @@ ModelImporter:
     hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 1
+    normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
   importAnimation: 1

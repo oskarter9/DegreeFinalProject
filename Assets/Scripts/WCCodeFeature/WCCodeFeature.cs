@@ -23,7 +23,7 @@ public class WCCodeFeature : MonoBehaviour {
     [HideInInspector]
     public float _flushDelay;
 
-    private SoundsManager _wCSoundManager;
+    private SoundsManager _soundsManager;
     private ReferencesManager _referencesManager;
     private GameObject _tvScreen;
     private AudioClip _wrongSound;
@@ -31,7 +31,7 @@ public class WCCodeFeature : MonoBehaviour {
 
     private void Awake()
     {
-        _wCSoundManager = SoundsManager.instance;
+        _soundsManager = SoundsManager.instance;
         _referencesManager = ReferencesManager.instance;
         _tvScreen = _referencesManager.PTwoTV;
         _flushDelay = SoundsManager.instance.ToiletFlush.length;
@@ -49,7 +49,7 @@ public class WCCodeFeature : MonoBehaviour {
             Counter += Time.deltaTime;
         }
         
-        if (_currentCode < 4)
+        if (_currentCode < 1)
         {
             if (PlayerInput.Count == 3)
             {
@@ -57,7 +57,7 @@ public class WCCodeFeature : MonoBehaviour {
                 {
                     if (!CheckCorrectCode())
                     {
-                        _wCSoundManager.PlaySFX(_wCSoundManager.SFXPuzzleTwoSource, _wCSoundManager.WrongSound);
+                        _soundsManager.PlaySFX(_soundsManager.SFXPuzzleTwoSource, _soundsManager.WrongSound);
                     }
                 }
                 
@@ -80,19 +80,24 @@ public class WCCodeFeature : MonoBehaviour {
             }
         }
 
+        ShowCodeInTv();
+        PlayerInput.Clear();
+        _currentCode += 1;
+        return true;
+    }
+
+    private void ShowCodeInTv()
+    {
         if (_currentCode == 0)
         {
             _tvScreen.GetComponent<TVScreenManager>().AvailableTextures.Add(_tvScreen.GetComponent<TVScreenManager>().MorseTranslationTextures[_currentCode]);
+            _tvScreen.GetComponent<AudioSource>().clip = _soundsManager.TVSynthLoop;
+            _tvScreen.GetComponent<AudioSource>().Play();
             StartCoroutine(_tvScreen.GetComponent<TVScreenManager>().IterateTextures());
         }
         else
         {
             _tvScreen.GetComponent<TVScreenManager>().AvailableTexturesToAdd.Add(_tvScreen.GetComponent<TVScreenManager>().MorseTranslationTextures[_currentCode]);
         }
-
-        PlayerInput.Clear();
-        _currentCode += 1;
-        return true;
     }
-
 }

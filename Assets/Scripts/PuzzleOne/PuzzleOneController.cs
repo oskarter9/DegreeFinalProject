@@ -13,6 +13,7 @@ public class PuzzleOneController : MonoBehaviour {
     public bool puzzleSolved;
 
     private Light[] _lights;
+    private GameObject[] _barLights;
     private ReferencesManager _referencesManager;
     private GameObject _soundClueEmitter;
     private GameObject _paperGenresCodes;
@@ -23,7 +24,8 @@ public class PuzzleOneController : MonoBehaviour {
     {
         _soundsManager = SoundsManager.instance;
         _referencesManager = ReferencesManager.instance;
-        _lights = ReferencesManager.instance.POneLights;
+        _lights = _referencesManager.POneLights;
+        _barLights = _referencesManager.POneMainRoomLightsContainer;
         _currentTrigger = GetComponent<DialogueTrigger>();
         _referencesManager.CurrentStoryDialogue = _currentTrigger;
         if(GameManager.instance.currentPuzzle == 1)
@@ -91,8 +93,13 @@ public class PuzzleOneController : MonoBehaviour {
             light.intensity = .8f;
         }
 
+        foreach (var emissiveLight in _barLights)
+        {
+            emissiveLight.GetComponent<MeshRenderer>().material.EnableKeyword("_EMISSION");
+        }
+
         _referencesManager.POneTobaccoMachine.Play();
+        _referencesManager.PTwoTV.GetComponent<AudioSource>().Play();
         _referencesManager.POneFluorescentsContainer.GetComponent<FluorescentsBehaviour>().EnableFluorescents();
-        _referencesManager.POneMainRoomLightsContainer.GetComponent<Animator>().Play("TurnOn");
     }
 }
