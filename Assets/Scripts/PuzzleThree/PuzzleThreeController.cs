@@ -39,12 +39,17 @@ public class PuzzleThreeController : MonoBehaviour {
     void ConfigureLevelThree()
     {
         _referencesManager.PThreeMorseLight.AddComponent<MorseGenerator>();
+        _referencesManager.PThreeMorseInputDevice.AddComponent<MorseMachine>();
+        _referencesManager.PThreeMorseInputDevice.AddComponent<MorseInputManager>();
         _soundClueEmitter = Instantiate(_referencesManager.SoundClueSource, transform);
     }
 
     void DestroyElements()
     {
         Destroy(_soundClueEmitter);
+        Destroy(_referencesManager.PThreeMorseLight.GetComponent<MorseGenerator>());
+        Destroy(_referencesManager.PThreeMorseInputDevice.GetComponent<MorseMachine>());
+        Destroy(_referencesManager.PThreeMorseInputDevice.GetComponent<MorseInputManager>());
         Destroy(this);
     }
 }

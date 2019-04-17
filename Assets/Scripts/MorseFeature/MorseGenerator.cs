@@ -6,6 +6,7 @@ using UnityEngine;
 public class MorseGenerator : MonoBehaviour {
 
     public int CodeLength = 4;
+    public string CodeToShow;
 
     private readonly Dictionary<char, string> _morseCodes = new Dictionary<char, string>{
         {'a',".-" },
@@ -22,8 +23,6 @@ public class MorseGenerator : MonoBehaviour {
 
     private Light _morseLight;
     private Material _objectEmissiveMaterial;
-
-    private string _codeToShow;
 
     private WaitForSeconds _delayMorseFlashDot, _delayMorseFlashDash, _delayBetweenFlashes, _delayBetweenCodeLetters, _delayCodeStart;
 
@@ -42,13 +41,13 @@ public class MorseGenerator : MonoBehaviour {
         InitializeWaitForSeconds();
         _morseLight = GetComponentInChildren<Light>();
         _morseLight.intensity = 0f;
-        _codeToShow = FiveDigitsGenerator();
-        Debug.Log(_codeToShow);
+        CodeToShow = FiveDigitsGenerator();
+        Debug.Log(CodeToShow);
 	}
 
     private void Start()
     {
-        StartCoroutine(FlashMorseCode(_codeToShow));
+        StartCoroutine(FlashMorseCode(CodeToShow));
     }
 
     private string FiveDigitsGenerator()

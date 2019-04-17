@@ -40,6 +40,8 @@ public class ReferencesManager : MonoBehaviour
 
     public GameObject PThreeControllerContainer;
     public GameObject PThreeMorseLight;
+    public GameObject PThreeMorseInputDevice;
+    public GameObject PThreeMorseInputUI;
 
     void Awake()
     {

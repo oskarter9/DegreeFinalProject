@@ -17,6 +17,9 @@ public class SoundsManager : MonoBehaviour {
 
     public AudioClip TVSynthLoop;
 
+    public AudioClip MorseCodeInput;
+    public AudioClip BadCodeInput;
+
     void Awake()
     {
         if (instance == null)
