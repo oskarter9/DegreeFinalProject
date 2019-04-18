@@ -4,6 +4,21 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            if (DialogueManager.instance.dialogueOpened)
+            {
+                DialogueManager.instance.DisplayNextSentence();
+            }
+            else
+            {
+                ReferencesManager.instance.CurrentStoryDialogue.TriggerDialogue();
+            }
+        }
+    }
+
     public void SavePlayer()
     {
         PlayerPrefs.SetFloat("PlayerX", transform.position.x);
@@ -11,8 +26,6 @@ public class Player : MonoBehaviour {
         PlayerPrefs.SetFloat("PlayerZ", transform.position.z);
 
         PlayerPrefs.SetInt("CurrentPuzzle", GameManager.instance.currentPuzzle);
-
-
     }
 
     public void LoadPlayer()

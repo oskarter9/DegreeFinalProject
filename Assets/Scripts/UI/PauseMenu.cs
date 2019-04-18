@@ -8,13 +8,13 @@ public class PauseMenu : MonoBehaviour {
     public static bool GamePaused = false;
     public GameObject PauseMenuUI;
 
-    private PlayerLook _cameraRotation;
-    private TwinCameraController _swapCamera;
+    private ReferencesManager _referencesManager;
+    private Animator _pauseMenuAC;
 
     private void Start()
     {
-        _cameraRotation = ReferencesManager.instance.Player.GetComponentInChildren<PlayerLook>();
-        _swapCamera = ReferencesManager.instance.Player.GetComponentInChildren<TwinCameraController>();
+        _referencesManager = ReferencesManager.instance;
+        _pauseMenuAC = PauseMenuUI.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -34,11 +34,10 @@ public class PauseMenu : MonoBehaviour {
 
     public void LoadMenu()
     {
-        Time.timeScale = 1f;
         GamePaused = false;
-        LockCursorManager(false);
+        _referencesManager.LockCursorManager(false);
         Cursor.visible = true;
-        EnableCamerasFunction();
+        _referencesManager.EnablePlayer();
         ReferencesManager.instance.Player.SavePlayer();
         PlayerPrefs.SetInt("SomethingToLoad", 1);
         SceneManager.LoadScene("MainMenu");
@@ -47,45 +46,19 @@ public class PauseMenu : MonoBehaviour {
 
     public void Resume()
     {
-        PauseMenuUI.SetActive(false);
-        Time.timeScale = 1f;
+        _pauseMenuAC.Play("PausePanelOut");
         GamePaused = false;
-        LockCursorManager(true);
+        _referencesManager.LockCursorManager(true);
         Cursor.visible = false;
-        EnableCamerasFunction();
+        _referencesManager.EnablePlayer();
     }
 
     void Pause()
     {
-        PauseMenuUI.SetActive(true);
-        Time.timeScale = 0f;
+        _pauseMenuAC.Play("PausePanelIn");
         GamePaused = true;
         Cursor.visible = true;
-        LockCursorManager(false);
-        DisableCamerasFunction();
-    }
-
-    void LockCursorManager(bool locked)
-    {
-        if (locked)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.None;
-        }
-    }
-
-    void DisableCamerasFunction()
-    {
-        _cameraRotation.enabled = false;
-        _swapCamera.enabled = false;
-    }
-
-    void EnableCamerasFunction()
-    {
-        _cameraRotation.enabled = true;
-        _swapCamera.enabled = true;
+        _referencesManager.LockCursorManager(false);
+        _referencesManager.DisablePlayer();
     }
 }

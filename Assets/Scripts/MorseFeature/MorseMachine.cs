@@ -7,8 +7,7 @@ public class MorseMachine : Interactable {
     private GameObject _morseInputUI;
     private Animator _morseInputAC;
 
-    private PlayerLook _cameraRotation;
-    private TwinCameraController _swapCamera;
+    private ReferencesManager _referencesManager;
 
     public override void Interact()
     {
@@ -18,36 +17,17 @@ public class MorseMachine : Interactable {
 
     void Start()
     {
-        _morseInputUI = ReferencesManager.instance.PThreeMorseInputUI;
+        _referencesManager = ReferencesManager.instance;
+        _morseInputUI = _referencesManager.PThreeMorseInputUI;
         _morseInputAC = _morseInputUI.GetComponent<Animator>();
-        _cameraRotation = ReferencesManager.instance.Player.GetComponentInChildren<PlayerLook>();
-        _swapCamera = ReferencesManager.instance.Player.GetComponentInChildren<TwinCameraController>();
     }
 
     private void OpenInputDevice()
     {
         _morseInputAC.Play("OpenGamePanel");
-        LockCursorManager(false);
+        _referencesManager.LockCursorManager(false);
         Cursor.visible = true;
-        DisableCamerasFunction();
+        _referencesManager.DisablePlayer();
         _morseInputUI.GetComponent<MorseUIManager>().InputDeviceOpened = true;
-    }
-
-    void LockCursorManager(bool locked)
-    {
-        if (locked)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.None;
-        }
-    }
-
-    void DisableCamerasFunction()
-    {
-        _cameraRotation.enabled = false;
-        _swapCamera.enabled = false;
     }
 }

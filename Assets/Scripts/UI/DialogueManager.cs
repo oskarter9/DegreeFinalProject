@@ -12,8 +12,7 @@ public class DialogueManager : MonoBehaviour {
     public bool dialogueOpened;
 
     private Queue<string> _sentences;
-    private PlayerLook _cameraRotation;
-    private TwinCameraController _swapCamera;
+    private ReferencesManager _referencesManager;
 
     void Awake()
     {
@@ -29,13 +28,14 @@ public class DialogueManager : MonoBehaviour {
 
     void Start () {
         _sentences = new Queue<string>();
-        _swapCamera = ReferencesManager.instance.Player.GetComponentInChildren<TwinCameraController>();
+        _referencesManager = ReferencesManager.instance;
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
         dialogueOpened = true;
-        LockCursorManager(true);
+        _referencesManager.LockCursorManager(true);
+        _referencesManager.DisablePlayerMovement();
         dialogueAC.SetBool("IsOpen", true);
         _sentences.Clear();
 
@@ -72,22 +72,9 @@ public class DialogueManager : MonoBehaviour {
 
     void EndDialogue()
     {
-        LockCursorManager(false);
+        _referencesManager.LockCursorManager(false);
+        _referencesManager.EnablePlayerMovement();
         dialogueOpened = false;
         dialogueAC.SetBool("IsOpen", false);
-    }
-
-    void LockCursorManager(bool locked)
-    {
-        if (locked)
-        {
-            Cursor.lockState = CursorLockMode.None;
-            _swapCamera.enabled = false;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            _swapCamera.enabled = true;
-        }
     }
 }

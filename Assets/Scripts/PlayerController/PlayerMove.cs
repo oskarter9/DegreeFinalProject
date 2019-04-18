@@ -17,17 +17,6 @@ public class PlayerMove : MonoBehaviour
     private void Update()
     {
         PlayerMovement();
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            if (DialogueManager.instance.dialogueOpened)
-            {
-                DialogueManager.instance.DisplayNextSentence();
-            }
-            else
-            {
-                ReferencesManager.instance.CurrentStoryDialogue.TriggerDialogue();
-            }
-        }
     }
 
     private void PlayerMovement()

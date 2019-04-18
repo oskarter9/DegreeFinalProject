@@ -9,9 +9,6 @@ public class MorseUIManager : MonoBehaviour {
     public bool InputDeviceOpened;
     public TextMeshProUGUI DisplayText;
 
-    private PlayerLook _cameraRotation;
-    private TwinCameraController _swapCamera;
-
     private ReferencesManager _referencesManager;
     private GameObject _morseInputDevice;
 
@@ -24,8 +21,6 @@ public class MorseUIManager : MonoBehaviour {
         _soundManager = SoundsManager.instance;
         _referencesManager = ReferencesManager.instance;
         _morseInputDevice = _referencesManager.PThreeMorseInputDevice;
-        _cameraRotation = ReferencesManager.instance.Player.GetComponentInChildren<PlayerLook>();
-        _swapCamera = ReferencesManager.instance.Player.GetComponentInChildren<TwinCameraController>();
     }
 	
 	// Update is called once per frame
@@ -35,9 +30,9 @@ public class MorseUIManager : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.R))
             {
                 GetComponent<Animator>().Play("CloseGamePanel");
-                LockCursorManager(true);
+                _referencesManager.LockCursorManager(true);
                 Cursor.visible = false;
-                EnableCamerasFunction();
+                _referencesManager.EnablePlayer();
                 InputDeviceOpened = false;
                 _morseInputDevice.GetComponent<MorseInputManager>().MorseInput.Clear();
                 DisplayText.text = "";
@@ -67,23 +62,5 @@ public class MorseUIManager : MonoBehaviour {
         _morseInputDevice.GetComponent<MorseInputManager>().CheckMorseCode = true;
         DisplayText.text = "";
         _charNumber = 0;
-    }
-
-    void LockCursorManager(bool locked)
-    {
-        if (locked)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.None;
-        }
-    }
-
-    void EnableCamerasFunction()
-    {
-        _cameraRotation.enabled = true;
-        _swapCamera.enabled = true;
     }
 }

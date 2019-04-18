@@ -43,6 +43,10 @@ public class ReferencesManager : MonoBehaviour
     public GameObject PThreeMorseInputDevice;
     public GameObject PThreeMorseInputUI;
 
+    private PlayerMove _playerMovement;
+    private PlayerLook _cameraRotation;
+    private TwinCameraController _swapCamera;
+
     void Awake()
     {
         if (instance == null)
@@ -53,7 +57,46 @@ public class ReferencesManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
+        _playerMovement = Player.GetComponentInChildren<PlayerMove>();
+        _cameraRotation = Player.GetComponentInChildren<PlayerLook>();
+        _swapCamera = Player.GetComponentInChildren<TwinCameraController>();
+    
         POneLighmapSwitch = GetComponentInChildren<LightmapSwitch>();
+    }
+
+    public void EnablePlayer()
+    {
+        _playerMovement.enabled = true;
+        _cameraRotation.enabled = true;
+        _swapCamera.enabled = true;
+    }
+
+    public void DisablePlayer()
+    {
+        _playerMovement.enabled = false;
+        _cameraRotation.enabled = false;
+        _swapCamera.enabled = false;
+    }
+
+    public void EnablePlayerMovement()
+    {
+        _playerMovement.enabled = true;
+    }
+
+    public void DisablePlayerMovement()
+    {
+        _playerMovement.enabled = false;
+    }
+
+    public void LockCursorManager(bool locked)
+    {
+        if (locked)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 }
