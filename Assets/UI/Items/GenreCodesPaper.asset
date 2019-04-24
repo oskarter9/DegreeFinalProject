@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: GenreCodesPaper
   m_EditorClassIdentifier: 
   Name: Genre Codes Paper
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 7f1973f27b3a40748a9f2d9f2a384f2d, type: 3}
   ObjectToUse: {fileID: 1395471134510870, guid: bce81b8bb30ed0341811b2f5e15fbca6,
     type: 2}
