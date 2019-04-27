@@ -8,5 +8,6 @@ public class UniverseController : MonoBehaviour {
 	void Awake()
     {
         SceneManager.LoadScene(2, LoadSceneMode.Additive);
+
     }
 }

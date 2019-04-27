@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TwinCameraController : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class TwinCameraController : MonoBehaviour
     [SerializeField]
     private Camera _hiddenCamera;
     private Material _hiddenCameraMat;
+    private int _currentSceneIndex = 1;
 
     private float _timeToChangeScene;
     private float _currentTime = 4f;
@@ -33,7 +35,20 @@ public class TwinCameraController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.P))
             {
+                /*if(_currentSceneIndex == 1)
+                {
+                    _currentSceneIndex = 2;
+                    SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(_currentSceneIndex));
+                }
+                else
+                {
+                    _currentSceneIndex = 1;
+                    SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(_currentSceneIndex));
+                }*/
                 _currentTime = 0f;
+                //LightmapSettings.lightmaps = new LightmapData[0];
+                
+                //LightmapSettings.lightmaps = ReferencesManager.instance.POneLighmapSwitch._sceneBLightMaps;
                 ChangeSceneMat();
                 Invoke("SwapCameras", _timeToChangeScene);
             }

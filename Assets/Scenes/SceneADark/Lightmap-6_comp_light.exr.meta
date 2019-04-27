@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5ca970a980887274fb57eb36107f6ddf
+guid: 688e9c783323dcb479f21c68034d9235
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}
@@ -21,7 +21,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
-  streamingMipmaps: 1
+  streamingMipmaps: 0
   streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
   generateCubemap: 6

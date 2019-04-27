@@ -38,7 +38,7 @@ public class PuzzleOneController : MonoBehaviour {
 	void Update () {
         if (powerEnabled)
         {
-            LightmapSettings.lightmaps = _referencesManager.POneLighmapSwitch._secondLightMaps;
+            //LightmapSettings.lightmaps = _referencesManager.POneLighmapSwitch._secondLightMaps;
             TurnOnPower();
             powerEnabled = false;
             enablePaper = true;
@@ -56,7 +56,7 @@ public class PuzzleOneController : MonoBehaviour {
     public void SetPuzzleOneVestiges()
     {
         TurnOnPower();
-        LightmapSettings.lightmaps = _referencesManager.POneLighmapSwitch._secondLightMaps;
+        //LightmapSettings.lightmaps = _referencesManager.POneLighmapSwitch._secondLightMaps;
         _referencesManager.POneLightSwitch.GetComponent<LightSwitchPOne>().enabled = false;
         Inventory.instance.Add(_referencesManager.POneGenreCodesPaperItem);
         Inventory.instance.Add(_referencesManager.POneLighterItem);
@@ -65,7 +65,7 @@ public class PuzzleOneController : MonoBehaviour {
 
     void ConfigureLevelOne()
     {
-        LightmapSettings.lightmaps = _referencesManager.POneLighmapSwitch._firstLightMaps;
+        //LightmapSettings.lightmaps = _referencesManager.POneLighmapSwitch._firstLightMaps;
         _referencesManager.POneLightSwitch.transform.SetParent(_referencesManager.POneControllerContainer.transform);
         _paperGenresCodes = Instantiate(_referencesManager.POneGenreCodesPaper, _referencesManager.POneGenreCodesPaperContainer);
         _paperGenresCodes.GetComponent<LookGenresCode>().enabled = false;
