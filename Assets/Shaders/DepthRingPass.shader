@@ -6,7 +6,9 @@ Properties {
    _MainTex ("", 2D) = "white" {} //this texture will have the rendered image before post-processing
    _AnotherTex ( "Texture to change", 2D) = "white"{}
    _RingWidth("ring width", Float) = 0.01
-   _RingPassTimeLength("ring pass time", Float) = 5.0
+   _RingPassTimeLength("ring pass time", Float) = 10.0
+   _RingEmissionIntensity("Emission intensity", Range(0,20)) = 0.5
+   _RingColor("Ring Color", Color) = (1,1,1,1)
 }
 
 SubShader {
@@ -19,6 +21,9 @@ CGPROGRAM
 
 sampler2D _CameraDepthTexture;
 float _StartingTime;
+float _RingEmissionIntensity;
+float4 _RingColor;
+float4 _RingEmissionColor;
 uniform float _RingPassTimeLength; //the length of time it takes the ring to traverse all depth values
 uniform float _RingWidth; //width of the ring
 float _RunRingPass = 0; //use this as a boolean value, to trigger the ring pass. It is called from the script attached to the camera.
@@ -48,7 +53,7 @@ half4 frag (v2f i) : COLOR{
    fixed4 orgColor = tex2Dproj(_MainTex, i.scrPos); //Get the orginal rendered color
    fixed4 nextView = tex2Dproj(_AnotherTex, i.scrPos);
    float4 newColor; //the color after the ring has passed
-   half4 lightRing; //the ring of light that will pass through the dpeth
+   float4 lightRing; //the ring of light that will pass through the dpeth
 
    float t = 1 - ((_Time.y - _StartingTime)/_RingPassTimeLength );
 
@@ -56,11 +61,12 @@ half4 frag (v2f i) : COLOR{
    if (_RunRingPass == 1){
       //this part draws the light ring
       if (depthValue < t && depthValue > t - _RingWidth){
-         lightRing.r = 1;
-         lightRing.g = 1;
-         lightRing.b = 0;
-         lightRing.a = 1;
-         return lightRing;
+         lightRing.r = _RingColor.r;
+         lightRing.g = _RingColor.g;
+         lightRing.b = _RingColor.b;
+         lightRing.a = _RingColor.a;
+		 
+         return lightRing * _RingEmissionIntensity;
       } else {
           if (depthValue < t) {
              //this part the ring hasn't pass through yet

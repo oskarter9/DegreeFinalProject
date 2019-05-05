@@ -9,6 +9,8 @@ public class SoundsManager : MonoBehaviour {
     public AudioSource SFXSource;
     public AudioSource SFXPuzzleTwoSource;
 
+    public AudioSource[] SceneAAudioSourceList;
+
     public AudioClip CorrectPuzzle;
 
     public AudioClip WrongSound;
@@ -37,5 +39,21 @@ public class SoundsManager : MonoBehaviour {
         audioSource.volume = 0.2f;
         audioSource.clip = clip;
         audioSource.Play();
+    }
+
+    public void DisableSceneAAudio()
+    {
+        foreach (var audioSource in SceneAAudioSourceList)
+        {
+            audioSource.mute = true;
+        }
+    }
+
+    public void EnableSceneAAudio()
+    {
+        foreach (var audioSource in SceneAAudioSourceList)
+        {
+            audioSource.mute = false;
+        }
     }
 }

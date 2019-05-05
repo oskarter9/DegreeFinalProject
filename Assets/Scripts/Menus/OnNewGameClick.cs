@@ -22,7 +22,7 @@ public class OnNewGameClick : MonoBehaviour {
         if (_ableToLoad)
         {
             Debug.Log("Build index = " + buildIndex);
-            AsyncOperation async = SceneManager.LoadSceneAsync(buildIndex, LoadSceneMode.Additive);
+            AsyncOperation async = SceneManager.LoadSceneAsync(buildIndex, LoadSceneMode.Single);
 
             while (!async.isDone)
             {

@@ -28,6 +28,7 @@ public class MorseInputManager : MonoBehaviour {
         {
             if (ValidMorseCode())
             {
+                _referencesManager.PThreeMorseInputUI.GetComponent<MorseUIManager>().InputDeviceOpened = false;
                 _morseInputAC.Play("CloseGamePanel");
                 _referencesManager.LockCursorManager(false);
                 Cursor.visible = false;

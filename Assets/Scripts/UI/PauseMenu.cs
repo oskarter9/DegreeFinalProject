@@ -40,6 +40,11 @@ public class PauseMenu : MonoBehaviour {
         _referencesManager.EnablePlayer();
         ReferencesManager.instance.Player.SavePlayer();
         PlayerPrefs.SetInt("SomethingToLoad", 1);
+        /*SceneManager.UnloadSceneAsync(1);
+        if (SceneManager.GetSceneByBuildIndex(2).isLoaded)
+        {
+            SceneManager.UnloadSceneAsync(2);
+        }*/
         SceneManager.LoadScene("MainMenu");
     }
 

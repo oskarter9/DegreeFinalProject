@@ -38,7 +38,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4016932372510150}
-  - component: {fileID: 114418959213080278}
   m_Layer: 0
   m_Name: TwinCameras
   m_TagString: Untagged
@@ -136,7 +135,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1678411006770404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.453, z: 0}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4016932372510150}
@@ -177,7 +176,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1353656565293344}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.94, y: 1.1, z: -5.654}
+  m_LocalPosition: {x: -5.577, y: 0.95, z: -5.654}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4272044913136364}
@@ -267,7 +266,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 1335
   m_RenderingPath: 3
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: b06df3632ee837847910e17234bc2902, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -311,30 +310,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Mat: {fileID: 2100000, guid: 52414b21493e6bb40834ddb8eb2b50b6, type: 2}
---- !u!114 &114418959213080278
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1148040889434230}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e9a5b12abed28e4a947ec7cc450a393, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InitialRenderTexture: {fileID: 8400000, guid: b06df3632ee837847910e17234bc2902,
-    type: 2}
-  ActiveCamera: {fileID: 20328682548010850}
-  ActiveCameraMaterial: {fileID: 2100000, guid: 52414b21493e6bb40834ddb8eb2b50b6,
-    type: 2}
-  _hiddenCamera: {fileID: 20868092025276936}
 --- !u!114 &114440298794197728
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1147813004433046}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5046b86e45da3e44f902767932d095be, type: 3}
   m_Name: 
@@ -410,7 +392,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 1.85
-  m_Radius: 0.4
+  m_Radius: 0.45
   m_SlopeLimit: 45
   m_StepOffset: 0.25
   m_SkinWidth: 0.06

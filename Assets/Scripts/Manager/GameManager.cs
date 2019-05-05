@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
                 _referencesManager.PThreeControllerContainer.AddComponent<PuzzleThreeController>();
                 break;
             case 4:
-                Debug.Log("Pasamos al puzzle número 4");
+                _referencesManager.PFourControllerContainer.AddComponent<PuzzleFourController>();
                 break;
         }
     }
@@ -76,6 +76,11 @@ public class GameManager : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    public void LoadSceneAdditive(int sceneIndex)
+    {
+        SceneManager.LoadScene(sceneIndex, LoadSceneMode.Additive);
     }
 
     private void SetGameVolume()

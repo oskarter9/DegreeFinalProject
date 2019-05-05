@@ -5,10 +5,12 @@ public class TwinCameraController : MonoBehaviour
 {
     public RenderTexture InitialRenderTexture;
 
-    public Camera ActiveCamera;
     public Material ActiveCameraMaterial;
 
-    [SerializeField]
+    private ReferencesManager _referencesManager;
+    private SoundsManager _soundsManager;
+
+    private Camera _activeCamera;
     private Camera _hiddenCamera;
     private Material _hiddenCameraMat;
     private int _currentSceneIndex = 1;
@@ -18,37 +20,36 @@ public class TwinCameraController : MonoBehaviour
 
     private Transform _playerTransform;
 
-    private void Awake()
+    private void Start()
     {
-        _playerTransform = GetComponentInParent<Player>().GetComponent<Transform>();
-        ActiveCameraMaterial = ActiveCamera.GetComponent<PostProcessDepthGrayscale>().Mat;
+        _referencesManager = ReferencesManager.instance;
+        _soundsManager = SoundsManager.instance;
+        _activeCamera = _referencesManager.CameraSceneA;
+        _hiddenCamera = _referencesManager.CameraSceneB;
+        _playerTransform = _referencesManager.Player.GetComponent<Transform>();
+        ActiveCameraMaterial = _activeCamera.GetComponent<PostProcessDepthGrayscale>().Mat;
         _playerTransform.gameObject.layer = LayerMask.NameToLayer("UniverseA");
         _timeToChangeScene = ActiveCameraMaterial.GetFloat("_RingPassTimeLength");
-        _hiddenCamera.GetComponent<PostProcessDepthGrayscale>().enabled = false;
         ActiveCameraMaterial.SetFloat("_RunRingPass", 0);
-        _hiddenCamera.targetTexture = InitialRenderTexture;
     }
 
     void Update()
     {
         if (TimeElapsed())
         {
-            if (Input.GetKeyDown(KeyCode.P))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                /*if(_currentSceneIndex == 1)
+                if(_currentSceneIndex == 1)
                 {
+                    _soundsManager.DisableSceneAAudio();
                     _currentSceneIndex = 2;
-                    SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(_currentSceneIndex));
                 }
                 else
                 {
+                    _soundsManager.EnableSceneAAudio();
                     _currentSceneIndex = 1;
-                    SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(_currentSceneIndex));
-                }*/
+                }
                 _currentTime = 0f;
-                //LightmapSettings.lightmaps = new LightmapData[0];
-                
-                //LightmapSettings.lightmaps = ReferencesManager.instance.POneLighmapSwitch._sceneBLightMaps;
                 ChangeSceneMat();
                 Invoke("SwapCameras", _timeToChangeScene);
             }
@@ -59,15 +60,15 @@ public class TwinCameraController : MonoBehaviour
     public void SwapCameras()
     {
         ChangePlayerLayer();
-        ActiveCamera.targetTexture = _hiddenCamera.targetTexture;
+        _activeCamera.targetTexture = _hiddenCamera.targetTexture;
         _hiddenCamera.targetTexture = null;
 
-        var swapCamera = ActiveCamera;
-        ActiveCamera = _hiddenCamera;
+        var swapCamera = _activeCamera;
+        _activeCamera = _hiddenCamera;
         _hiddenCamera = swapCamera;
 
         ActiveCameraMaterial.SetFloat("_RunRingPass", 0);
-        ActiveCamera.GetComponent<PostProcessDepthGrayscale>().enabled = true;
+        _activeCamera.GetComponent<PostProcessDepthGrayscale>().enabled = true;
     }
 
     private void ChangeSceneMat()
@@ -75,7 +76,7 @@ public class TwinCameraController : MonoBehaviour
         ActiveCameraMaterial.SetTexture("_AnotherTex", _hiddenCamera.targetTexture);
         ActiveCameraMaterial.SetFloat("_StartingTime", Time.time);
         ActiveCameraMaterial.SetFloat("_RunRingPass", 1);
-        ActiveCameraMaterial.SetFloat("_RingWidth", 0.001f);
+        ActiveCameraMaterial.SetFloat("_RingWidth", 0.01f);
     }
 
     private bool TimeElapsed()

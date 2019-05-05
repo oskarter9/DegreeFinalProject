@@ -8,8 +8,11 @@ public class ReferencesManager : MonoBehaviour
 
     public Transform PlayerObjectsContainer;
     public Player Player;
+    public Camera CameraSceneA;
+    public Camera CameraSceneB;
     public GameObject SoundClueSource;
     public Canvas MainCanvas;
+    public ReflectionProbe[] ReflectiveObjects;
     public DialogueTrigger CurrentStoryDialogue;
 
     [Header("First Puzzle References")]
@@ -42,6 +45,11 @@ public class ReferencesManager : MonoBehaviour
     public GameObject PThreeMorseLight;
     public GameObject PThreeMorseInputDevice;
     public GameObject PThreeMorseInputUI;
+    public Item PThreeTimeDevice;
+
+    [Header("Fourth Puzzle References")]
+
+    public GameObject PFourControllerContainer;
 
     private PlayerMove _playerMovement;
     private PlayerLook _cameraRotation;
@@ -59,7 +67,7 @@ public class ReferencesManager : MonoBehaviour
         }
         _playerMovement = Player.GetComponentInChildren<PlayerMove>();
         _cameraRotation = Player.GetComponentInChildren<PlayerLook>();
-        _swapCamera = Player.GetComponentInChildren<TwinCameraController>();
+        //_swapCamera = Player.GetComponentInChildren<TwinCameraController>();
     
         POneLighmapSwitch = GetComponentInChildren<LightmapSwitch>();
     }
@@ -68,14 +76,14 @@ public class ReferencesManager : MonoBehaviour
     {
         _playerMovement.enabled = true;
         _cameraRotation.enabled = true;
-        _swapCamera.enabled = true;
+        //_swapCamera.enabled = true;
     }
 
     public void DisablePlayer()
     {
         _playerMovement.enabled = false;
         _cameraRotation.enabled = false;
-        _swapCamera.enabled = false;
+        //_swapCamera.enabled = false;
     }
 
     public void EnablePlayerMovement()
@@ -97,6 +105,22 @@ public class ReferencesManager : MonoBehaviour
         else
         {
             Cursor.lockState = CursorLockMode.None;
+        }
+    }
+
+    public void DisableReflectionProbes()
+    {
+        foreach (var reflection in ReflectiveObjects)
+        {
+            reflection.enabled = false;
+        }
+    }
+
+    public void EnableReflectionProbes()
+    {
+        foreach (var reflection in ReflectiveObjects)
+        {
+            reflection.enabled = true;
         }
     }
 }

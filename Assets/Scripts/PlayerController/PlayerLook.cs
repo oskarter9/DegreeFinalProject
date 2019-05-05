@@ -13,16 +13,12 @@ public class PlayerLook : MonoBehaviour
     private Camera _mainCamera;
     public SoundsManager _soundsManager;
 
-    private void Awake()
-    {
-        _mainCamera = GetComponentInChildren<TwinCameraController>().ActiveCamera;
-        LockCursor();
-        _xAxisClamp = 0.0f;
-    }
-
-    void Start()
+    private void Start()
     {
         _soundsManager = SoundsManager.instance;
+        _mainCamera = ReferencesManager.instance.CameraSceneA;
+        LockCursor();
+        _xAxisClamp = 0.0f;
     }
 
     private void LockCursor()

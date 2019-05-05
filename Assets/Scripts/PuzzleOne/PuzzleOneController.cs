@@ -38,7 +38,7 @@ public class PuzzleOneController : MonoBehaviour {
 	void Update () {
         if (powerEnabled)
         {
-            //LightmapSettings.lightmaps = _referencesManager.POneLighmapSwitch._secondLightMaps;
+            LightmapSettings.lightmaps = _referencesManager.POneLighmapSwitch._secondLightMaps;
             TurnOnPower();
             powerEnabled = false;
             enablePaper = true;
@@ -65,7 +65,7 @@ public class PuzzleOneController : MonoBehaviour {
 
     void ConfigureLevelOne()
     {
-        //LightmapSettings.lightmaps = _referencesManager.POneLighmapSwitch._firstLightMaps;
+        LightmapSettings.lightmaps = _referencesManager.POneLighmapSwitch._firstLightMaps;
         _referencesManager.POneLightSwitch.transform.SetParent(_referencesManager.POneControllerContainer.transform);
         _paperGenresCodes = Instantiate(_referencesManager.POneGenreCodesPaper, _referencesManager.POneGenreCodesPaperContainer);
         _paperGenresCodes.GetComponent<LookGenresCode>().enabled = false;
@@ -75,6 +75,7 @@ public class PuzzleOneController : MonoBehaviour {
     }
     void TurnOffLights()
     {
+        _referencesManager.DisableReflectionProbes();
         foreach (var light in _lights)
         {
             light.intensity = 0;
@@ -95,9 +96,14 @@ public class PuzzleOneController : MonoBehaviour {
 
         foreach (var emissiveLight in _barLights)
         {
-            emissiveLight.GetComponent<MeshRenderer>().material.EnableKeyword("_EMISSION");
+            foreach(var material in emissiveLight.GetComponent<MeshRenderer>().materials)
+            {
+                material.EnableKeyword("_EMISSION");
+            }
+            //emissiveLight.GetComponent<MeshRenderer>().material.EnableKeyword("_EMISSION");
         }
 
+        _referencesManager.EnableReflectionProbes();
         _referencesManager.POneTobaccoMachine.Play();
         _referencesManager.PTwoTV.GetComponent<AudioSource>().Play();
         _referencesManager.POneFluorescentsContainer.GetComponent<FluorescentsBehaviour>().EnableFluorescents();
