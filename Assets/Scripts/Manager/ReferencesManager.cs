@@ -11,7 +11,7 @@ public class ReferencesManager : MonoBehaviour
     public Camera CameraSceneA;
     public Camera CameraSceneB;
     public GameObject SoundClueSource;
-    public Canvas MainCanvas;
+    public UIPanels CanvasPanels;
     public ReflectionProbe[] ReflectiveObjects;
     public DialogueTrigger CurrentStoryDialogue;
 
@@ -26,7 +26,6 @@ public class ReferencesManager : MonoBehaviour
     public GameObject POneControllerContainer;
     public GameObject POneGenreCodesPaper;
     public Transform POneGenreCodesPaperContainer;
-    public GameObject POneGenreCodesUI;
     public Item POneLighterItem;
     public Item POneGenreCodesPaperItem;
     [HideInInspector]
@@ -44,7 +43,6 @@ public class ReferencesManager : MonoBehaviour
     public GameObject PThreeControllerContainer;
     public GameObject PThreeMorseLight;
     public GameObject PThreeMorseInputDevice;
-    public GameObject PThreeMorseInputUI;
     public Item PThreeTimeDevice;
 
     [Header("Fourth Puzzle References")]

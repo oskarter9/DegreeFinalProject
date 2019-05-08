@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour {
 
-    public static bool GamePaused = false;
+    public bool GamePaused = false;
     public GameObject PauseMenuUI;
 
     private ReferencesManager _referencesManager;
@@ -39,12 +39,8 @@ public class PauseMenu : MonoBehaviour {
         Cursor.visible = true;
         _referencesManager.EnablePlayer();
         ReferencesManager.instance.Player.SavePlayer();
+        ReferencesManager.instance.CameraSceneB.GetComponent<PostProcessDepthGrayscale>().enabled = false;
         PlayerPrefs.SetInt("SomethingToLoad", 1);
-        /*SceneManager.UnloadSceneAsync(1);
-        if (SceneManager.GetSceneByBuildIndex(2).isLoaded)
-        {
-            SceneManager.UnloadSceneAsync(2);
-        }*/
         SceneManager.LoadScene("MainMenu");
     }
 

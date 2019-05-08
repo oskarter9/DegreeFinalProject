@@ -8,11 +8,12 @@ public class LookGenresCode : MonoBehaviour {
 
     private bool _lookingPaper = false;
     private Animator _lookGenresCodeAnimator;
+    private UIPanels _canvas;
 
     void Start()
     {
-        _lookGenresCodeUI = ReferencesManager.instance.POneGenreCodesUI;
-        _lookGenresCodeAnimator = _lookGenresCodeUI.GetComponent<Animator>();
+        _canvas = ReferencesManager.instance.CanvasPanels;
+        _lookGenresCodeAnimator = _canvas.GenresPaper.GetComponent<Animator>();
     }
 
     void Update () {

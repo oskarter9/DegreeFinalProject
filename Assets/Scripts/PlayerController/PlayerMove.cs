@@ -17,6 +17,7 @@ public class PlayerMove : MonoBehaviour
     private void Update()
     {
         PlayerMovement();
+        PlaySoundStep();
     }
 
     private void PlayerMovement()
@@ -28,5 +29,14 @@ public class PlayerMove : MonoBehaviour
         Vector3 rightMovement = transform.right * horizInput;
 
         charController.SimpleMove(forwardMovement + rightMovement);
+    }
+
+    private void PlaySoundStep()
+    {
+        if(GetComponent<CharacterController>().velocity.magnitude > 2f && GetComponent<AudioSource>().isPlaying == false)
+        {
+            GetComponent<AudioSource>().volume = Random.Range(0.4f, 0.8f);
+            GetComponent<AudioSource>().Play();
+        }
     }
 }

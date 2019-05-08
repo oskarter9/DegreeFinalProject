@@ -17,8 +17,12 @@ public class PuzzleThreeController : MonoBehaviour {
         _referencesManager = ReferencesManager.instance;
         _currentTrigger = GetComponent<DialogueTrigger>();
         _referencesManager.CurrentStoryDialogue = _currentTrigger;
-        _currentTrigger.TriggerDialogue();
-        ConfigureLevelThree();
+        if (GameManager.instance.currentPuzzle == 3)
+        {
+            _currentTrigger.TriggerDialogue();
+            ConfigureLevelThree();
+        }
+            
     }
 
     void Update()
@@ -35,6 +39,8 @@ public class PuzzleThreeController : MonoBehaviour {
 
     public void SetPuzzleThreeVestiges()
     {
+        GameManager.instance.LoadSceneAdditive(2);
+        Inventory.instance.Add(_referencesManager.PThreeTimeDevice);
         DestroyElements();
     }
 

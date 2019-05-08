@@ -39,16 +39,7 @@ public class TwinCameraController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                if(_currentSceneIndex == 1)
-                {
-                    _soundsManager.DisableSceneAAudio();
-                    _currentSceneIndex = 2;
-                }
-                else
-                {
-                    _soundsManager.EnableSceneAAudio();
-                    _currentSceneIndex = 1;
-                }
+                
                 _currentTime = 0f;
                 ChangeSceneMat();
                 Invoke("SwapCameras", _timeToChangeScene);
@@ -59,6 +50,7 @@ public class TwinCameraController : MonoBehaviour
 
     public void SwapCameras()
     {
+        SceneARefSounds();
         ChangePlayerLayer();
         _activeCamera.targetTexture = _hiddenCamera.targetTexture;
         _hiddenCamera.targetTexture = null;
@@ -71,10 +63,26 @@ public class TwinCameraController : MonoBehaviour
         _activeCamera.GetComponent<PostProcessDepthGrayscale>().enabled = true;
     }
 
+    private void SceneARefSounds()
+    {
+        if (_currentSceneIndex == 1)
+        {
+            _referencesManager.DisableReflectionProbes();
+            _soundsManager.DisableSceneAAudio();
+            _currentSceneIndex = 2;
+        }
+        else
+        {
+            _referencesManager.EnableReflectionProbes();
+            _soundsManager.EnableSceneAAudio();
+            _currentSceneIndex = 1;
+        }
+    }
     private void ChangeSceneMat()
     {
         ActiveCameraMaterial.SetTexture("_AnotherTex", _hiddenCamera.targetTexture);
-        ActiveCameraMaterial.SetFloat("_StartingTime", Time.time);
+        //¡Cuidao! Si ponemos Time.time, nos coje el tiempo desde la escena del menú, y el shader realiza mal el calculo de t.
+        ActiveCameraMaterial.SetFloat("_StartingTime", Time.timeSinceLevelLoad);
         ActiveCameraMaterial.SetFloat("_RunRingPass", 1);
         ActiveCameraMaterial.SetFloat("_RingWidth", 0.01f);
     }

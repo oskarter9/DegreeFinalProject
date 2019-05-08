@@ -11,16 +11,22 @@ public class PuzzleTwoController : MonoBehaviour {
     private SoundsManager _soundsManager;
     private DialogueTrigger _currentTrigger;
     private Material _tvScreenMaterial;
+    private GameObject _tvScreen;
 
     void Awake()
     {
         _soundsManager = SoundsManager.instance;
         _referencesManager = ReferencesManager.instance;
+        _tvScreen = _referencesManager.PTwoTV;
         _currentTrigger = GetComponent<DialogueTrigger>();
         _referencesManager.CurrentStoryDialogue = _currentTrigger;
-        _currentTrigger.TriggerDialogue();
-        _tvScreenMaterial = _referencesManager.PTwoTV.GetComponent<MeshRenderer>().material;
-        ConfigureLevelTwo();
+        
+        _tvScreenMaterial = _tvScreen.GetComponent<MeshRenderer>().material;
+        if (GameManager.instance.currentPuzzle == 2)
+        {
+            _currentTrigger.TriggerDialogue();
+            ConfigureLevelTwo();
+        }
     }
 
     void Update()
@@ -35,6 +41,9 @@ public class PuzzleTwoController : MonoBehaviour {
 
     public void SetPuzzleTwoVestiges()
     {
+        _tvScreenMaterial.EnableKeyword("_EMISSION");
+        _tvScreen.GetComponent<TVScreenManager>().AvailableTextures.AddRange(_tvScreen.GetComponent<TVScreenManager>().MorseTranslationTextures);
+        StartCoroutine(_tvScreen.GetComponent<TVScreenManager>().IterateTextures());
         DestroyElements();
     }
 

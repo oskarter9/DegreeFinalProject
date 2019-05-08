@@ -56,7 +56,7 @@ public class PuzzleOneController : MonoBehaviour {
     public void SetPuzzleOneVestiges()
     {
         TurnOnPower();
-        //LightmapSettings.lightmaps = _referencesManager.POneLighmapSwitch._secondLightMaps;
+        LightmapSettings.lightmaps = _referencesManager.POneLighmapSwitch._secondLightMaps;
         _referencesManager.POneLightSwitch.GetComponent<LightSwitchPOne>().enabled = false;
         Inventory.instance.Add(_referencesManager.POneGenreCodesPaperItem);
         Inventory.instance.Add(_referencesManager.POneLighterItem);

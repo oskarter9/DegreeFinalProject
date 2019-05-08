@@ -18,7 +18,7 @@ public class MorseInputManager : MonoBehaviour {
     void Start () {
         _referencesManager = ReferencesManager.instance;
         _soundsManager = SoundsManager.instance;
-        _morseInputAC = _referencesManager.PThreeMorseInputUI.GetComponent<Animator>();
+        _morseInputAC = _referencesManager.CanvasPanels.MorseInput.GetComponent<Animator>();
         MorseInput = new List<char>();
 	}
 	
@@ -28,7 +28,7 @@ public class MorseInputManager : MonoBehaviour {
         {
             if (ValidMorseCode())
             {
-                _referencesManager.PThreeMorseInputUI.GetComponent<MorseUIManager>().InputDeviceOpened = false;
+                _referencesManager.CanvasPanels.MorseInput.GetComponent<MorseUIManager>().InputDeviceOpened = false;
                 _morseInputAC.Play("CloseGamePanel");
                 _referencesManager.LockCursorManager(false);
                 Cursor.visible = false;

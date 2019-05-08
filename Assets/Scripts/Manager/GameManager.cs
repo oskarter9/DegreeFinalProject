@@ -27,12 +27,15 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-        //SetGameVolume();
         _referencesManager = ReferencesManager.instance;
         if (PlayerPrefs.GetInt("SomethingToLoad") == 1)
         {
-            //_referencesManager.Player.LoadPlayer();
-            currentPuzzle = 1;
+            _referencesManager.Player.LoadPlayer();
+            for (int i = 1; i <= currentPuzzle; i++)
+            {
+                SetEnvironmentVestiges(i);
+            }
+            //currentPuzzle = 1;
         }
         else
         {
@@ -72,6 +75,10 @@ public class GameManager : MonoBehaviour
             case 3:
                 var pTwo = _referencesManager.PTwoControllerContainer.AddComponent<PuzzleTwoController>();
                 pTwo.SetPuzzleTwoVestiges();
+                break;
+            case 4:
+                var pThree = _referencesManager.PThreeControllerContainer.AddComponent<PuzzleThreeController>();
+                pThree.SetPuzzleThreeVestiges();
                 break;
             default:
                 break;

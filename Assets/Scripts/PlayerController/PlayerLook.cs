@@ -11,12 +11,16 @@ public class PlayerLook : MonoBehaviour
 
     private float _xAxisClamp;
     private Camera _mainCamera;
-    public SoundsManager _soundsManager;
+    private SoundsManager _soundsManager;
+    private ReferencesManager _referencesManager;
+    private Animator _pointerAnimator;
 
     private void Start()
     {
         _soundsManager = SoundsManager.instance;
-        _mainCamera = ReferencesManager.instance.CameraSceneA;
+        _referencesManager = ReferencesManager.instance;
+        _mainCamera = _referencesManager.CameraSceneA;
+        _pointerAnimator = _referencesManager.CanvasPanels.PointerUI.GetComponent<Animator>();
         LockCursor();
         _xAxisClamp = 0.0f;
     }
@@ -40,9 +44,13 @@ public class PlayerLook : MonoBehaviour
             if (interactable != null)
             {
                 float distance = Vector3.Distance(transform.position, interactable.transform.position);
-                if (Input.GetKeyDown(KeyCode.R) && distance < 5f)
+                if (distance < 5f)
                 {
-                    SetFocus(interactable);
+                    _pointerAnimator.Play("PointerIn");
+                    if (Input.GetKeyDown(KeyCode.R))
+                    {
+                        SetFocus(interactable);
+                    }
                 }
             }
             else if (interactable == null && Input.GetKeyDown(KeyCode.R))
@@ -51,6 +59,7 @@ public class PlayerLook : MonoBehaviour
             }
             else
             {
+                _pointerAnimator.Play("PointerOut");
                 RemoveFocus();
             }
         }

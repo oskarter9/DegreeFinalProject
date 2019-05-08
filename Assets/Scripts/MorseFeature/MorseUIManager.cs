@@ -11,6 +11,7 @@ public class MorseUIManager : MonoBehaviour {
 
     private ReferencesManager _referencesManager;
     private GameObject _morseInputDevice;
+    private PauseMenu _pauseUI;
 
     private int _charNumber = 0;
 
@@ -20,6 +21,7 @@ public class MorseUIManager : MonoBehaviour {
     void Start () {
         _soundManager = SoundsManager.instance;
         _referencesManager = ReferencesManager.instance;
+        _pauseUI = _referencesManager.CanvasPanels.GetComponent<PauseMenu>();
         _morseInputDevice = _referencesManager.PThreeMorseInputDevice;
     }
 	
@@ -27,7 +29,7 @@ public class MorseUIManager : MonoBehaviour {
 	void Update () {
         if (InputDeviceOpened)
         {
-            if (Input.GetKeyDown(KeyCode.R))
+            if (Input.GetKeyDown(KeyCode.R) && !_pauseUI.GetComponent<PauseMenu>().GamePaused)
             {
                 GetComponent<Animator>().Play("CloseGamePanel");
                 _referencesManager.LockCursorManager(true);

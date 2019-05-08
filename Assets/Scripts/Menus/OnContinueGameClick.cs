@@ -14,15 +14,15 @@ public class OnContinueGameClick : MonoBehaviour {
     {
         _sceneToGo = buildIndex;
         //Esto de abajo hay que cambiarlo porque si que deberia haber algo que cargar
-        PlayerPrefs.SetInt("SomethingToLoad", 0);
-        SceneChangerAC.SetTrigger("FadeOut");
+        PlayerPrefs.SetInt("SomethingToLoad", 1);
+        SceneChangerAC.SetTrigger("ContinueFadeOut");
     }
 
     private IEnumerator LoadSceneAsync(int buildIndex)
     {
         if (_ableToLoad)
         {
-            AsyncOperation async = SceneManager.LoadSceneAsync(buildIndex, LoadSceneMode.Additive);
+            AsyncOperation async = SceneManager.LoadSceneAsync(buildIndex, LoadSceneMode.Single);
 
             while (!async.isDone)
             {
@@ -30,6 +30,7 @@ public class OnContinueGameClick : MonoBehaviour {
             }
 
             AsyncOperation async2 = SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+            //AsyncOperation async2 = SceneManager.UnloadSceneAsync(0);
 
             while (!async2.isDone)
                 yield return null;
@@ -38,7 +39,7 @@ public class OnContinueGameClick : MonoBehaviour {
         }
     }
 
-    public void OnFadeOut()
+    public void OnContinueFadeOut()
     {
         _ableToLoad = true;
         StartCoroutine(LoadSceneAsync(_sceneToGo));

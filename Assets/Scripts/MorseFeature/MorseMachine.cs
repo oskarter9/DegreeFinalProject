@@ -18,7 +18,7 @@ public class MorseMachine : Interactable {
     void Start()
     {
         _referencesManager = ReferencesManager.instance;
-        _morseInputUI = _referencesManager.PThreeMorseInputUI;
+        _morseInputUI = _referencesManager.CanvasPanels.MorseInput;
         _morseInputAC = _morseInputUI.GetComponent<Animator>();
     }
 
