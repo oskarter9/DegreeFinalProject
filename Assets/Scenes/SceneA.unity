@@ -90,7 +90,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 112000584, guid: e7b2068e396ea7240baa074a742b56be,
+  m_LightingDataAsset: {fileID: 112000586, guid: 261c39dff420415479eb2ac88d465207,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -121,6 +121,72 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1827776179}
   m_Script: {fileID: 11500000, guid: de3e9ba1e450d9d4ebedf4f0797bf9bd, type: 3}
+--- !u!1 &19504301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 19504302}
+  - component: {fileID: 19504303}
+  m_Layer: 9
+  m_Name: Point Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &19504302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 19504301}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.00479, y: 0.00103, z: 0.00841}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 675460879}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &19504303
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 19504301}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 4
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!108 &25610592 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 108793047972302990, guid: ed3418477bbca8c48a6b0befe3e2884d,
@@ -1627,7 +1693,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 744961601a00a5243844ee7e6e9e973a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PauseUI: {fileID: 1382780122}
   PointerUI: {fileID: 1401134158}
   GenresPaper: {fileID: 696017054}
   MorseInput: {fileID: 1104053803}
@@ -2701,7 +2766,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1961545538218120, guid: ed3418477bbca8c48a6b0befe3e2884d, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 215335723983557420, guid: ed3418477bbca8c48a6b0befe3e2884d,
         type: 2}
@@ -2712,9 +2777,56 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 1.611
       objectReference: {fileID: 0}
+    - target: {fileID: 108658373007033196, guid: ed3418477bbca8c48a6b0befe3e2884d,
+        type: 2}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108793047972302990, guid: ed3418477bbca8c48a6b0befe3e2884d,
+        type: 2}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108755750939673576, guid: ed3418477bbca8c48a6b0befe3e2884d,
+        type: 2}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 215194854720457730, guid: ed3418477bbca8c48a6b0befe3e2884d,
+        type: 2}
+      propertyPath: m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4173849835958564, guid: ed3418477bbca8c48a6b0befe3e2884d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.15031204
+      objectReference: {fileID: 0}
+    - target: {fileID: 215194854720457730, guid: ed3418477bbca8c48a6b0befe3e2884d,
+        type: 2}
+      propertyPath: m_BoxOffset.y
+      value: -0.26330364
+      objectReference: {fileID: 0}
+    - target: {fileID: 4173849835958564, guid: ed3418477bbca8c48a6b0befe3e2884d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.91718507
+      objectReference: {fileID: 0}
+    - target: {fileID: 215194854720457730, guid: ed3418477bbca8c48a6b0befe3e2884d,
+        type: 2}
+      propertyPath: m_BoxOffset.x
+      value: -0.15951943
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961545538218120, guid: ed3418477bbca8c48a6b0befe3e2884d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed3418477bbca8c48a6b0befe3e2884d, type: 2}
   m_IsPrefabAsset: 0
+--- !u!4 &675460879 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4218890291132758, guid: ed3418477bbca8c48a6b0befe3e2884d,
+    type: 2}
+  m_PrefabInternal: {fileID: 675460878}
 --- !u!215 &683405095 stripped
 ReflectionProbe:
   m_CorrespondingSourceObject: {fileID: 215127765079481452, guid: ed3418477bbca8c48a6b0befe3e2884d,
@@ -4382,6 +4494,7 @@ MonoBehaviour:
   - {fileID: 1268694001}
   - {fileID: 629484895}
   - {fileID: 821599308}
+  - {fileID: 19504303}
   POneTobaccoMachine: {fileID: 779832857}
   POneFans:
   - {fileID: 1518555252}
@@ -6041,106 +6154,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1 &1419496684 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1353656565293344, guid: 58543736ddd328f48a1f1342493b0d38,
-    type: 2}
-  m_PrefabInternal: {fileID: 1827776179}
---- !u!82 &1419496688
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1419496684}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 947518a93d28de745adcff1ff130e7a0, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 0.6
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &1423467345
 GameObject:
   m_ObjectHideFlags: 0
@@ -7494,32 +7507,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1353656565293344, guid: 58543736ddd328f48a1f1342493b0d38, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 4276252645035650, guid: 58543736ddd328f48a1f1342493b0d38, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.204
-      objectReference: {fileID: 0}
-    - target: {fileID: 4276252645035650, guid: 58543736ddd328f48a1f1342493b0d38, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0.301
-      objectReference: {fileID: 0}
-    - target: {fileID: 20328682548010850, guid: 58543736ddd328f48a1f1342493b0d38,
-        type: 2}
-      propertyPath: near clip plane
-      value: 0.01
-      objectReference: {fileID: 0}
     - target: {fileID: 20868092025276936, guid: 58543736ddd328f48a1f1342493b0d38,
         type: 2}
-      propertyPath: near clip plane
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 114440298794197728, guid: 58543736ddd328f48a1f1342493b0d38,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
+      propertyPath: m_TargetTexture
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58543736ddd328f48a1f1342493b0d38, type: 2}
@@ -8805,237 +8796,237 @@ Prefab:
         type: 2}
       propertyPath: FirstLightMapDir.Array.data[0]
       value: 
-      objectReference: {fileID: 2800000, guid: 398d621c8e4dfa94987a17b28ef43400, type: 3}
+      objectReference: {fileID: 2800000, guid: 0a400acb8700c534882810707ff9ad8f, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapDir.Array.data[1]
       value: 
-      objectReference: {fileID: 2800000, guid: 1646aa02a24d9a848be6504797c186fd, type: 3}
+      objectReference: {fileID: 2800000, guid: f64f0645c6cc3a14395b3911200cda7c, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapDir.Array.data[2]
       value: 
-      objectReference: {fileID: 2800000, guid: c364641253036c745a48c425c7d72db2, type: 3}
+      objectReference: {fileID: 2800000, guid: 67b05e3c0ec9c50449a615f7225f3cb7, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapDir.Array.data[3]
       value: 
-      objectReference: {fileID: 2800000, guid: 95dcf5233d4540548b78a65edd257e3a, type: 3}
+      objectReference: {fileID: 2800000, guid: 92a754037f3f69347babcfbd54777ec0, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapDir.Array.data[4]
       value: 
-      objectReference: {fileID: 2800000, guid: f9c0e20315cee634abe230f1d6076fb8, type: 3}
+      objectReference: {fileID: 2800000, guid: b8eaa1bd0ded83341bfe55e10511f5af, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapDir.Array.data[5]
       value: 
-      objectReference: {fileID: 2800000, guid: f04d8bf8d3e002745a5b29a0499d9528, type: 3}
+      objectReference: {fileID: 2800000, guid: 092f250cc5659e246a2e875f2c949e60, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapDir.Array.data[6]
       value: 
-      objectReference: {fileID: 2800000, guid: f06b33ee69f6dc74a8db0b7743c181da, type: 3}
+      objectReference: {fileID: 2800000, guid: ac7bce750e85a474d9afdf2d522df9fb, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapLight.Array.data[0]
       value: 
-      objectReference: {fileID: 2800000, guid: 4548ef1c68fc59241bc71ec8ea45db2e, type: 3}
+      objectReference: {fileID: 2800000, guid: ba2045358c7a27b47be549b87a6f6c09, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapLight.Array.data[1]
       value: 
-      objectReference: {fileID: 2800000, guid: 245322ee5e4481640be7eda49e779007, type: 3}
+      objectReference: {fileID: 2800000, guid: 7ffb7a4118f133d40963fbe92a3df409, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapLight.Array.data[2]
       value: 
-      objectReference: {fileID: 2800000, guid: 10fa3f51b8d989e428a562940835b1d2, type: 3}
+      objectReference: {fileID: 2800000, guid: 59653e3726d51e440a2ce90105a210d4, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapLight.Array.data[3]
       value: 
-      objectReference: {fileID: 2800000, guid: 34108f180dec64e43baaa93498b2976d, type: 3}
+      objectReference: {fileID: 2800000, guid: d1043fdd36b13c84582ef6ce41233a3d, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapLight.Array.data[4]
       value: 
-      objectReference: {fileID: 2800000, guid: b741da2a718bd234ba7cc0ef172e6764, type: 3}
+      objectReference: {fileID: 2800000, guid: 263e6ea58d45b624ebbdc7a2efd89277, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapLight.Array.data[5]
       value: 
-      objectReference: {fileID: 2800000, guid: 2cec37dbf09673046a3dcdd45052eac3, type: 3}
+      objectReference: {fileID: 2800000, guid: 28a4f769cc8b47d4bb434539370d80d5, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapLight.Array.data[6]
       value: 
-      objectReference: {fileID: 2800000, guid: 53983c48b7678914faae0948ca0e9601, type: 3}
+      objectReference: {fileID: 2800000, guid: 2261ed7291c0de0418e97f1fba6602cf, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapSM.Array.data[0]
       value: 
-      objectReference: {fileID: 2800000, guid: 4d0381bed530efd46b6e0089546f7f40, type: 3}
+      objectReference: {fileID: 2800000, guid: c9457fe11c9e3394aa209975ea5a677a, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapSM.Array.data[1]
       value: 
-      objectReference: {fileID: 2800000, guid: 7cfd137091630fb46a2064d57a0a9bfe, type: 3}
+      objectReference: {fileID: 2800000, guid: 055b5c5fdd50634458494ae68e7f2492, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapSM.Array.data[2]
       value: 
-      objectReference: {fileID: 2800000, guid: 064500d97d953224383c149487c9900f, type: 3}
+      objectReference: {fileID: 2800000, guid: 5db62480e82ba5948b085dde314e95a4, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapSM.Array.data[3]
       value: 
-      objectReference: {fileID: 2800000, guid: 51758241fd135a24f92121d205cba457, type: 3}
+      objectReference: {fileID: 2800000, guid: be7a9f933f443834eb0087500c4da1a0, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapSM.Array.data[4]
       value: 
-      objectReference: {fileID: 2800000, guid: 5607dc01b59401c40a79718e4bf85579, type: 3}
+      objectReference: {fileID: 2800000, guid: 6bf83a7073b247e4bbb91c467fb11218, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapSM.Array.data[5]
       value: 
-      objectReference: {fileID: 2800000, guid: 1fd3de9d93602554eb88729889a6be63, type: 3}
+      objectReference: {fileID: 2800000, guid: 90aae2028bf93c2488df0e2984cec04e, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapSM.Array.data[6]
       value: 
-      objectReference: {fileID: 2800000, guid: 93b36220dc419df4eac23c9d941ce057, type: 3}
+      objectReference: {fileID: 2800000, guid: fe60b97c26989c942ae55b0d61774a0d, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapDir.Array.data[0]
       value: 
-      objectReference: {fileID: 2800000, guid: 836a48a03d9e6be4285fefd008a1c2c2, type: 3}
+      objectReference: {fileID: 2800000, guid: f80554aa4559b70409cb128691226c27, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapDir.Array.data[1]
       value: 
-      objectReference: {fileID: 2800000, guid: e9819ad237445ee4c8038e8d03197918, type: 3}
+      objectReference: {fileID: 2800000, guid: 7d5329d0f6ceef64abe2b64faf34a573, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapDir.Array.data[2]
       value: 
-      objectReference: {fileID: 2800000, guid: b33194d65eafcfc4a8bf555a62a7ef5f, type: 3}
+      objectReference: {fileID: 2800000, guid: 3dd8917f3a4af5b468d01b7230b6e0be, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapDir.Array.data[3]
       value: 
-      objectReference: {fileID: 2800000, guid: 572fa61e940030548b9e7999371eaff7, type: 3}
+      objectReference: {fileID: 2800000, guid: 648933cc4b2c7754da544314046ee106, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapDir.Array.data[4]
       value: 
-      objectReference: {fileID: 2800000, guid: 974d47ae7b64e9240b962c6bc600bda4, type: 3}
+      objectReference: {fileID: 2800000, guid: 7700e5f2262b29245999c0e665f245d5, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapDir.Array.data[5]
       value: 
-      objectReference: {fileID: 2800000, guid: aa40dea396acf1f4bbfd2acfa5e41fad, type: 3}
+      objectReference: {fileID: 2800000, guid: 1aa681db78b56844685c6741c2b2b07e, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapDir.Array.data[6]
       value: 
-      objectReference: {fileID: 2800000, guid: 8c49961e7c28c0d4bb9659224ab31516, type: 3}
+      objectReference: {fileID: 2800000, guid: c692c16cb259d0f47bf7f8cc016e8994, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapLight.Array.data[7]
       value: 
-      objectReference: {fileID: 2800000, guid: 11694a06acf67e04bb53e39915c89320, type: 3}
+      objectReference: {fileID: 2800000, guid: c49d01584e3f9d24fa10de18ae7ded7c, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapDir.Array.data[7]
       value: 
-      objectReference: {fileID: 2800000, guid: 452ee27589c7c1d4bb138fc1d962f569, type: 3}
+      objectReference: {fileID: 2800000, guid: e2ea0bf02f47f1941a76658c43fb3067, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapDir.Array.data[8]
       value: 
-      objectReference: {fileID: 2800000, guid: 6e71c875273a08b4f9f7b8827df5df2a, type: 3}
+      objectReference: {fileID: 2800000, guid: 74a4f651a321da044b4eb80d2b4ad752, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapDir.Array.data[9]
       value: 
-      objectReference: {fileID: 2800000, guid: 3a83a5d6e0ba00244a291aed12d3420b, type: 3}
+      objectReference: {fileID: 2800000, guid: 07d3d9f327fe275488705536e3a334aa, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapDir.Array.data[10]
       value: 
-      objectReference: {fileID: 2800000, guid: ac92a714f98648f48870e05a0c42c9bd, type: 3}
+      objectReference: {fileID: 2800000, guid: 4fac125bed696174a8370635f05a095c, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapDir.Array.data[11]
       value: 
-      objectReference: {fileID: 2800000, guid: ba518b3bfc4eaea4d8ee743944c667b4, type: 3}
+      objectReference: {fileID: 2800000, guid: a6175541f6b5f0e49adb0632499fdb0a, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapDir.Array.data[12]
       value: 
-      objectReference: {fileID: 2800000, guid: e28796b93d60aa54caf6209eaf998cb5, type: 3}
+      objectReference: {fileID: 2800000, guid: a469fdca566416d41b3572cd54f8e6db, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapDir.Array.data[13]
       value: 
-      objectReference: {fileID: 2800000, guid: 0d9cd4b0adceb7347af4b10b2d0d66d0, type: 3}
+      objectReference: {fileID: 2800000, guid: 76773df0fb95f4d46a0ba11d911d85e0, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapDir.Array.data[14]
       value: 
-      objectReference: {fileID: 2800000, guid: aee060b870e65654fad1bc714f39ce4a, type: 3}
+      objectReference: {fileID: 2800000, guid: 74c3cac15bf9625409165987f1a948d0, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapLight.Array.data[8]
       value: 
-      objectReference: {fileID: 2800000, guid: d14f32f2661d4ad4c9aeb710faf08147, type: 3}
+      objectReference: {fileID: 2800000, guid: 61910f7f858e37d43a2b578ed6a5a7da, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapLight.Array.data[9]
       value: 
-      objectReference: {fileID: 2800000, guid: 5e219c88ee2d170458876ef02ca1aa58, type: 3}
+      objectReference: {fileID: 2800000, guid: 654545496c6c3ef4182a59550489e641, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapLight.Array.data[10]
       value: 
-      objectReference: {fileID: 2800000, guid: c20dae076b277b74a8b37a8a3cc0aa91, type: 3}
+      objectReference: {fileID: 2800000, guid: c6159deb63f8e06459fc11b96af71549, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapLight.Array.data[11]
       value: 
-      objectReference: {fileID: 2800000, guid: 3070596eab15b85408cf2b57f64092f3, type: 3}
+      objectReference: {fileID: 2800000, guid: 377d1247ca2c26147b875b0c35a90394, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapLight.Array.data[12]
       value: 
-      objectReference: {fileID: 2800000, guid: bf8f45dabbfe2164a9de40f0deeaefd6, type: 3}
+      objectReference: {fileID: 2800000, guid: d9d874989a91b9d43b6a6c655f10c1d1, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapLight.Array.data[13]
       value: 
-      objectReference: {fileID: 2800000, guid: 7da682c0f6260a74da83c457106aa342, type: 3}
+      objectReference: {fileID: 2800000, guid: 9b113f2395d09474281b306cf84b09aa, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapLight.Array.data[14]
       value: 
-      objectReference: {fileID: 2800000, guid: 069c15dfb8c9ff243adce470c6b0eabb, type: 3}
+      objectReference: {fileID: 2800000, guid: afbb6fcba271f89459003e341c63a6e4, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapLight.Array.data[15]
       value: 
-      objectReference: {fileID: 2800000, guid: b97021d41a62e3346927762b04dbeb1b, type: 3}
+      objectReference: {fileID: 2800000, guid: a21243a1279bda14c8da4e0173e038e3, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapLight.Array.data[16]
       value: 
-      objectReference: {fileID: 2800000, guid: bfbe7d3ab2363cb469e12ce1e142427e, type: 3}
+      objectReference: {fileID: 2800000, guid: c1db5279975b0ec47a295a11f2f27bb5, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapLight.Array.data[17]
       value: 
-      objectReference: {fileID: 2800000, guid: 4793bb87178f08e41941bf85381bcb69, type: 3}
+      objectReference: {fileID: 2800000, guid: 8f46f3acbcebe6d4193150ec905ce16f, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapLight.Array.data[18]
@@ -9065,167 +9056,167 @@ Prefab:
         type: 2}
       propertyPath: SecondLightMapLight.Array.data[6]
       value: 
-      objectReference: {fileID: 2800000, guid: ed8f16cc8a486bf458116b47859919d7, type: 3}
+      objectReference: {fileID: 2800000, guid: b98fa6714e578584f92646fd2e6d74d5, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapLight.Array.data[5]
       value: 
-      objectReference: {fileID: 2800000, guid: 9241c4f6e0278794bbee74b4ed109ebc, type: 3}
+      objectReference: {fileID: 2800000, guid: 3420f406d72f5a74bb6e036346883069, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapLight.Array.data[4]
       value: 
-      objectReference: {fileID: 2800000, guid: 9b7f798a1fdb4af4fa126de500782251, type: 3}
+      objectReference: {fileID: 2800000, guid: 6db0a23191a13c14585d0bf948dfcc55, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapLight.Array.data[3]
       value: 
-      objectReference: {fileID: 2800000, guid: 9b5fdf48656c5594b98e44e1b52e53af, type: 3}
+      objectReference: {fileID: 2800000, guid: 79586a1a46a803c438d0b40922abb864, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapLight.Array.data[2]
       value: 
-      objectReference: {fileID: 2800000, guid: 96bf6791659ebe4448358dbc4300b557, type: 3}
+      objectReference: {fileID: 2800000, guid: e57f10814325aa343877e4641930befb, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapLight.Array.data[1]
       value: 
-      objectReference: {fileID: 2800000, guid: 94e56c227b10e114b9372ed91fff0c1b, type: 3}
+      objectReference: {fileID: 2800000, guid: 43deb4b136fd51d47913d138c9449f9b, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapLight.Array.data[0]
       value: 
-      objectReference: {fileID: 2800000, guid: d50cc168194683645a63569b21af0c28, type: 3}
+      objectReference: {fileID: 2800000, guid: 50d5fd22b61028a4abf0829e7f6d22a2, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapSM.Array.data[0]
       value: 
-      objectReference: {fileID: 2800000, guid: 0420e5dcd137cdc41a7a9e7dda8dd787, type: 3}
+      objectReference: {fileID: 2800000, guid: 78e4b79234c7e4a43bae80ee053ee216, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapSM.Array.data[1]
       value: 
-      objectReference: {fileID: 2800000, guid: 8f9bccc8293ab7b4188cef2e887b0467, type: 3}
+      objectReference: {fileID: 2800000, guid: 1a265549a1ee40f4eb20652ec68633c2, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapSM.Array.data[2]
       value: 
-      objectReference: {fileID: 2800000, guid: e6d8d98a403f23a40bc5864e52b82c6e, type: 3}
+      objectReference: {fileID: 2800000, guid: 93845d6cface4a742b6eb2f7bc921e3e, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapSM.Array.data[3]
       value: 
-      objectReference: {fileID: 2800000, guid: ab43b7c2bd182764d8ad92b97de7c140, type: 3}
+      objectReference: {fileID: 2800000, guid: 1ca7445ca37c4154ea9314d8257e2307, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapSM.Array.data[4]
       value: 
-      objectReference: {fileID: 2800000, guid: e044920f48fef2444a31e7970ee0400f, type: 3}
+      objectReference: {fileID: 2800000, guid: 4621ec161d142b94dae9e5bd2f99a8e2, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapSM.Array.data[5]
       value: 
-      objectReference: {fileID: 2800000, guid: 2cbac57e21471644391a78fcfa10baa2, type: 3}
+      objectReference: {fileID: 2800000, guid: 2d0da510ea75e3942a4a3075785289d6, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapSM.Array.data[6]
       value: 
-      objectReference: {fileID: 2800000, guid: 4b346e54a0981c84ba5950f3ca8e691b, type: 3}
+      objectReference: {fileID: 2800000, guid: 319086aa744afe84485f57e6a7f78a1a, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapSM.Array.data[7]
       value: 
-      objectReference: {fileID: 2800000, guid: 5732964b850a52e4387bccd50282468f, type: 3}
+      objectReference: {fileID: 2800000, guid: 9740deee4b82c0b41a86dafba48b5cc5, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapSM.Array.data[8]
       value: 
-      objectReference: {fileID: 2800000, guid: bad82bf2358b82a469ab1cc075917e81, type: 3}
+      objectReference: {fileID: 2800000, guid: 266a89dd3bdae19449d3bf0bb0afdfd0, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapSM.Array.data[9]
       value: 
-      objectReference: {fileID: 2800000, guid: 1046ec822a8e4e444bf9815865f796db, type: 3}
+      objectReference: {fileID: 2800000, guid: ebe51601a6e621640ae52cf53f067e1d, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapSM.Array.data[10]
       value: 
-      objectReference: {fileID: 2800000, guid: 7e176c5bb9456a24bab4f3eb87aacede, type: 3}
+      objectReference: {fileID: 2800000, guid: acb5d7df3952c9f4695dbaf5e421039d, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapSM.Array.data[11]
       value: 
-      objectReference: {fileID: 2800000, guid: c04c246b610d94f4d967a6d2626fce22, type: 3}
+      objectReference: {fileID: 2800000, guid: 67fd70fa967804b48af75b48947d5cc8, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapSM.Array.data[12]
       value: 
-      objectReference: {fileID: 2800000, guid: f362900a94db8ba408d58f4d10daf471, type: 3}
+      objectReference: {fileID: 2800000, guid: 8ce7777a06ca3f24ab26541ac020403c, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapSM.Array.data[13]
       value: 
-      objectReference: {fileID: 2800000, guid: fa80a0387859c0146ac2259bf6f52427, type: 3}
+      objectReference: {fileID: 2800000, guid: 8b1239edd679a5d4ba3b546b95d54285, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapSM.Array.data[14]
       value: 
-      objectReference: {fileID: 2800000, guid: 13edcb8b68229a2418bf9fa0157bca9e, type: 3}
+      objectReference: {fileID: 2800000, guid: 4927067f491dac2439313c54d541bc52, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapDir.Array.data[7]
       value: 
-      objectReference: {fileID: 2800000, guid: 44856fca0a809df4383d4dbc36cdaf4f, type: 3}
+      objectReference: {fileID: 2800000, guid: cec242e2b4785cd4b894055c51d0987d, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapDir.Array.data[8]
       value: 
-      objectReference: {fileID: 2800000, guid: 5af4e7faff29f1647a6a38a6e0ed91b9, type: 3}
+      objectReference: {fileID: 2800000, guid: 425968a3357bee043855ab48f04319d5, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapDir.Array.data[9]
       value: 
-      objectReference: {fileID: 2800000, guid: 01e4c64b55385c249a2d142b6408759b, type: 3}
+      objectReference: {fileID: 2800000, guid: 0f606ba4d9545cb4eb675952a4a84606, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapDir.Array.data[10]
       value: 
-      objectReference: {fileID: 2800000, guid: 1e1603e50eb7fd44daddbf7347083c2a, type: 3}
+      objectReference: {fileID: 2800000, guid: a351750c067b9134d93f4e42bb60cd26, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapDir.Array.data[11]
       value: 
-      objectReference: {fileID: 2800000, guid: 6182c2480744ad947804ba6716f01bdd, type: 3}
+      objectReference: {fileID: 2800000, guid: a1de80786bf23bb4699c8872957ef604, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapDir.Array.data[12]
       value: 
-      objectReference: {fileID: 2800000, guid: fdb99ce6b7152b24092d53499f6cd18c, type: 3}
+      objectReference: {fileID: 2800000, guid: 1a21bf37fbf2a854196cd39d4bbe371f, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapDir.Array.data[13]
       value: 
-      objectReference: {fileID: 2800000, guid: 3fbf85db25a71f64897e0b2fea1371eb, type: 3}
+      objectReference: {fileID: 2800000, guid: fa3eb2a1da3bae947b2df6517757996c, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapDir.Array.data[14]
       value: 
-      objectReference: {fileID: 2800000, guid: 301fd74b84ce91548a054d4e38936083, type: 3}
+      objectReference: {fileID: 2800000, guid: d2115adeb5db5f84cada5adb4f1f7620, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapDir.Array.data[15]
       value: 
-      objectReference: {fileID: 2800000, guid: a0f2f5c48d73017499d0e668beb3b46b, type: 3}
+      objectReference: {fileID: 2800000, guid: c7f1649f6c158d4409e8943415c810fe, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapDir.Array.data[16]
       value: 
-      objectReference: {fileID: 2800000, guid: 506812b45769c274087883715c1d2cc9, type: 3}
+      objectReference: {fileID: 2800000, guid: 249060256752a364a81bae9e123b9394, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapDir.Array.data[17]
       value: 
-      objectReference: {fileID: 2800000, guid: 57c64aa4df4a4fc498cea1edd6e983f0, type: 3}
+      objectReference: {fileID: 2800000, guid: 1c306681b6acbb348943f3ac6797012d, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapDir.Array.data[18]
@@ -9250,117 +9241,117 @@ Prefab:
         type: 2}
       propertyPath: FirstLightMapLight.Array.data[7]
       value: 
-      objectReference: {fileID: 2800000, guid: 639af0c22ae826245870aa960c8c3659, type: 3}
+      objectReference: {fileID: 2800000, guid: 98c13eadd8186bd4b90dbac9e503cc25, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapLight.Array.data[8]
       value: 
-      objectReference: {fileID: 2800000, guid: d32799cf8e13d8c40a8ee02d4ed513e4, type: 3}
+      objectReference: {fileID: 2800000, guid: 086de8b434cb86a4d9ddd81ecdd946fd, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapLight.Array.data[9]
       value: 
-      objectReference: {fileID: 2800000, guid: 42577c5c7c874294dba1a6f1d59a6813, type: 3}
+      objectReference: {fileID: 2800000, guid: 7040dc48727aa664f927857a892ebe3d, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapLight.Array.data[10]
       value: 
-      objectReference: {fileID: 2800000, guid: 394a50112aec7d440821699a78e76ce1, type: 3}
+      objectReference: {fileID: 2800000, guid: 2da643b1a49c65f4eacb6b3c36cb263a, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapLight.Array.data[11]
       value: 
-      objectReference: {fileID: 2800000, guid: 7de61b743c863ad4e9d8715f1a5f686b, type: 3}
+      objectReference: {fileID: 2800000, guid: 9f5c9b4270fe3144fad13027354e6a17, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapLight.Array.data[12]
       value: 
-      objectReference: {fileID: 2800000, guid: c6c579b1fbd543b49b548943cf4da90f, type: 3}
+      objectReference: {fileID: 2800000, guid: 365a2e62319c8694e934904aee04854d, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapLight.Array.data[13]
       value: 
-      objectReference: {fileID: 2800000, guid: 41af5c8c64ffad045b4b56ab9c8515ca, type: 3}
+      objectReference: {fileID: 2800000, guid: d11f500044126c74ab18cb6faa5d781f, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapLight.Array.data[14]
       value: 
-      objectReference: {fileID: 2800000, guid: 006f2374382e6bf4ca7500595dcb744e, type: 3}
+      objectReference: {fileID: 2800000, guid: 523101f2e226eb7468272a4658b717ab, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapSM.Array.data[7]
       value: 
-      objectReference: {fileID: 2800000, guid: 799e540343f79af44919abee1bddb6f3, type: 3}
+      objectReference: {fileID: 2800000, guid: 54731572561472a419fd64be825a0b99, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapSM.Array.data[8]
       value: 
-      objectReference: {fileID: 2800000, guid: 75b2290297bdf3d479190f7110571b26, type: 3}
+      objectReference: {fileID: 2800000, guid: 0ea9a4a0b2e7e2c4abcd7565e69333bb, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapSM.Array.data[9]
       value: 
-      objectReference: {fileID: 2800000, guid: 04d89e4da3898f743ae9251c430078eb, type: 3}
+      objectReference: {fileID: 2800000, guid: 3fba1d2a466794346af8bc36eba19836, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapSM.Array.data[10]
       value: 
-      objectReference: {fileID: 2800000, guid: dda0cefdbaeb8fd44aadb11bd303ecac, type: 3}
+      objectReference: {fileID: 2800000, guid: 303a4c6ab669d4a4dba83feea4c55233, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapSM.Array.data[11]
       value: 
-      objectReference: {fileID: 2800000, guid: 1750bfd30bfc0164884f6470cb1632d9, type: 3}
+      objectReference: {fileID: 2800000, guid: 4f4cf240840cec14bb42dd6494d2f0b7, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapSM.Array.data[12]
       value: 
-      objectReference: {fileID: 2800000, guid: b917e96e09802dd479bc3712abfae250, type: 3}
+      objectReference: {fileID: 2800000, guid: 0af39ff0b19366e45b231d41693f0c57, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapSM.Array.data[13]
       value: 
-      objectReference: {fileID: 2800000, guid: 381f801fcdd7fc64e920993e160bdffb, type: 3}
+      objectReference: {fileID: 2800000, guid: 7f63de7e6f42a2a41ba56857ef4ba5ed, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapSM.Array.data[14]
       value: 
-      objectReference: {fileID: 2800000, guid: 36f01f9796447df41beefc021d7fce32, type: 3}
+      objectReference: {fileID: 2800000, guid: 72c6c08ad4727f4418779f52b6ad807d, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapLight.Array.data[15]
       value: 
-      objectReference: {fileID: 2800000, guid: fd0ab906d53b00c4c806f93f90e631ce, type: 3}
+      objectReference: {fileID: 2800000, guid: 2cc7495bfb06469418f64b8a6b55b874, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapLight.Array.data[16]
       value: 
-      objectReference: {fileID: 2800000, guid: dd446c45355254541865d9b67be67aa5, type: 3}
+      objectReference: {fileID: 2800000, guid: 8a971b0cc1f75e44faf409d5c2dac647, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapSM.Array.data[15]
       value: 
-      objectReference: {fileID: 2800000, guid: 48c73261cd9d1d240a65a31c35a1edf2, type: 3}
+      objectReference: {fileID: 2800000, guid: a44098df4f6fd8c45b13ae35c6a977c6, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapDir.Array.data[15]
       value: 
-      objectReference: {fileID: 2800000, guid: 4d57ea0cdf9bc0a4389d81c608ac4a24, type: 3}
+      objectReference: {fileID: 2800000, guid: c793dd4cfa8b7a5409d18305d2239de8, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapSM.Array.data[15]
       value: 
-      objectReference: {fileID: 2800000, guid: 1d609cb7ae3701c478707ddb4ec8daad, type: 3}
+      objectReference: {fileID: 2800000, guid: b1dbd6427d5a45542bc175d8e1bb10a2, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapDir.Array.data[16]
       value: 
-      objectReference: {fileID: 2800000, guid: 2c785ae8b9fb8734fbc930d81371de63, type: 3}
+      objectReference: {fileID: 2800000, guid: a07948495aedc70439e6cda974d2bdcc, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapDir.Array.data[17]
       value: 
-      objectReference: {fileID: 2800000, guid: 96f410a4baa520e4980f8b16bc55d3c5, type: 3}
+      objectReference: {fileID: 2800000, guid: 51ca7d4f7a100af4484d00e8ff4ced2f, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapDir.Array.data[18]
@@ -9385,12 +9376,12 @@ Prefab:
         type: 2}
       propertyPath: SecondLightMapSM.Array.data[16]
       value: 
-      objectReference: {fileID: 2800000, guid: de9eaa52ea8c1ff42804048f1ffb50b1, type: 3}
+      objectReference: {fileID: 2800000, guid: dc156f027e68c154791d78198d69880d, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapSM.Array.data[17]
       value: 
-      objectReference: {fileID: 2800000, guid: bc386fda8707f664b8ab9c8e060d77d0, type: 3}
+      objectReference: {fileID: 2800000, guid: 044e431965e67754fa3c9dd4431a4780, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: SecondLightMapSM.Array.data[18]
@@ -9415,7 +9406,7 @@ Prefab:
         type: 2}
       propertyPath: FirstLightMapLight.Array.data[17]
       value: 
-      objectReference: {fileID: 2800000, guid: 2a860ce772fb0094c806c2bcd3480567, type: 3}
+      objectReference: {fileID: 2800000, guid: 7486052641dac624ca5ea598ec5c9cd4, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapLight.Array.data[18]
@@ -9440,12 +9431,12 @@ Prefab:
         type: 2}
       propertyPath: FirstLightMapSM.Array.data[16]
       value: 
-      objectReference: {fileID: 2800000, guid: 8d858941bac2da041a3df20d0beef458, type: 3}
+      objectReference: {fileID: 2800000, guid: cb6bfce6762600b41a44117f12693405, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapSM.Array.data[17]
       value: 
-      objectReference: {fileID: 2800000, guid: 2cf7e13a02ba6b440bf4a03178e16cca, type: 3}
+      objectReference: {fileID: 2800000, guid: 58d326d2b5fee254d98b10b7f78c169d, type: 3}
     - target: {fileID: 114717463778336930, guid: 87bb978a5db56464f84b7ab37ed95ace,
         type: 2}
       propertyPath: FirstLightMapSM.Array.data[18]

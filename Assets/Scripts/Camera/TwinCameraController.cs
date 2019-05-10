@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 public class TwinCameraController : MonoBehaviour
 {
-    public RenderTexture InitialRenderTexture;
+    //public RenderTexture InitialRenderTexture;
 
     public Material ActiveCameraMaterial;
 
@@ -20,17 +21,27 @@ public class TwinCameraController : MonoBehaviour
 
     private Transform _playerTransform;
 
+    private CommandBuffer _depthHackBuffer;
+    [SerializeField]
+    private Renderer _depthHackQuad;
+
     private void Start()
     {
+        var rt = new RenderTexture(Screen.width, Screen.height,24);
+        rt.format = RenderTextureFormat.ARGBFloat;
+        Shader.SetGlobalTexture("_TimeCrackTexture", rt);
+
         _referencesManager = ReferencesManager.instance;
         _soundsManager = SoundsManager.instance;
         _activeCamera = _referencesManager.CameraSceneA;
         _hiddenCamera = _referencesManager.CameraSceneB;
+        _hiddenCamera.targetTexture = rt;
         _playerTransform = _referencesManager.Player.GetComponent<Transform>();
+        ChangeLayerRecursively(_playerTransform, "UniverseA");
         ActiveCameraMaterial = _activeCamera.GetComponent<PostProcessDepthGrayscale>().Mat;
-        _playerTransform.gameObject.layer = LayerMask.NameToLayer("UniverseA");
         _timeToChangeScene = ActiveCameraMaterial.GetFloat("_RingPassTimeLength");
         ActiveCameraMaterial.SetFloat("_RunRingPass", 0);
+        DepthHack();
     }
 
     void Update()
@@ -58,6 +69,8 @@ public class TwinCameraController : MonoBehaviour
         var swapCamera = _activeCamera;
         _activeCamera = _hiddenCamera;
         _hiddenCamera = swapCamera;
+
+        DoDepthHack();
 
         ActiveCameraMaterial.SetFloat("_RunRingPass", 0);
         _activeCamera.GetComponent<PostProcessDepthGrayscale>().enabled = true;
@@ -100,11 +113,37 @@ public class TwinCameraController : MonoBehaviour
     private void ChangePlayerLayer()
     {
         if(_playerTransform.gameObject.layer == LayerMask.NameToLayer("UniverseA")){
-            _playerTransform.gameObject.layer = LayerMask.NameToLayer("UniverseB");
+            ChangeLayerRecursively(_playerTransform, "UniverseB");
         }
         else
         {
-            _playerTransform.gameObject.layer = LayerMask.NameToLayer("UniverseA");
+            ChangeLayerRecursively(_playerTransform, "UniverseA");
+        }
+    }
+
+    private void DepthHack()
+    {
+        _depthHackBuffer = new CommandBuffer();
+        _depthHackBuffer.ClearRenderTarget(true, true, Color.black, 0);
+        _depthHackBuffer.name = "Fancy Depth Magic";
+        _depthHackBuffer.DrawRenderer(_depthHackQuad, new Material(Shader.Find("Hidden/DepthHack")));
+
+        DoDepthHack();
+    }
+
+    private void DoDepthHack()
+    {
+        _hiddenCamera.AddCommandBuffer(CameraEvent.BeforeForwardOpaque, _depthHackBuffer);
+        _hiddenCamera.AddCommandBuffer(CameraEvent.BeforeDepthTexture, _depthHackBuffer);
+        _activeCamera.RemoveAllCommandBuffers();
+    }
+
+    private void ChangeLayerRecursively(Transform trans, string layerName)
+    {
+        trans.gameObject.layer = LayerMask.NameToLayer(layerName);
+        foreach (Transform child in trans)
+        {
+            ChangeLayerRecursively(child, layerName);
         }
     }
 }

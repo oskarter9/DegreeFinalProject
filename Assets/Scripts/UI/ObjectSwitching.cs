@@ -1,8 +1,10 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class ObjectSwitching : MonoBehaviour {
 
     public int SelectedObject = 0;
+
 
 	// Use this for initialization
 	void Start () {
@@ -63,4 +65,5 @@ public class ObjectSwitching : MonoBehaviour {
             i++;
         }
     }
+
 }

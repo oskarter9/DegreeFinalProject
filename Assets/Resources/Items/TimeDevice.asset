@@ -11,7 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68be1cf4911d7994da5308aee8a99716, type: 3}
   m_Name: TimeDevice
   m_EditorClassIdentifier: 
-  Name: TimeDevice
   Icon: {fileID: 21300000, guid: 8d795a5f1a7c53649843e9c9c0c7cb7b, type: 3}
-  ObjectToUse: {fileID: 1628911097131310, guid: 9a8f2b6ec115f1d4aa8f7028e87a660f,
+  ObjectToUse: {fileID: 1625065616403322, guid: aaa677411e7d06f4585671e45e9f44d2,
     type: 2}
