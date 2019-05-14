@@ -15,6 +15,8 @@ public class SettingsMenu : MonoBehaviour {
     public Toggle BloomEffectToggle;
     public Toggle VignetteEffectToggle;
     public Toggle MBEffectToggle;
+    public Toggle AAEffectToggle;
+    public Toggle CameraPathToggle;
     public PostProcessingProfile PostProcProf;
 
     public Button ApplyChangesButton;
@@ -25,7 +27,6 @@ public class SettingsMenu : MonoBehaviour {
 
     void Start()
     {
-        
         _resolutions = Screen.resolutions;
 
         ResolutionDropdown.ClearOptions();
@@ -97,6 +98,18 @@ public class SettingsMenu : MonoBehaviour {
         EnableButton(ApplyChangesButton);
     }
 
+    public void SetAntiAliasing(bool aaActive)
+    {
+        PlayerPrefs.SetInt("AAEffect", BoolToInt(aaActive));
+        EnableButton(ApplyChangesButton);
+    }
+
+    public void SetCameraPath(bool qualityPath)
+    {
+        PlayerPrefs.SetInt("RefQuality", BoolToInt(qualityPath));
+        EnableButton(ApplyChangesButton);
+    }
+
     public void SetDefaultSettings()
     {
         SetVolume(1);
@@ -106,6 +119,8 @@ public class SettingsMenu : MonoBehaviour {
         SetBloomEffect(true);
         SetVignetteEffect(true);
         SetMBEffect(true);
+        SetAntiAliasing(true);
+        SetCameraPath(true);//deferred
         ApplyChanges();
         SetInitialSettings();
         changesNotApplied = false;
@@ -116,19 +131,31 @@ public class SettingsMenu : MonoBehaviour {
     {
         AudioListener.volume = PlayerPrefs.GetFloat("PrevGeneralVolume");
         VolumeSlider.value = PlayerPrefs.GetFloat("PrevGeneralVolume");
+
         QualitySettings.SetQualityLevel(PlayerPrefs.GetInt("PrevQualityIndex"));
         QualityDropdown.value = PlayerPrefs.GetInt("PrevQualityIndex");
+
         Screen.fullScreen = IntToBool(PlayerPrefs.GetInt("PrevFullScreen"));
         FullScreenToggle.isOn = IntToBool(PlayerPrefs.GetInt("PrevFullScreen"));
+
         Resolution res = _resolutions[PlayerPrefs.GetInt("PrevResolutionIndex")];
         ResolutionDropdown.value = PlayerPrefs.GetInt("PrevResolutionIndex");
         Screen.SetResolution(res.width, res.height, Screen.fullScreen);
+
         PostProcProf.bloom.enabled = IntToBool(PlayerPrefs.GetInt("PrevBloomEffect"));
         BloomEffectToggle.isOn = IntToBool(PlayerPrefs.GetInt("PrevBloomEffect"));
+
         PostProcProf.vignette.enabled = IntToBool(PlayerPrefs.GetInt("PrevVignetteEffect"));
         VignetteEffectToggle.isOn = IntToBool(PlayerPrefs.GetInt("PrevVignetteEffect"));
+
         PostProcProf.motionBlur.enabled = IntToBool(PlayerPrefs.GetInt("PrevMBEffect"));
         MBEffectToggle.isOn = IntToBool(PlayerPrefs.GetInt("PrevMBEffect"));
+
+        PostProcProf.antialiasing.enabled = IntToBool(PlayerPrefs.GetInt("PrevAAEffect"));
+        AAEffectToggle.isOn = IntToBool(PlayerPrefs.GetInt("PrevAAEffect"));
+
+        CameraPathToggle.isOn = IntToBool(PlayerPrefs.GetInt("PrevRefQuality"));
+
         changesNotApplied = false;
         ApplyChangesButton.interactable = false;
     }
@@ -144,6 +171,7 @@ public class SettingsMenu : MonoBehaviour {
         PostProcProf.bloom.enabled = IntToBool(PlayerPrefs.GetInt("BloomEffect"));
         PostProcProf.vignette.enabled = IntToBool(PlayerPrefs.GetInt("VignetteEffect"));
         PostProcProf.motionBlur.enabled = IntToBool(PlayerPrefs.GetInt("MBEffect"));
+        PostProcProf.antialiasing.enabled = IntToBool(PlayerPrefs.GetInt("AAEffect"));
         changesNotApplied = false;
         ApplyChangesButton.interactable = false;
     }
@@ -157,6 +185,8 @@ public class SettingsMenu : MonoBehaviour {
         BloomEffectToggle.isOn = IntToBool(PlayerPrefs.GetInt("BloomEffect"));
         VignetteEffectToggle.isOn = IntToBool(PlayerPrefs.GetInt("VignetteEffect"));
         MBEffectToggle.isOn = IntToBool(PlayerPrefs.GetInt("MBEffect"));
+        AAEffectToggle.isOn = IntToBool(PlayerPrefs.GetInt("AAEffect"));
+        CameraPathToggle.isOn = IntToBool(PlayerPrefs.GetInt("RefQuality"));
     }
 
     void GetInitialSettings()
@@ -168,6 +198,8 @@ public class SettingsMenu : MonoBehaviour {
         PlayerPrefs.SetInt("PrevBloomEffect", PlayerPrefs.GetInt("BloomEffect"));
         PlayerPrefs.SetInt("PrevVignetteEffect", PlayerPrefs.GetInt("VignetteEffect"));
         PlayerPrefs.SetInt("PrevMBEffect", PlayerPrefs.GetInt("MBEffect"));
+        PlayerPrefs.SetInt("PrevAAEffect", PlayerPrefs.GetInt("AAEffect"));
+        PlayerPrefs.SetInt("PrevRefQuality", PlayerPrefs.GetInt("RefQuality"));
     }
 
     void EnableButton(Button btn)

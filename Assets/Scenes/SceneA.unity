@@ -49,7 +49,7 @@ LightmapSettings:
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
-    m_IndirectOutputScale: 1
+    m_IndirectOutputScale: 2
     m_AlbedoBoost: 1
     m_TemporalCoherenceThreshold: 1
     m_EnvironmentLightingMode: 1
@@ -57,7 +57,7 @@ LightmapSettings:
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
     serializedVersion: 10
-    m_Resolution: 2
+    m_Resolution: 3
     m_BakeResolution: 120
     m_AtlasSize: 1024
     m_AO: 0
@@ -2817,6 +2817,21 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1961545538218120, guid: ed3418477bbca8c48a6b0befe3e2884d, type: 2}
       propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 215579017262329756, guid: ed3418477bbca8c48a6b0befe3e2884d,
+        type: 2}
+      propertyPath: m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23430052367894642, guid: ed3418477bbca8c48a6b0befe3e2884d,
+        type: 2}
+      propertyPath: m_ReflectionProbeUsage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 215579017262329756, guid: ed3418477bbca8c48a6b0befe3e2884d,
+        type: 2}
+      propertyPath: m_BoxProjection
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -7511,6 +7526,16 @@ Prefab:
         type: 2}
       propertyPath: m_TargetTexture
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 20328682548010850, guid: 58543736ddd328f48a1f1342493b0d38,
+        type: 2}
+      propertyPath: m_AllowMSAA
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20868092025276936, guid: 58543736ddd328f48a1f1342493b0d38,
+        type: 2}
+      propertyPath: m_AllowMSAA
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58543736ddd328f48a1f1342493b0d38, type: 2}

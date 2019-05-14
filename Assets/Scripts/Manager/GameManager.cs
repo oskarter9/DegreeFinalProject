@@ -35,13 +35,12 @@ public class GameManager : MonoBehaviour
             {
                 SetEnvironmentVestiges(i);
             }
-            //currentPuzzle = 1;
         }
         else
         {
             currentPuzzle = 1;
         }
-        //SetEnvironmentVestiges(currentPuzzle);
+        SetCamerasRenderingPath();
         SetPuzzleEnvironment(currentPuzzle);
     }
 
@@ -93,6 +92,20 @@ public class GameManager : MonoBehaviour
     private void SetGameVolume()
     {
         AudioListener.volume = PlayerPrefs.GetFloat("GeneralVolume");
+    }
+
+    private void SetCamerasRenderingPath()
+    {
+        if(PlayerPrefs.GetInt("RefQuality") == 1)
+        {
+            _referencesManager.CameraSceneA.renderingPath = RenderingPath.DeferredShading;
+            _referencesManager.CameraSceneB.renderingPath = RenderingPath.DeferredShading;
+        }
+        else
+        {
+            _referencesManager.CameraSceneA.renderingPath = RenderingPath.Forward;
+            _referencesManager.CameraSceneB.renderingPath = RenderingPath.Forward;
+        }
     }
 }
 
