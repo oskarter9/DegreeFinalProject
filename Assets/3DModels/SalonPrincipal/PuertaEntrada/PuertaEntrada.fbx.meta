@@ -7,26 +7,10 @@ ModelImporter:
     400000: //RootNode
     2100000: PuertaEntrada
     2100002: CristalesPuertaEntrada
-    2100004: BombinPuertaMetal
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube.020
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: BombinPuertaMetal
-    second: {fileID: 2100000, guid: 24d6bbb3425eb944684db37cfb68efda, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: CristalesPuertaEntrada
-    second: {fileID: 2100000, guid: ca438923a2cf700439b5b6497b3eee45, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: PuertaEntrada
-    second: {fileID: 2100000, guid: 24d6bbb3425eb944684db37cfb68efda, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -81,7 +65,7 @@ ModelImporter:
     hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 3
     normalCalculationMode: 4
   importAnimation: 1

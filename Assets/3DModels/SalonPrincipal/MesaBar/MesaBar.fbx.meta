@@ -5,22 +5,11 @@ ModelImporter:
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: PatasMetalMesa
-    2100002: TablaMetalMesa
+    2100000: TablaMetalMesa
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cylinder.014
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: PatasMetalMesa
-    second: {fileID: 2100000, guid: a8f1d44651a4b89429158bdaaf5796e8, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: TablaMetalMesa
-    second: {fileID: 2100000, guid: a8f1d44651a4b89429158bdaaf5796e8, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0

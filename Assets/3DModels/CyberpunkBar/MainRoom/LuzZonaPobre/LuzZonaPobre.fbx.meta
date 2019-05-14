@@ -5,40 +5,12 @@ ModelImporter:
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: ZocalosLuzLetrero
+    2100000: LetreroJapoLuz
     2100002: BombillaLetrero
-    2100004: UnionesZocalos
-    2100006: SujeccionLetreroLuz
-    2100008: LetreroJapoLuz
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cylinder.002
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: BombillaLetrero
-    second: {fileID: 2100000, guid: 45488f8b94569ab4099fa4372b64c233, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: LetreroJapoLuz
-    second: {fileID: 2100000, guid: 81775d38c0e69f44eb613c24f7591add, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: SujeccionLetreroLuz
-    second: {fileID: 2100000, guid: 81775d38c0e69f44eb613c24f7591add, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: UnionesZocalos
-    second: {fileID: 2100000, guid: 81775d38c0e69f44eb613c24f7591add, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: ZocalosLuzLetrero
-    second: {fileID: 2100000, guid: 81775d38c0e69f44eb613c24f7591add, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0

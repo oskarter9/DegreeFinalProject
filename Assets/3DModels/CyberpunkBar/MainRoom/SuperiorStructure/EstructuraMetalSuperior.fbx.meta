@@ -6,45 +6,10 @@ ModelImporter:
     100000: //RootNode
     400000: //RootNode
     2100000: EstructuraMetal
-    2100002: PalasExtractor
-    2100004: MarcoContador
-    2100006: NumerosContador
-    2100008: CarcasaLuzTemporizadora
-    2100010: LuzTemporizadora
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube.009
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: CarcasaLuzTemporizadora
-    second: {fileID: 2100000, guid: 73a6d353510e1c14083e1b5308c590ff, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: EstructuraMetal
-    second: {fileID: 2100000, guid: 73a6d353510e1c14083e1b5308c590ff, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: LuzTemporizadora
-    second: {fileID: 2100000, guid: 73a6d353510e1c14083e1b5308c590ff, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: MarcoContador
-    second: {fileID: 2100000, guid: 73a6d353510e1c14083e1b5308c590ff, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: NumerosContador
-    second: {fileID: 2100000, guid: 73a6d353510e1c14083e1b5308c590ff, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: PalasExtractor
-    second: {fileID: 2100000, guid: 73a6d353510e1c14083e1b5308c590ff, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0

@@ -5,41 +5,16 @@ ModelImporter:
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: TapaCubo
-    2100002: BolsaBasura
-    2100004: ParteInferiorCubo
-    2100006: ParteSuperiorCubo
-    2100008: InteriorPapelera
+    2100000: ParteSuperiorCubo
     2300000: //RootNode
     3300000: //RootNode
-    4300000: TapaPapelera
-    2186277476908879412: ImportLogs
+    4300000: TapaPapelera.001
   externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: BolsaBasura
-    second: {fileID: 2100000, guid: 4d54698a06aab1c4cb447a32bc03312f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: InteriorPapelera
-    second: {fileID: 2100000, guid: 4694aa30a1f4d994a811e9da22ce1895, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: ParteInferiorCubo
-    second: {fileID: 2100000, guid: 1851c4d64c4fb1742abb3213d01633ea, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: ParteSuperiorCubo
     second: {fileID: 2100000, guid: 981a480522c98d34299a8bb365afa836, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: TapaCubo
-    second: {fileID: 2100000, guid: 2d1afcf48a18649449c9ab3f038fce29, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -75,12 +50,12 @@ ModelImporter:
     addColliders: 0
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 0
-    importLights: 0
+    importCameras: 1
+    importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 1
     useFileUnits: 1
-    optimizeMeshForGPU: 0
+    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
@@ -94,8 +69,8 @@ ModelImporter:
     hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 0
-    tangentImportMode: 0
+    normalImportMode: 1
+    tangentImportMode: 3
     normalCalculationMode: 4
   importAnimation: 1
   copyAvatar: 0

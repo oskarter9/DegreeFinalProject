@@ -6,22 +6,10 @@ ModelImporter:
     100000: //RootNode
     400000: //RootNode
     2100000: ZocaloBombilla
-    2100002: AcopleMetalBombilla
-    2100004: EmisivoBombilla
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cylinder.016
+    4300000: Cylinder.020
   externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: AcopleMetalBombilla
-    second: {fileID: 2100000, guid: 3678eaba6dfb2c043bf93ded9c061867, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: EmisivoBombilla
-    second: {fileID: 2100000, guid: 3678eaba6dfb2c043bf93ded9c061867, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

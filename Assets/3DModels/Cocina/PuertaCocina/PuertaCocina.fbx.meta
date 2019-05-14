@@ -6,39 +6,11 @@ ModelImporter:
     100000: //RootNode
     400000: //RootNode
     2100000: PuertaCocina.001
-    2100002: MarcoVentanucoPuertaCocina
-    2100004: ChapaPuertaCocina
-    2100006: BisagrasPuertaCocina
-    2100008: VentanucoPuertaCocina
+    2100002: VentanucoPuertaCocina
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube.010
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: BisagrasPuertaCocina
-    second: {fileID: 2100000, guid: 79439a08774e8a8419205927463018ca, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: ChapaPuertaCocina
-    second: {fileID: 2100000, guid: 79439a08774e8a8419205927463018ca, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: MarcoVentanucoPuertaCocina
-    second: {fileID: 2100000, guid: 79439a08774e8a8419205927463018ca, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: PuertaCocina.001
-    second: {fileID: 2100000, guid: 79439a08774e8a8419205927463018ca, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: VentanucoPuertaCocina
-    second: {fileID: 2100000, guid: 04f229fcee4d7424291ea2cc2046ae06, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0

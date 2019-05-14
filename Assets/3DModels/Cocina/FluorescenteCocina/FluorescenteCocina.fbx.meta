@@ -11,22 +11,7 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube.003
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: EmisivoFluorescente
-    second: {fileID: 2100000, guid: 6420a661664f9cf4d8a6b31cc96d07ce, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: MetalFluorescente
-    second: {fileID: 2100000, guid: aa99e54fa4261e74285f9de1a6e9ab59, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: PlasticoFluorescente
-    second: {fileID: 2100000, guid: aa99e54fa4261e74285f9de1a6e9ab59, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0

@@ -6,39 +6,10 @@ ModelImporter:
     100000: //RootNode
     400000: //RootNode
     2100000: BaseMetal
-    2100002: CajaRegistradora
-    2100004: Teclas
-    2100006: DetallesMetal
-    2100008: Pantalla
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube.021
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: BaseMetal
-    second: {fileID: 2100000, guid: 66e9ed94dce52c24eb5ead86676ad074, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: CajaRegistradora
-    second: {fileID: 2100000, guid: 66e9ed94dce52c24eb5ead86676ad074, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: DetallesMetal
-    second: {fileID: 2100000, guid: 66e9ed94dce52c24eb5ead86676ad074, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Pantalla
-    second: {fileID: 2100000, guid: 66e9ed94dce52c24eb5ead86676ad074, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Teclas
-    second: {fileID: 2100000, guid: 66e9ed94dce52c24eb5ead86676ad074, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0

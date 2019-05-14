@@ -5,40 +5,11 @@ ModelImporter:
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: InteriorMetal
-    2100002: Metal
-    2100004: InteriorWood
-    2100006: WoodPanel
-    2100008: BluePanel
+    2100000: WoodPanel
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube.006
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: BluePanel
-    second: {fileID: 2100000, guid: 1e498eaa81298344e9410c39c1e10985, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: InteriorMetal
-    second: {fileID: 2100000, guid: 1e498eaa81298344e9410c39c1e10985, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: InteriorWood
-    second: {fileID: 2100000, guid: 1e498eaa81298344e9410c39c1e10985, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Metal
-    second: {fileID: 2100000, guid: 1e498eaa81298344e9410c39c1e10985, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: WoodPanel
-    second: {fileID: 2100000, guid: 1e498eaa81298344e9410c39c1e10985, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0

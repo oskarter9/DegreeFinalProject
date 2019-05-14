@@ -6,27 +6,10 @@ ModelImporter:
     100000: //RootNode
     400000: //RootNode
     2100000: CarcasaLamparaParedLarga
-    2100002: SujeccionLamparaParedLarga
-    2100004: EmisivoLamparaParedLarga
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube.006
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: CarcasaLamparaParedLarga
-    second: {fileID: 2100000, guid: 961a876c140a99a49885f5fab653b4a3, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: EmisivoLamparaParedLarga
-    second: {fileID: 2100000, guid: 961a876c140a99a49885f5fab653b4a3, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: SujeccionLamparaParedLarga
-    second: {fileID: 2100000, guid: 961a876c140a99a49885f5fab653b4a3, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0

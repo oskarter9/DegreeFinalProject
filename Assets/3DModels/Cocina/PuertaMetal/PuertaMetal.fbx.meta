@@ -6,27 +6,10 @@ ModelImporter:
     100000: //RootNode
     400000: //RootNode
     2100000: PuertaMetal
-    2100002: PomoPuertaMetal
-    2100004: BombinPuertaMetal
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube.014
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: BombinPuertaMetal
-    second: {fileID: 2100000, guid: b8e4585cf9bb3a749a24fd98e89daa26, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: PomoPuertaMetal
-    second: {fileID: 2100000, guid: b8e4585cf9bb3a749a24fd98e89daa26, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: PuertaMetal
-    second: {fileID: 2100000, guid: b8e4585cf9bb3a749a24fd98e89daa26, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0

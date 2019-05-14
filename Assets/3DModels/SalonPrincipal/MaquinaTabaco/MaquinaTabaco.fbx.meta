@@ -5,52 +5,11 @@ ModelImporter:
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: CabezaMaquina
-    2100002: CuerpoMaquina
-    2100004: BandejaRecogida
-    2100006: SelectorTabaco
-    2100008: PanelBotones
-    2100010: RanuraMonedas
-    2100012: PatasMaquina
+    2100000: CuerpoMaquina
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube.002
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: BandejaRecogida
-    second: {fileID: 2100000, guid: fd1ddca2dcf0d3a439f9d23f1005e779, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: CabezaMaquina
-    second: {fileID: 2100000, guid: 0b6f5388bf2e2c546bcc418df4b32f90, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: CuerpoMaquina
-    second: {fileID: 2100000, guid: 7cc50e9737768504589f9af3dd64c648, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: PanelBotones
-    second: {fileID: 2100000, guid: ef15d19ee3bdd5c4d826d62ba5afc097, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: PatasMaquina
-    second: {fileID: 2100000, guid: 914bd9c327e3cc941939fbf3a85fff52, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: RanuraMonedas
-    second: {fileID: 2100000, guid: c4b5488c63e4d4a4ea1385c44d193ffa, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: SelectorTabaco
-    second: {fileID: 2100000, guid: c27ed9c5203b22443a81286282a4aa4e, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -89,7 +48,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 0
     keepQuads: 0
@@ -105,7 +64,7 @@ ModelImporter:
     hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 1
+    normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
   importAnimation: 1

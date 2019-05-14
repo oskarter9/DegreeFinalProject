@@ -5,30 +5,11 @@ ModelImporter:
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: BaldasRecibidor
-    2100002: SuperiorRecibidor
-    2100004: PieRecibidor
+    2100000: PieRecibidor
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube.001
-    6400000: //RootNode
-    2186277476908879412: ImportLogs
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: BaldasRecibidor
-    second: {fileID: 2100000, guid: 8504a2f441c5d8d46b27ccd371b2c6f1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: PieRecibidor
-    second: {fileID: 2100000, guid: 51280fb76135f914b96d999bf6ce9a3e, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: SuperiorRecibidor
-    second: {fileID: 2100000, guid: c04aef4fd124ea147beb7be50e604c33, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0

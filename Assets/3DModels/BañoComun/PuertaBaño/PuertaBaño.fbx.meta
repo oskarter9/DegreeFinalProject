@@ -6,33 +6,10 @@ ModelImporter:
     100000: //RootNode
     400000: //RootNode
     2100000: "PuertaBa\xF1oChicos"
-    2100002: "BombinPuertaBa\xF1o"
-    2100004: "BisagrasPuertaBa\xF1o"
-    2100006: "PomosPuertaBa\xF1o"
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube.013
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: "BisagrasPuertaBa\xF1o"
-    second: {fileID: 2100000, guid: 6f8954dd20580de49b51a0198fd113b0, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: "BombinPuertaBa\xF1o"
-    second: {fileID: 2100000, guid: 72bbc0bcf90b86c4b8c9b73462b0a887, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: "PomosPuertaBa\xF1o"
-    second: {fileID: 2100000, guid: 94e96b584049b6641a9954f93abd1923, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: "PuertaBa\xF1oChicos"
-    second: {fileID: 2100000, guid: 59d46b8e21dac174da6681538e534a98, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0

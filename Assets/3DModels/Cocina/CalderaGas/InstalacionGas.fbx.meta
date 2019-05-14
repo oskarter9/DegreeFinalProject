@@ -6,27 +6,10 @@ ModelImporter:
     100000: //RootNode
     400000: //RootNode
     2100000: InstalacionGas
-    2100002: InsercionesTuberiasGas
-    2100004: ExtractorGas
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cube.004
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: ExtractorGas
-    second: {fileID: 2100000, guid: eb98924e8632b224290e6bcecc7b2056, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: InsercionesTuberiasGas
-    second: {fileID: 2100000, guid: eef6eacdbd7c1f741b2631a298269e87, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: InstalacionGas
-    second: {fileID: 2100000, guid: fae9addeea389414c81e2aadb7acbb05, type: 2}
+    4300000: Cube.025
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -65,7 +48,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
@@ -81,7 +64,7 @@ ModelImporter:
     hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 1
+    normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
   importAnimation: 1

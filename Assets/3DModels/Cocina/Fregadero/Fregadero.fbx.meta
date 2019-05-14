@@ -6,21 +6,10 @@ ModelImporter:
     100000: //RootNode
     400000: //RootNode
     2100000: Fregadero
-    2100002: PatasYGrifos
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube.022
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Fregadero
-    second: {fileID: 2100000, guid: 2f1e1a4864df5e241aa3fd317a10afac, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: PatasYGrifos
-    second: {fileID: 2100000, guid: 2f1e1a4864df5e241aa3fd317a10afac, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -59,7 +48,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
@@ -75,7 +64,7 @@ ModelImporter:
     hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 3
     normalCalculationMode: 4
   importAnimation: 1

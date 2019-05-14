@@ -3,53 +3,20 @@ guid: 37a14cafb5c1f024aae0067ac4c3c4f6
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Cylinder
-    100002: //RootNode
-    400000: Cylinder
-    400002: //RootNode
-    2100000: Sumidero
-    2100002: PilaLavabo
-    2100004: Grifo
-    2100006: BocaAgua
-    2100008: "Desag\xFCeLavabo"
-    2100010: TuberiasLavabo
-    2300000: Cylinder
-    2300002: //RootNode
-    3300000: Cylinder
-    3300002: //RootNode
-    4300000: Cube
+    100000: Cube.001
+    100002: Cylinder
+    100004: //RootNode
+    400000: Cube.001
+    400002: Cylinder
+    400004: //RootNode
+    2100000: PilaLavabo
+    2300000: Cube.001
+    2300002: Cylinder
+    3300000: Cube.001
+    3300002: Cylinder
+    4300000: Cube.001
     4300002: Cylinder
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: BocaAgua
-    second: {fileID: 2100000, guid: aa266be60da716c4594f0bba0898f5b2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: "Desag\xFCeLavabo"
-    second: {fileID: 2100000, guid: aa266be60da716c4594f0bba0898f5b2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Grifo
-    second: {fileID: 2100000, guid: aa266be60da716c4594f0bba0898f5b2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: PilaLavabo
-    second: {fileID: 2100000, guid: aa266be60da716c4594f0bba0898f5b2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Sumidero
-    second: {fileID: 2100000, guid: aa266be60da716c4594f0bba0898f5b2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: TuberiasLavabo
-    second: {fileID: 2100000, guid: aa266be60da716c4594f0bba0898f5b2, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -104,7 +71,7 @@ ModelImporter:
     hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 3
     normalCalculationMode: 4
   importAnimation: 1

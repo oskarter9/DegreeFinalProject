@@ -7,49 +7,15 @@ ModelImporter:
     100002: //RootNode
     400000: PantallaTele
     400002: //RootNode
-    2100000: RuletasGrandes
-    2100002: CuloTele
-    2100004: FrontalTele
-    2100006: PlasticoNegroTele
-    2100008: "RuletasPeque\xF1as"
-    2100010: Pantalla
+    2100000: CuloTele
+    2100002: Pantalla.001
     2300000: PantallaTele
     2300002: //RootNode
     3300000: PantallaTele
     3300002: //RootNode
     4300000: Tele
     4300002: PantallaTele
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: CuloTele
-    second: {fileID: 2100000, guid: 728102ebbb77e5249b544082e5fc9146, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: FrontalTele
-    second: {fileID: 2100000, guid: 728102ebbb77e5249b544082e5fc9146, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Pantalla
-    second: {fileID: 2100000, guid: acca58b493fdc7246b2a6a864e0aa07e, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: PlasticoNegroTele
-    second: {fileID: 2100000, guid: 728102ebbb77e5249b544082e5fc9146, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: RuletasGrandes
-    second: {fileID: 2100000, guid: 728102ebbb77e5249b544082e5fc9146, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: "RuletasPeque\xF1as"
-    second: {fileID: 2100000, guid: 728102ebbb77e5249b544082e5fc9146, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0

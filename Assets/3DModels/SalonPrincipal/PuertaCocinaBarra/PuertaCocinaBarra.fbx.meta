@@ -6,10 +6,7 @@ ModelImporter:
     100000: //RootNode
     400000: //RootNode
     2100000: PuertaCocina
-    2100002: BombinPuerta
-    2100004: Bisagras
-    2100006: VentanaPuerta
-    2100008: PomoPuerta
+    2100002: VentanaPuerta
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube.012
@@ -52,7 +49,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
@@ -68,7 +65,7 @@ ModelImporter:
     hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 3
     normalCalculationMode: 4
   importAnimation: 1

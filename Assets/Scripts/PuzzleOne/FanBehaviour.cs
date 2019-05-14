@@ -11,7 +11,7 @@ public class FanBehaviour : MonoBehaviour {
     private Transform _fanRotators;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
         GetComponent<AudioSource>().Stop();
         _fanEmissive.DisableKeyword("_EMISSION");
         _fanRotators = transform.GetChild(0);

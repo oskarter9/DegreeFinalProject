@@ -9,12 +9,7 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube.016
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Jabonera
-    second: {fileID: 2100000, guid: 999dbfc3731e71d4a8c6be5c3dfac0f2, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0

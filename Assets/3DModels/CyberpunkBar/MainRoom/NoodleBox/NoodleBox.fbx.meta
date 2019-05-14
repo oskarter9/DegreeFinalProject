@@ -6,39 +6,10 @@ ModelImporter:
     100000: //RootNode
     400000: //RootNode
     2100000: CajaCarton
-    2100002: PanelesRojos
-    2100004: CarcasaCalentador
-    2100006: ExteriorBoton
-    2100008: BotonCalentador
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube.012
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: BotonCalentador
-    second: {fileID: 2100000, guid: 8704292619e339342a7fa45af72c6394, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: CajaCarton
-    second: {fileID: 2100000, guid: 8704292619e339342a7fa45af72c6394, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: CarcasaCalentador
-    second: {fileID: 2100000, guid: 8704292619e339342a7fa45af72c6394, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: ExteriorBoton
-    second: {fileID: 2100000, guid: 8704292619e339342a7fa45af72c6394, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: PanelesRojos
-    second: {fileID: 2100000, guid: 8704292619e339342a7fa45af72c6394, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0

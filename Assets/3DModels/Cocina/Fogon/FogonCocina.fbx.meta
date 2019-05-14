@@ -6,45 +6,10 @@ ModelImporter:
     100000: //RootNode
     400000: //RootNode
     2100000: MetalizadoBase
-    2100002: MetalizadoOscuroFrontal
-    2100004: RuletasFogones
-    2100006: QuemadoresFogones
-    2100008: ManetaHorno
-    2100010: SoportesSartenes
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube.005
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: ManetaHorno
-    second: {fileID: 2100000, guid: 5aec239d93709a44eb70ebd860f28ea1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: MetalizadoBase
-    second: {fileID: 2100000, guid: 5aec239d93709a44eb70ebd860f28ea1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: MetalizadoOscuroFrontal
-    second: {fileID: 2100000, guid: 5aec239d93709a44eb70ebd860f28ea1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: QuemadoresFogones
-    second: {fileID: 2100000, guid: 5aec239d93709a44eb70ebd860f28ea1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: RuletasFogones
-    second: {fileID: 2100000, guid: 5aec239d93709a44eb70ebd860f28ea1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: SoportesSartenes
-    second: {fileID: 2100000, guid: 5aec239d93709a44eb70ebd860f28ea1, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
