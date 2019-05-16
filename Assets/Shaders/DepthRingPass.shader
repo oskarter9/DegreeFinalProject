@@ -3,7 +3,7 @@
 Shader "Custom/DepthRingPass" {
 
 Properties {
-   _MainTex ("", 2D) = "white" {} //this texture will have the rendered image before post-processing
+   _MainTex ("", 2D) = "white" {} 
    _AnotherTex ( "Texture to change", 2D) = "white"{}
    _RingWidth("ring width", Float) = 0.01
    _RingPassTimeLength("ring pass time", Float) = 10.0
@@ -47,17 +47,15 @@ sampler2D _AnotherTex;
 //Our Fragment Shader
 half4 frag (v2f i) : COLOR{
 
-   //extract the value of depth for each screen position from _CameraDepthExture
    float depthValue = Linear01Depth (tex2Dproj(_CameraDepthTexture, UNITY_PROJ_COORD(i.scrPos)).r);
 
-   fixed4 orgColor = tex2Dproj(_MainTex, i.scrPos); //Get the orginal rendered color
+   fixed4 orgColor = tex2Dproj(_MainTex, i.scrPos);
    fixed4 nextView = tex2Dproj(_AnotherTex, i.scrPos);
-   float4 newColor; //the color after the ring has passed
-   float4 lightRing; //the ring of light that will pass through the dpeth
+   float4 newColor;
+   float4 lightRing;
 
    float t = 1 - ((_Time.y - _StartingTime)/_RingPassTimeLength );
 
-   //the script attached to the camera will set _RunRingPass to 1 and then will start the ring pass
    if (_RunRingPass == 1){
       //this part draws the light ring
       if (depthValue < t && depthValue > t - _RingWidth){
@@ -73,7 +71,6 @@ half4 frag (v2f i) : COLOR{
              return orgColor;
           } else {
              //this part the ring has passed through
-             //basically taking the original colors and adding a slight red tint to it.
 			 newColor.r = nextView.r;
              newColor.g = nextView.g;
              newColor.b = nextView.b;

@@ -10,7 +10,17 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cylinder.002
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BombillaLetrero
+    second: {fileID: 2100000, guid: 45488f8b94569ab4099fa4372b64c233, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LetreroJapoLuz
+    second: {fileID: 2100000, guid: 81775d38c0e69f44eb613c24f7591add, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

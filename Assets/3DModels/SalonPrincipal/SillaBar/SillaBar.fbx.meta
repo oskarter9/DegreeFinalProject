@@ -9,7 +9,12 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cylinder.015
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BarrasSillas
+    second: {fileID: 2100000, guid: bf2a52a7a5ef5f64d8282d10f4fca284, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

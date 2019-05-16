@@ -9,7 +9,12 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube.005
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MetalizadoBase
+    second: {fileID: 2100000, guid: 5aec239d93709a44eb70ebd860f28ea1, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

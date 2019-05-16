@@ -15,7 +15,17 @@ ModelImporter:
     3300002: //RootNode
     4300000: Tele
     4300002: PantallaTele
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CuloTele
+    second: {fileID: 2100000, guid: 728102ebbb77e5249b544082e5fc9146, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pantalla.001
+    second: {fileID: 2100000, guid: acca58b493fdc7246b2a6a864e0aa07e, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

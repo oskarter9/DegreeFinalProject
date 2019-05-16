@@ -25,4 +25,5 @@ Material:
     m_Floats:
     - _ColorAlpha: 0.974
     - _Refraction: 0.02
+    - _WChanger: 2.16
     m_Colors: []

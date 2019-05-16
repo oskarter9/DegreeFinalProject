@@ -9,7 +9,12 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube.008
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MetalPlataforma
+    second: {fileID: 2100000, guid: 89c87496026b0fa4393cc8a783b3f73d, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

@@ -29,7 +29,6 @@ public class OnNewGameClick : MonoBehaviour {
                 yield return null;
             }
             AsyncOperation async2 = SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
-            //AsyncOperation async2 = SceneManager.UnloadSceneAsync(0);
 
             while (!async2.isDone)
                 yield return null;

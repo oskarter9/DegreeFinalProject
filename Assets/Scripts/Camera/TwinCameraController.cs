@@ -41,7 +41,6 @@ public class TwinCameraController : MonoBehaviour
         ActiveCameraMaterial = _activeCamera.GetComponent<PostProcessDepthGrayscale>().Mat;
         _timeToChangeScene = ActiveCameraMaterial.GetFloat("_RingPassTimeLength");
         ActiveCameraMaterial.SetFloat("_RunRingPass", 0);
-        DepthHack();
     }
 
     void Update()
@@ -56,7 +55,6 @@ public class TwinCameraController : MonoBehaviour
                 Invoke("SwapCameras", _timeToChangeScene);
             }
         }
-
     }
 
     public void SwapCameras()
@@ -69,8 +67,6 @@ public class TwinCameraController : MonoBehaviour
         var swapCamera = _activeCamera;
         _activeCamera = _hiddenCamera;
         _hiddenCamera = swapCamera;
-
-        DoDepthHack();
 
         ActiveCameraMaterial.SetFloat("_RunRingPass", 0);
         _activeCamera.GetComponent<PostProcessDepthGrayscale>().enabled = true;
@@ -94,7 +90,6 @@ public class TwinCameraController : MonoBehaviour
     private void ChangeSceneMat()
     {
         ActiveCameraMaterial.SetTexture("_AnotherTex", _hiddenCamera.targetTexture);
-        //¡Cuidao! Si ponemos Time.time, nos coje el tiempo desde la escena del menú, y el shader realiza mal el calculo de t.
         ActiveCameraMaterial.SetFloat("_StartingTime", Time.timeSinceLevelLoad);
         ActiveCameraMaterial.SetFloat("_RunRingPass", 1);
         ActiveCameraMaterial.SetFloat("_RingWidth", 0.01f);
@@ -119,23 +114,6 @@ public class TwinCameraController : MonoBehaviour
         {
             ChangeLayerRecursively(_playerTransform, "UniverseA");
         }
-    }
-
-    private void DepthHack()
-    {
-        _depthHackBuffer = new CommandBuffer();
-        _depthHackBuffer.ClearRenderTarget(true, true, Color.black, 0);
-        _depthHackBuffer.name = "Fancy Depth Magic";
-        _depthHackBuffer.DrawRenderer(_depthHackQuad, new Material(Shader.Find("Hidden/DepthHack")));
-
-        DoDepthHack();
-    }
-
-    private void DoDepthHack()
-    {
-        _hiddenCamera.AddCommandBuffer(CameraEvent.BeforeForwardOpaque, _depthHackBuffer);
-        _hiddenCamera.AddCommandBuffer(CameraEvent.BeforeDepthTexture, _depthHackBuffer);
-        _activeCamera.RemoveAllCommandBuffers();
     }
 
     private void ChangeLayerRecursively(Transform trans, string layerName)

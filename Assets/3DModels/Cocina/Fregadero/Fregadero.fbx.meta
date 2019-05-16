@@ -9,7 +9,12 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube.022
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fregadero
+    second: {fileID: 2100000, guid: 2f1e1a4864df5e241aa3fd317a10afac, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

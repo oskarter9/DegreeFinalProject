@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class TopPanelManager : MonoBehaviour
 {
-    [Header("PANEL LIST")]
+    [Header("Panels List")]
     public List<GameObject> panels = new List<GameObject>();
 
-    [Header("BUTTON LIST")]
+    [Header("Button List")]
     public List<GameObject> buttons = new List<GameObject>();
 
     // [Header("PANEL ANIMS")]

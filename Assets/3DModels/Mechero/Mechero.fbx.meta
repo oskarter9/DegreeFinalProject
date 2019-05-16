@@ -26,12 +26,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Metal
-    second: {fileID: 2100000, guid: 1bfba45e2f6b4e043845e2a98bd90202, type: 2}
+    second: {fileID: 2100000, guid: 19cf674e77036a34f9a80f30aa042bdc, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: PiedraBisagra
-    second: {fileID: 2100000, guid: 8e03b2f14c4db8d48bc804f7a056f801, type: 2}
+    second: {fileID: 2100000, guid: 19cf674e77036a34f9a80f30aa042bdc, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
