@@ -1,27 +1,20 @@
 fileFormatVersion: 2
-guid: 735524f01a075bc41bea34b20032c2ad
+guid: cb29a4c614439054aa2804069fa6f5e0
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: RodapiesTechumbre
-    2100002: Paredes
+    2100000: Paredes
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cocina.001
-    2186277476908879412: ImportLogs
+    4300000: Cocina.005
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Paredes
-    second: {fileID: 2100000, guid: 98c9006433414ea4e93535dd9693a14e, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: RodapiesTechumbre
-    second: {fileID: 2100000, guid: 98c9006433414ea4e93535dd9693a14e, type: 2}
+    second: {fileID: 2100000, guid: 94b1f058fc7c91340851e07574f39ca5, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

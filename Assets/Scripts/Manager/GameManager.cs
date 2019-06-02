@@ -89,11 +89,6 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(sceneIndex, LoadSceneMode.Additive);
     }
 
-    private void SetGameVolume()
-    {
-        AudioListener.volume = PlayerPrefs.GetFloat("GeneralVolume");
-    }
-
     private void SetCamerasRenderingPath()
     {
         if(PlayerPrefs.GetInt("RefQuality") == 1)

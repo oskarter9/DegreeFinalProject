@@ -19,7 +19,7 @@ public class PauseMenu : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {  
             if (GamePaused)
             {
@@ -39,7 +39,7 @@ public class PauseMenu : MonoBehaviour {
         Cursor.visible = true;
         _referencesManager.EnablePlayer();
         ReferencesManager.instance.Player.SavePlayer();
-        ReferencesManager.instance.CameraSceneB.GetComponent<PostProcessDepthGrayscale>().enabled = false;
+        ReferencesManager.instance.CameraSceneB.GetComponent<CameraRTCapture>().enabled = false;
         PlayerPrefs.SetInt("SomethingToLoad", 1);
         SceneManager.LoadScene("MainMenu");
     }

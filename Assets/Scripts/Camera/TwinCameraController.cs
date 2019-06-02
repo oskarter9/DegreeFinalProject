@@ -38,7 +38,7 @@ public class TwinCameraController : MonoBehaviour
         _hiddenCamera.targetTexture = rt;
         _playerTransform = _referencesManager.Player.GetComponent<Transform>();
         ChangeLayerRecursively(_playerTransform, "UniverseA");
-        ActiveCameraMaterial = _activeCamera.GetComponent<PostProcessDepthGrayscale>().Mat;
+        ActiveCameraMaterial = _activeCamera.GetComponent<CameraRTCapture>().Mat;
         _timeToChangeScene = ActiveCameraMaterial.GetFloat("_RingPassTimeLength");
         ActiveCameraMaterial.SetFloat("_RunRingPass", 0);
     }
@@ -69,7 +69,7 @@ public class TwinCameraController : MonoBehaviour
         _hiddenCamera = swapCamera;
 
         ActiveCameraMaterial.SetFloat("_RunRingPass", 0);
-        _activeCamera.GetComponent<PostProcessDepthGrayscale>().enabled = true;
+        _activeCamera.GetComponent<CameraRTCapture>().enabled = true;
     }
 
     private void SceneARefSounds()

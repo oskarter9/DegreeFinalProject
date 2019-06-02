@@ -1,10 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour {
-
-    #region Singleton
 
     public static Inventory instance;
 
@@ -19,8 +16,6 @@ public class Inventory : MonoBehaviour {
             Destroy(gameObject);
         }
     }
-
-    #endregion
 
     public List<Item> Items = new List<Item>();
 

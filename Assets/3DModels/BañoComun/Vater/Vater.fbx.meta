@@ -8,48 +8,13 @@ ModelImporter:
     400000: CadenaVater
     400002: //RootNode
     2100000: Retrete
-    2100002: TuberiaVater
-    2100004: Cisterna
-    2100006: "Desag\xFCe"
-    2100008: CadenaVater
-    2100010: DetalleCadenaVater
     2300000: CadenaVater
     2300002: //RootNode
     3300000: CadenaVater
     3300002: //RootNode
     4300000: Vater
     4300002: CadenaVater
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: CadenaVater
-    second: {fileID: 2100000, guid: db6f3f367f51ecd49b0ca53abf1d85b1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Cisterna
-    second: {fileID: 2100000, guid: 2d6b2573735cbef4c9886a1fdf466d27, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: "Desag\xFCe"
-    second: {fileID: 2100000, guid: f6abf347efe23ab4bb255ec5227ddea4, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: DetalleCadenaVater
-    second: {fileID: 2100000, guid: bc969044d38cf284bb1940d5b2adbf23, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Retrete
-    second: {fileID: 2100000, guid: e154058232342d44388a284ce49b48e9, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: TuberiaVater
-    second: {fileID: 2100000, guid: 03e7ff7981be3e7439ca48f0aa455ddd, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -86,11 +51,11 @@ ModelImporter:
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
-    importLights: 1
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 1
     useFileUnits: 1
-    optimizeMeshForGPU: 1
+    optimizeMeshForGPU: 0
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
@@ -104,7 +69,7 @@ ModelImporter:
     hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 1
+    normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
   importAnimation: 1

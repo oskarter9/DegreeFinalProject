@@ -26,8 +26,6 @@ public class WCCodeFeature : MonoBehaviour {
     private SoundsManager _soundsManager;
     private ReferencesManager _referencesManager;
     private GameObject _tvScreen;
-    private AudioClip _wrongSound;
-    private AudioClip _correctSound;
 
     private void Awake()
     {
@@ -49,7 +47,7 @@ public class WCCodeFeature : MonoBehaviour {
             Counter += Time.deltaTime;
         }
         
-        if (_currentCode < 1)
+        if (_currentCode < 4)
         {
             if (PlayerInput.Count == 3)
             {

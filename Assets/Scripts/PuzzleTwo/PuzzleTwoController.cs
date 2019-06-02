@@ -59,15 +59,17 @@ public class PuzzleTwoController : MonoBehaviour {
     {
         _referencesManager.PTwoFemaleWC.transform.SetParent(_referencesManager.PTwoControllerContainer.transform);
         _referencesManager.PTwoMaleWC.transform.SetParent(_referencesManager.PTwoControllerContainer.transform);
-        _referencesManager.PTwoFemaleWC.AddComponent<WCWomenWriter>();
-        _referencesManager.PTwoMaleWC.AddComponent<WCMenWriter>();
+        _referencesManager.PTwoFemaleWC.AddComponent<WCWriter>();
+        _referencesManager.PTwoFemaleWC.GetComponent<WCWriter>().CodeToInput = 1;
+        _referencesManager.PTwoMaleWC.AddComponent<WCWriter>();
+        _referencesManager.PTwoMaleWC.GetComponent<WCWriter>().CodeToInput = 0;
     }
 
     void DestroyElements()
     {
         Destroy(_soundClueEmitter);
-        Destroy(GetComponentInChildren<WCWomenWriter>());
-        Destroy(GetComponentInChildren<WCMenWriter>());
+        Destroy(_referencesManager.PTwoMaleWC.GetComponent<WCWriter>());
+        Destroy(_referencesManager.PTwoFemaleWC.GetComponent<WCWriter>());
         Destroy(GetComponent<WCCodeFeature>());
         Destroy(this);
     }
