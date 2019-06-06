@@ -4,19 +4,29 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
+    private ReferencesManager _referencesManager;
+
+    private void Start()
+    {
+        _referencesManager = ReferencesManager.instance;
+    }
+
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
+        if (_referencesManager.ActiveDialogueBox)
         {
-            if (DialogueManager.instance.dialogueOpened)
+            if (Input.GetKeyDown(KeyCode.T))
             {
-                DialogueManager.instance.DisplayNextSentence();
+                if (DialogueManager.instance.dialogueOpened)
+                {
+                    DialogueManager.instance.DisplayNextSentence();
+                }
+                else
+                {
+                    ReferencesManager.instance.CurrentStoryDialogue.TriggerDialogue();
+                }
             }
-            else
-            {
-                ReferencesManager.instance.CurrentStoryDialogue.TriggerDialogue();
-            }
-        }
+        } 
     }
 
     public void SavePlayer()

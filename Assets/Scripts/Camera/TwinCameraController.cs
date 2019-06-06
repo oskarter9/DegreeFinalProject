@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.Rendering;
-using UnityEngine.SceneManagement;
+using UnityEngine.PostProcessing;
+using System.Collections;
 
 public class TwinCameraController : MonoBehaviour
 {
-    //public RenderTexture InitialRenderTexture;
+    public GameObject Portal;
+    public PostProcessingProfile PPProfile;
 
     public Material ActiveCameraMaterial;
 
@@ -49,7 +51,6 @@ public class TwinCameraController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                
                 _currentTime = 0f;
                 ChangeSceneMat();
                 Invoke("SwapCameras", _timeToChangeScene);
@@ -70,6 +71,7 @@ public class TwinCameraController : MonoBehaviour
 
         ActiveCameraMaterial.SetFloat("_RunRingPass", 0);
         _activeCamera.GetComponent<CameraRTCapture>().enabled = true;
+
     }
 
     private void SceneARefSounds()

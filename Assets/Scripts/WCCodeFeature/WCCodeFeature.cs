@@ -47,7 +47,7 @@ public class WCCodeFeature : MonoBehaviour {
             Counter += Time.deltaTime;
         }
         
-        if (_currentCode < 4)
+        if (_currentCode < 1)
         {
             if (PlayerInput.Count == 3)
             {

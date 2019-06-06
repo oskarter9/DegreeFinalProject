@@ -31,6 +31,7 @@ public class PuzzleThreeController : MonoBehaviour {
         {
             GameManager.instance.LoadSceneAdditive(2);
             _soundsManager.PlaySFX(_soundsManager.SFXSource, _soundsManager.CorrectPuzzle);
+            _referencesManager.RestrictedZones.SetActive(true);
             Inventory.instance.Add(_referencesManager.PThreeTimeDevice);
             GameManager.instance.SetPuzzleEnvironment(++GameManager.instance.currentPuzzle);
             DestroyElements();

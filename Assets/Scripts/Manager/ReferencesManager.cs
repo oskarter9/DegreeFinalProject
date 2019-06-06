@@ -6,7 +6,8 @@ public class ReferencesManager : MonoBehaviour
 {
     public static ReferencesManager instance = null;
 
-    public Transform PlayerObjectsContainer;
+    public GameObject PlayerObjectsContainer;
+    public GameObject RestrictedZones;
     public Player Player;
     public Camera CameraSceneA;
     public Camera CameraSceneB;
@@ -14,6 +15,8 @@ public class ReferencesManager : MonoBehaviour
     public UIPanels CanvasPanels;
     public ReflectionProbe[] ReflectiveObjects;
     public DialogueTrigger CurrentStoryDialogue;
+    [HideInInspector]
+    public bool ActiveDialogueBox = true;
 
     [Header("First Puzzle References")]
 
@@ -72,15 +75,17 @@ public class ReferencesManager : MonoBehaviour
 
     public void EnablePlayer()
     {
-        _playerMovement.enabled = true;
+        EnablePlayerMovement();
         _cameraRotation.enabled = true;
+        ActiveDialogueBox = true;
         //_swapCamera.enabled = true;
     }
 
     public void DisablePlayer()
     {
-        _playerMovement.enabled = false;
+        DisablePlayerMovement();
         _cameraRotation.enabled = false;
+        ActiveDialogueBox = false;
         //_swapCamera.enabled = false;
     }
 

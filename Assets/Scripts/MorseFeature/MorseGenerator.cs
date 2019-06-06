@@ -41,7 +41,8 @@ public class MorseGenerator : MonoBehaviour {
         InitializeWaitForSeconds();
         _morseLight = GetComponentInChildren<Light>();
         _morseLight.intensity = 0f;
-        CodeToShow = FiveDigitsGenerator();
+        //CodeToShow = FiveDigitsGenerator();
+        CodeToShow = "a134";
         Debug.Log(CodeToShow);
 	}
 

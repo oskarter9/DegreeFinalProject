@@ -27,7 +27,7 @@ public class Inventory : MonoBehaviour {
     public void Add(Item item)
     {
         Items.Add(item);
-        Instantiate(item.ObjectToUse, ReferencesManager.instance.PlayerObjectsContainer);
+        Instantiate(item.ObjectToUse, ReferencesManager.instance.PlayerObjectsContainer.transform);
         ReferencesManager.instance.PlayerObjectsContainer.GetComponent<ObjectSwitching>().SelectObject();
 
         if (OnItemChangedCallback != null)

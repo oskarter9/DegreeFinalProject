@@ -27,9 +27,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _RingEmissionIntensity: 10
-    - _RingPassTimeLength: 3
+    - _RingEmissionIntensity: 20
+    - _RingPassTimeLength: 2
     - _RingWidth: 0.01
     m_Colors:
-    - _RingColor: {r: 0, g: 0.75408125, b: 1, a: 1}
+    - _RingColor: {r: 0, g: 0.2837615, b: 1, a: 1}
     - _RingEmissionColor: {r: 1, g: 1, b: 1, a: 1}

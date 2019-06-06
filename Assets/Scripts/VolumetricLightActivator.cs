@@ -10,6 +10,7 @@ public class VolumetricLightActivator : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         GetComponent<AuraLight>().enabled = true;
+        //GetComponent<Light>().cullingMask
         _animatorController = GetComponent<Animator>();
         StartCoroutine(CarPass());
     }
@@ -17,7 +18,6 @@ public class VolumetricLightActivator : MonoBehaviour {
     IEnumerator CarPass()
     {
         yield return new WaitForSeconds(Random.Range(5, 10));
-        Debug.Log("Animacion de coche");
         _animatorController.SetTrigger("CarPass");
         StartCoroutine(CarPass());
     }

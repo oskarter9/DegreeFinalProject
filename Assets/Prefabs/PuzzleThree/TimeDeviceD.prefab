@@ -1389,6 +1389,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e9a5b12abed28e4a947ec7cc450a393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Portal: {fileID: 1866132983136732}
+  PPProfile: {fileID: 11400000, guid: dba6ffafc5d3aba4c94ae5324dd070a1, type: 2}
   ActiveCameraMaterial: {fileID: 2100000, guid: 52414b21493e6bb40834ddb8eb2b50b6,
     type: 2}
   _depthHackQuad: {fileID: 23162469629785234}

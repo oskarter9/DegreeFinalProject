@@ -52,6 +52,7 @@ public class PauseMenu : MonoBehaviour {
         _referencesManager.LockCursorManager(true);
         Cursor.visible = false;
         _referencesManager.EnablePlayer();
+        _referencesManager.PlayerObjectsContainer.SetActive(true);
     }
 
     void Pause()
@@ -61,5 +62,6 @@ public class PauseMenu : MonoBehaviour {
         Cursor.visible = true;
         _referencesManager.LockCursorManager(false);
         _referencesManager.DisablePlayer();
+        _referencesManager.PlayerObjectsContainer.SetActive(false);
     }
 }
